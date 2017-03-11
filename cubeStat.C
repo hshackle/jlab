@@ -9,7 +9,7 @@ void cubeStat(){
   char tmp_str[1000];
 
 
-  TH1F *h1 = new TH1F("Legend","Measured Volume Distribution of Cube;Volume Measured (mm^3);Frequency",50,2800,4000);
+  TH1F *h1 = new TH1F("Data",";Volume Measured (mm^{3});Frequency",25,2800,4000);
 
   while (1){
     
@@ -67,8 +67,12 @@ void cubeStat(){
   zstd = zstd/177;
   Vstd = Vstd/177;
   h1->SetFillColor(11);
-  h1->Draw();
+  h1->Draw("SAME");
   h1->Fit("gaus");
+  gStyle->SetOptStat();
+  gStyle->SetOptFit(1100);
+  gStyle->SetLabelFont(132);
+  gStyle->SetLegendFont(132);
   cout << xmean << " +- " << xstd << endl;
   cout << ymean << " +- " << ystd <<endl;
   cout << zmean << " +- " << zstd <<  endl;
