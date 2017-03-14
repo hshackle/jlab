@@ -1,0 +1,175 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\title[Michelson Interferometry]{Wavelength Detection through Michelson Interferometry}
+\author{Henry Shackleton}
+
+\begin{document}
+
+\titlepage
+
+\begin{frame}
+  \frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction and Theory}
+
+
+\begin{frame}
+  \frametitle{What is Michelson Interferometry?}
+  \includegraphics[width=9cm]{basic_interferometer.png}
+  \pause
+  \\
+  Use detector measurements to determine wavelength of light source.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Light travels as waves}
+  \begin{equation*}
+    E(t) = E_1 e^{i\left(\phi_1 - \omega t\right)}
+  \end{equation*}
+  \hspace{5pt}\includegraphics[width=10cm]{complex.png}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Superposition of waves work as addition}
+  \begin{equation*}
+    E_T(t) = E_1 e^{i(\phi_1 - \omega t)} + E_2 e^{i(\phi_2 - \omega t)}
+  \end{equation*}
+  \pause
+  Form of the superposition dependent on relative phase, $\phi_1 - \phi_2$
+\end{frame}
+
+\begin{frame}
+  \frametitle{Interference through relative phase difference}
+  Constructive interference: $ \phi_1 - \phi_2 = 2 \pi n \text{, } n = 1, 2, 3, \ldots$
+  \pause
+  \begin{equation*}
+    E(t) = (E_1 + E_2) e^{i \omega t}
+  \end{equation*}
+  \pause
+  Destructive interference: $\phi_1 - \phi_2 = (2 n + 1) \pi \text{, } n = 1, 2, 3, \ldots$
+  \pause
+  \begin{equation*}
+    E(t) = (E_1 - E_2) e^{i \omega t}
+  \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Constructive interference through relative phase difference}
+  \begin{center}
+  \includegraphics[width=5cm]{wave1pres} 
+  \includegraphics[width=5cm]{wave2pres}
+  \\
+  \includegraphics[width=5cm]{constructivepres}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Destructive interference through relative phase difference}
+  \begin{center}
+  \includegraphics[width=5cm]{wave1pres} 
+  \includegraphics[width=5cm]{wave3pres}
+  \\
+  \includegraphics[width=5cm]{destructivepres}
+\end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{From complex waves to observables}
+  \begin{itemize}
+    \item
+    What photodetectors observe is the \textit{intensity} of a wave.
+  \item
+    $I \propto \langle E_T^* E_T \rangle = E_1^2 + E_2^2 + 2 E_1 E_2 \cos(\phi_1 - \phi_2)$
+  \item Interference affects intensity too!
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Relative length traveled to relative phase}
+  \begin{itemize}
+    \item One wave travels a length $2l_1$, and one wave travels a length $2l_2$. What is the relative phase offset of the two?
+    \end{itemize}
+  \begin{equation*}\phi_1 - \phi_2 = \frac{4\pi}{\lambda} \left(l_2 - l_1 \right)\end{equation*}
+    \begin{equation*} 
+      I \propto E^2  + E^2 \cos\left(\frac{4\pi}{\lambda} (l_2 - l_1) \right)
+    \end{equation*}
+  \end{frame}
+
+\section{Experimental Setup}
+\begin{frame}
+  \frametitle{Overview of experimental setup}
+  \hspace{25pt}\includegraphics[width=10cm]{setup.png}
+\end{frame}
+
+\begin{frame}
+  \frametitle{PZT converts voltage to displacement}
+  \begin{itemize}
+    \item PZT changes relative length difference from $2(l_2 - l_1)$ to $2(l_2 - l_1 - \Delta V)$.
+    \item Relative length difference causes a phase difference proportional to the wavelength.
+    \item $I \propto E^2 (1 + \cos(C(\lambda)V) )$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Oscilliscope display of interference patterns}
+  \includegraphics[width=12cm]{waveform}
+\end{frame}
+
+\section{Data Analysis}
+
+\begin{frame}
+  \frametitle{Distribution of measured voltage differences}
+  \includegraphics[width=12cm]{graph_helvetica}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Wavelength Calculation and Error Propegation}
+  Sources of error:
+  \begin{itemize}
+    \item Measured voltage difference $\pm 0.14$ V from measurement
+      \pause
+    \item Measured voltage difference $\pm 0.02$ V from distribution
+      \pause
+    \item Average voltage difference $6.96 \pm .16$ V
+      \pause
+    \item PZT voltage to length conversion $44.6 \pm 2.6$ nm/V
+      \pause
+    \item $\lambda = 620 \pm 38$ nm
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Predicted wavelength agrees with independent calculations}
+  \begin{itemize}
+    \item
+    Standard wavelength of orange light: 590-620 nm.
+  \item Predicted wavelength of $620 \pm 38$ nm mostly falls within this range.
+  \item Michelson interferometry can be used to accurately calculate wavelengths.
+\end{itemize}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}
+  \frametitle{Wavelength calculation through Michelson interferometry}
+  \begin{itemize}
+    \pause
+    \item Michelson interferometers produce interference patterns dependent on the light wavelength and the relative length difference between the two arms.
+      \pause
+    \item By controlling this length with a PZT, we can accurately determine the wavelength of the light source.
+      \pause
+    \item Error propegation is largely controlled by the PZT.
+      \pause
+    \item The aether probably doesn't exist.
+  \end{itemize}
+\end{frame}
+
+
+\end{document}

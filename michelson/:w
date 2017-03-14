@@ -1,0 +1,112 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\title[Michelson Interferometry]{Wavelength Detection through Michelson Interferometry}
+\author{Henry Shackleton}
+
+\begin{document}
+
+\titlepage
+
+\begin{frame}
+  \frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction and Theory}
+\begin{frame}
+  \frametitle{What is Michelson Interferometry?}
+  \includegraphics[width=10cm]{basic_interferometer.png}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Light travels as waves}
+  \begin{equation*}
+    E(t) = E_1 e^{i\left(\phi_1 - \omega t\right)}
+  \end{equation*}
+  \hspace{5pt}\includegraphics[width=10cm]{complex.png}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Superposition of waves work as addition}
+  \begin{equation*}
+    E_T(t) = E_1 e^{i(\phi_1 - \omega t)} + E_2 e^{i(\phi_2 - \omega t)}
+  \end{equation*}
+  \pause
+  Form of the superposition dependent on relative phase, $\phi_1 - \phi_2$
+\end{frame}
+
+\begin{frame}
+  \frametitle{Interference through relative phase difference}
+  Constructive interference: $ \phi_1 - \phi_2 = 2 \pi n \text{, } n = 1, 2, 3, \ldots$
+  \pause
+  \begin{equation*}
+    E(t) = (E_1 + E_2) e^{i \omega t}
+  \end{equation*}
+  \pause
+  Destructive interference: $\phi_1 - \phi_2 = (2 n + 1) \pi \text{, } n = 1, 2, 3, \ldots$
+  \pause
+  \begin{equation*}
+    E(t) = (E_1 - E_2) e^{i \omega t}
+  \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Constructive interference through relative phase difference}
+  \begin{center}
+  \includegraphics[width=5cm]{wave1pres} 
+  \includegraphics[width=5cm]{wave2pres}
+  \\
+  \includegraphics[width=5cm]{constructivepres}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Destructive interference through relative phase difference}
+  \begin{center}
+  \includegraphics[width=5cm]{wave1pres} 
+  \includegraphics[width=5cm]{wave3pres}
+  \\
+  \includegraphics[width=5cm]{destructivepres}
+\end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{From complex waves to observables}
+  \begin{itemize}
+    \item
+    What photodetectors observe is the \textit{intensity} of a wave.
+  \item
+    $I \propto \langle E_T^* E_T \rangle = E_1^2 + E_2^2 + 2 E_1 E_2 \cos(\phi_1 - \phi_2)$
+  \item Interference affects intensity too!
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Relative length traveled to relative phase}
+  \begin{itemize}
+    \item One wave travels a length $2l_1$, and one wave travels a length $2l_2$. What is the relative phase offset of the two?
+    \end{itemize}
+  \begin{equation*}\phi_1 - \phi_2 = \frac{4\pi}{\lambda} \left(l_2 - l_1 \right)\end{equation*}
+  \end{frame}
+
+\section{Experimental Setup}
+\begin{frame}
+  \frametitle{Overview of experimental setup}
+  \hspace{25pt}\includegraphics[width=10cm]{setup.png}
+\end{frame}
+
+\begin{frame}
+  \frametitle{PZT converts voltage to displacement}
+  \begin{itemize}
+    \item PZT changes relative length difference from $2(l_2 - l_1)$ to $2[l_2 - l_1 - \Delta(V)]$.
+    \item Relative length difference causes a phase difference proportional to the wavelength.
+  \end{itemize}
+\end{frame}
+
+
+\end{document}

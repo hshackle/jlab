@@ -13,7 +13,7 @@ void poisson_100hz(){
 
  TH1 *freq = new TH1D("Data", "Poisson Measured Frequency vs. Theoretical Distribution", 70, 70, 140);
  //TF1 *theory = new TF1("theory", "103.8^x * TMath::Exp(-103.8)/TMath::Gamma(x)", 80, 140);
- TF1 *theory = new TF1("theory", "100 * TMath::Gaus(x, [0], [1])", 70, 140);
+ TF1 *theory = new TF1("theory", "100 * TMath::Gaus(x, 8)", 70, 140);
 // Start a for loop iterating over all lines in the file
 
   for (Int_t num=0; num < n_points; num++){ 
