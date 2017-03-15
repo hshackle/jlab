@@ -180,6 +180,7 @@ INPUT michelson-paper.bbl
 INPUT michelson-paper.aux
 INPUT ./michelson-paper.out
 INPUT ./michelson-paper.out
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb

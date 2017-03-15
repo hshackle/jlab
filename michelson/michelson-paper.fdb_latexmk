@@ -1,12 +1,13 @@
 # Fdb version 3
-["bibtex michelson-paper"] 1489528314 "michelson-paper.aux" "michelson-paper.bbl" "michelson-paper" 1489528315
+["bibtex michelson-paper"] 1489530038 "michelson-paper.aux" "michelson-paper.bbl" "michelson-paper" 1489530038
   "/usr/share/texmf-dist/bibtex/bst/revtex/apsrev4-1.bst" 1479561037 71518 fec93f06df0c073f83d2330456bd19c2 ""
-  "michelson-paper.aux" 1489528315 3198 43f79d0051b222b59ddda1f587ba4b79 ""
+  "michelson-paper.aux" 1489530038 3279 1b0a914aa0076f118a7524d6c636e509 ""
   "michelson-paper.bcf" 0 -1 0 ""
-  "michelson-paperNotes.bib" 1489528315 103 48ad29797468f16e2853d8797278d7af ""
+  "michelson-paperNotes.bib" 1489530038 103 48ad29797468f16e2853d8797278d7af ""
   (generated)
+  "michelson-paper.blg"
   "michelson-paper.bbl"
-["pdflatex"] 1489528314 "michelson-paper.tex" "michelson-paper.pdf" "michelson-paper" 1489528315
+["pdflatex"] 1489530038 "michelson-paper.tex" "michelson-paper.pdf" "michelson-paper" 1489530038
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1479649810 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1479649815 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1479649815 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -48,6 +49,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm" 1479649815 1116 25a7bf822c58caf309a702ef79f4afbb ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1479649815 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmti9.tfm" 1479649815 1476 cccc6cc4935c18ec3d5623b77ecb8b74 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1479649808 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1479649808 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb" 1479649808 32298 c6d25bb16d1eac01ebdc6d7084126a1e ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1479649808 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
@@ -115,17 +117,17 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1481223507 7252863 0bf779829d4266b787eab2ce4d695fde ""
   "destructive.pdf" 1489505077 5487 4a19978a7da84ce7fc3a122ee07f028f ""
   "graph_times.pdf" 1489511102 13205 b09f4fac2f9ff0ca850903ce11916d43 ""
-  "michelson-paper.aux" 1489528315 3198 43f79d0051b222b59ddda1f587ba4b79 ""
-  "michelson-paper.bbl" 1489528314 1983 c789b8b2e2ff60989c671635ad8473c2 "bibtex michelson-paper"
-  "michelson-paper.out" 1489528315 438 1ecda517657b99c1ce9ea0516c94977e ""
-  "michelson-paper.tex" 1489528292 20010 a82c2fb8602c837769634bfa5610ac7f ""
+  "michelson-paper.aux" 1489530038 3279 1b0a914aa0076f118a7524d6c636e509 ""
+  "michelson-paper.bbl" 1489530038 1983 c789b8b2e2ff60989c671635ad8473c2 "bibtex michelson-paper"
+  "michelson-paper.out" 1489530038 493 bb258260104e06cc13140f0f4596e159 ""
+  "michelson-paper.tex" 1489530034 20082 383b86e1628c6540718510228d74c595 ""
   "setup.png" 1489426774 50022 85ce418e39d5ca1d32b4e027174f039c ""
   "shifted.pdf" 1489505116 10837 0a847458750abc17a4ece8d92cecb274 ""
   "sin1.pdf" 1489505048 10831 4c3fbaaff9280188ed43bf3bad5a2f7c ""
   "waveform.pdf" 1489448474 16110 4353403230e314288f9306ada7699eca ""
   (generated)
+  "michelson-paper.aux"
   "michelson-paper.out"
+  "michelson-paper.pdf"
   "michelson-paperNotes.bib"
   "michelson-paper.log"
-  "michelson-paper.aux"
-  "michelson-paper.pdf"
