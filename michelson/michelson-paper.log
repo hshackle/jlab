@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.8)  14 MAR 2017 18:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.8)  17 MAR 2017 20:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -396,55 +396,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--188
 
  []
 
-<sin1.pdf, id=39, 361.35pt x 255.95625pt>
+<sin1.pdf, id=35, 361.35pt x 255.95625pt>
 File: sin1.pdf Graphic file (type pdf)
  <use sin1.pdf>
 Package pdftex.def Info: sin1.pdf used on input line 211.
 (pdftex.def)             Requested size: 203.99689pt x 144.49837pt.
- <shifted.pdf, id=40, 361.35pt x 255.95625pt>
+ <shifted.pdf, id=36, 361.35pt x 255.95625pt>
 File: shifted.pdf Graphic file (type pdf)
  <use shifted.pdf>
 Package pdftex.def Info: shifted.pdf used on input line 212.
 (pdftex.def)             Requested size: 203.99689pt x 144.49837pt.
- <destructive.pdf, id=41, 361.35pt x 255.95625pt>
+ <destructive.pdf, id=37, 361.35pt x 255.95625pt>
 File: destructive.pdf Graphic file (type pdf)
  <use destructive.pdf>
 Package pdftex.def Info: destructive.pdf used on input line 213.
 (pdftex.def)             Requested size: 203.99689pt x 144.49837pt.
- <setup.png, id=42, 770.12718pt x 618.05907pt>
+ <setup.png, id=38, 770.12718pt x 618.05907pt>
 File: setup.png Graphic file (type png)
  <use setup.png>
 Package pdftex.def Info: setup.png used on input line 238.
 (pdftex.def)             Requested size: 203.99689pt x 163.70943pt.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-Underfull \hbox (badness 1946) in paragraph at lines 235--243
-\OT1/cmr/m/n/10 The pho-tode-tec-tor is con-nected to the os-cil-lis-cope
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--243
-
- []
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 243.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 242.
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 243.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 242.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
-<waveform.pdf, id=72, 361.35pt x 194.7275pt>
+<waveform.pdf, id=68, 361.35pt x 182.6825pt>
 File: waveform.pdf Graphic file (type pdf)
  <use waveform.pdf>
-Package pdftex.def Info: waveform.pdf used on input line 246.
-(pdftex.def)             Requested size: 203.99689pt x 109.93208pt.
- <graph_times.pdf, id=73, 569.12625pt x 498.86375pt>
+Package pdftex.def Info: waveform.pdf used on input line 245.
+(pdftex.def)             Requested size: 203.99689pt x 103.13217pt.
+ <graph_times.pdf, id=69, 569.12625pt x 498.86375pt>
 File: graph_times.pdf Graphic file (type pdf)
  <use graph_times.pdf>
-Package pdftex.def Info: graph_times.pdf used on input line 254.
+Package pdftex.def Info: graph_times.pdf used on input line 253.
 (pdftex.def)             Requested size: 229.49844pt x 201.16333pt.
  [2 <./sin1.pdf> <./shifted.pdf
 
@@ -454,48 +444,50 @@ pdfTeX warning: pdflatex (file ./shifted.pdf): PDF inclusion: multiple pdfs with
 pdfTeX warning: pdflatex (file ./destructive.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./setup.png>]
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 260.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 259.
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 260.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 259.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
-[3 <./waveform.pdf> <./graph_times.pdf, page is rotated 90 degrees>]
+[3 <./waveform.pdf> <./graph_times.pdf, page is rotated 90 degrees>] (./michelson-paper.bbl
 
-LaTeX Warning: Reference `LastBibItem' on page 4 undefined on input line 267.
+LaTeX Warning: Reference `LastBibItem' on page 4 undefined on input line 9.
 
-(./michelson-paper.bbl)
+
+Package natbib Warning: Empty `thebibliography' environment on input line 53.
+
+)
 
 Class revtex4-1 Warning: Environment acknowledgements is obsolete;
 Use acknowledgments instead.
 
-[4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 269.
- (./michelson-paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 269.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 269.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 268.
+(./michelson-paper.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 268.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 268.
 Package rerunfilecheck Info: File `michelson-paper.out' has not changed.
-(rerunfilecheck)             Checksum: BB258260104E06CC13140F0F4596E159;493.
+(rerunfilecheck)             Checksum: 74A223DF64DF80B82449E907525BB5BE;437.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 8261 strings out of 493013
- 114537 string characters out of 6139317
- 327619 words of memory out of 5000000
- 11668 multiletter control sequences out of 15000+600000
+ 8260 strings out of 493013
+ 114568 string characters out of 6139317
+ 327792 words of memory out of 5000000
+ 11669 multiletter control sequences out of 15000+600000
  16807 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,8n,28p,1349b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on michelson-paper.pdf (4 pages, 286241 bytes).
+Output written on michelson-paper.pdf (3 pages, 290580 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 184 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 95 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 251 PDF objects out of 1000 (max. 8388607)
+ 177 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 87 words of extra memory for PDF output out of 10000 (max. 10000000)
 

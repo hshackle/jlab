@@ -13,7 +13,7 @@ void michelson(){
   Double_t yerror[3];
 
   for(int i=0; i < 3; i++){
-    xerror[i] = 0.1;
+    xerror[i] = 0.14;
     yerror[i] = TMath::Sqrt(count[i]);
     cout << xerror[i] << " " << value[i] << " " << yerror[i] << " " << count[i] << endl;
   };

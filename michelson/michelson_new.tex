@@ -1,5 +1,4 @@
 \documentclass{beamer}
-\usepackage{comment}
 \usetheme{Madrid}
 
 \usepackage[utf8]{inputenc}
@@ -24,7 +23,7 @@
   \frametitle{What is Michelson Interferometry?}
   \includegraphics[width=9cm]{basic_interferometer.png}
   \pause
-  \\
+
   Use detector measurements to determine wavelength of light source.
 \end{frame}
 
@@ -38,57 +37,12 @@
 
 \begin{frame}
   \frametitle{Superposition of waves work as addition}
+  \begin{center}
   \begin{equation*}
     E_T(t) = E_1 e^{i(\phi_1 - \omega t)} + E_2 e^{i(\phi_2 - \omega t)}
   \end{equation*}
-  \pause
-  \begin{comment}
-  Form of the superposition dependent on relative phase, $\phi_1 - \phi_2$
-\end{comment}
-For two waves with equal amplitude,
-\begin{equation*}
-  E_T(t) = E(e^{i(\phi_1 - \omega t)} + e^{i(\phi_2 - \omega t)})
-\end{equation*}
-\end{frame}
-\begin{comment}
-
-\begin{frame}
-  \frametitle{Interference through relative phase difference}
-  Constructive interference: $ \phi_1 - \phi_2 = 2 \pi n \text{, } n = 1, 2, 3, \ldots$
-  \pause
-  \begin{equation*}
-    E(t) = (E_1 + E_2) e^{i \omega t}
-  \end{equation*}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Constructive interference through relative phase difference}
-  \begin{center}
-  \includegraphics[width=5cm]{wave1pres} 
-  \includegraphics[width=5cm]{wave2pres}
-  \\
-  \includegraphics[width=5cm]{constructivepres}
 \end{center}
 \end{frame}
-
-\begin{frame}
-  \frametitle{Interference through relative phase difference}
-  Destructive interference: $\phi_1 - \phi_2 = (2 n + 1) \pi \text{, } n = 1, 2, 3, \ldots$
-  \begin{equation*}
-    E(t) = (E_1 - E_2) e^{i \omega t}
-  \end{equation*}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Destructive interference through relative phase difference}
-  \begin{center}
-  \includegraphics[width=5cm]{wave1pres} 
-  \includegraphics[width=5cm]{wave3pres}
-  \\
-  \includegraphics[width=5cm]{destructivepres}
-\end{center}
-\end{frame}
-\end{comment}
 
 \begin{frame}
   \frametitle{From complex waves to observables}
@@ -97,7 +51,13 @@ For two waves with equal amplitude,
     What photodetectors observe is the \textit{intensity} of a wave.
   \item
     $I \propto \langle E_T^* E_T \rangle = E_1^2 + E_2^2 + 2 E_1 E_2 \cos(\phi_1 - \phi_2)$
-  \item Interference affects intensity too!
+  \item Relative phase difference affects intensity measured.
+    \pause
+    \begin{itemize}
+      \item $\phi_1 - \phi_2 = 2 \pi n$, $n = 1, 2, \ldots$ - constructive interference
+        \pause
+      \item $\phi_1 - \phi_2 = (2n + 1) \pi$ - destructive interference
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -106,7 +66,10 @@ For two waves with equal amplitude,
   \begin{itemize}
     \item One wave travels a length $2l_1$, and one wave travels a length $2l_2$. What is the relative phase offset of the two?
     \end{itemize}
-  \begin{equation*}\phi_1 - \phi_2 = \frac{4\pi}{\lambda} \left(l_2 - l_1 \right)\end{equation*}
+  \begin{equation*}
+    \phi_1 - \phi_2 = \frac{4\pi}{\lambda} \left(l_2 - l_1 \right)
+  \end{equation*}
+  \pause
     \begin{equation*} 
       I \propto E^2  + E^2 \cos\left(\frac{4\pi}{\lambda} (l_2 - l_1) \right)
     \end{equation*}
@@ -122,8 +85,9 @@ For two waves with equal amplitude,
   \frametitle{PZT converts voltage to displacement}
   \begin{itemize}
     \item PZT changes relative length difference from $2(l_2 - l_1)$ to $2(l_2 - l_1 - \Delta V)$.
-    \item Relative length difference causes a phase difference proportional to the wavelength.
-    \item $I \propto E^2 (1 + \cos(C(\lambda)V) )$
+    \item Linear relative length difference causes a linear phase difference proportional to the wavelength.
+    \item Linear phase difference causes periodic intensity differences.
+    \item Measure voltage differences corresponding to a full period in intensity.
   \end{itemize}
 \end{frame}
 
@@ -136,29 +100,31 @@ For two waves with equal amplitude,
 
 \begin{frame}
   \frametitle{Distribution of measured voltage differences}
-  \includegraphics[width=12cm]{graph_helvetica}
-\end{frame}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+  \includegraphics[width=6.5cm]{graph_helvetica}
+\end{column}
 
-\begin{frame}
-  \frametitle{Wavelength Calculation and Error Propegation}
+\begin{column}{0.5\textwidth}
   \begin{itemize}
     \item Individual measured voltage differences give error of $\pm 0.14$ V from measurement
       \pause
-    \item Average measured voltage difference has error of $\pm 0.02$ V from distribution
+    \item Averaging voltage differences gives $6.96 \pm .02$ V 
       \pause
-    \item Average voltage difference $6.96 \pm .14$ V
+    \item Total uncertainty in voltage $6.96 \pm .14$ V
       \pause
     \item PZT voltage to length conversion $44.6 \pm 2.6$ nm/V
       \pause
     \item $\lambda = 620 \pm 38$ nm
   \end{itemize}
+  \end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{Predicted wavelength agrees with independent calculations}
   \begin{itemize}
-    \item
-    Standard wavelength of orange light: 590-620 nm.
+    \item Wavelength reported on laser is 594.6 nm.
   \item Predicted wavelength of $620 \pm 38$ nm mostly falls within this range.
   \item Michelson interferometry can be used to accurately calculate wavelengths.
 \end{itemize}
@@ -169,7 +135,6 @@ For two waves with equal amplitude,
 \begin{frame}
   \frametitle{Wavelength calculation through Michelson interferometry}
   \begin{itemize}
-    \pause
     \item Michelson interferometers produce interference patterns dependent on the light wavelength and the relative length difference between the two arms.
       \pause
     \item By controlling this length with a PZT, we can accurately determine the wavelength of the light source.
@@ -182,7 +147,6 @@ For two waves with equal amplitude,
 
 \begin{frame}
   \frametitle{Derivation of wavelength/voltage correpondance}
-  \\
   \begin{center}
   \begin{equation*}
     I \propto E^2\left(1 + cos\left(\frac{4\pi}{\lambda} (l_2 - l_1 - \Delta V ) \right) \right)
@@ -196,5 +160,24 @@ For two waves with equal amplitude,
 \end{center}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Constructive interference in light waves}
+  \begin{center}
+    \includegraphics[width=5cm]{wave1pres}
+    \includegraphics[width=5cm]{wave2pres}
+    \\
+    \includegraphics[width=5cm]{constructivepres}
+    \end{center}
+  \end{frame}
+
+\begin{frame}
+  \frametitle{Constructive interference in light waves}
+  \begin{center}
+    \includegraphics[width=5cm]{wave1pres}
+    \includegraphics[width=5cm]{wave3pres}
+    \\
+    \includegraphics[width=5cm]{destructivepres}
+  \end{center}
+\end{frame}
 
 \end{document}

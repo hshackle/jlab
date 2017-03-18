@@ -64,7 +64,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\documentclass[aps,twocolumn,secnumarabic,balancelastpage,amsmath,amssymb,nofootinbib, floatfix]{revtex4}
-\documentclass[aps,twocolumn,secnumarabic,amsmath,amssymb,nofootinbib,floatfix]{revtex4-1}
+\documentclass[aps,twocolumn,nobalancelastpage,secnumarabic,amsmath,amssymb,nofootinbib,floatfix]{revtex4-1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % N.B.:  Different computers have different packages installed.  
@@ -239,12 +239,11 @@ A Michelson interferometer is a device where a beam of light can be split in two
     \caption{A block diagram of our experimental setup, with lengths $l_1$ and $l_2$ indicating the distance travelled by each of the two light beams.}
   \end{figure}
   Both light beams are reflected by the mirrors, and recombined at a photodetector, which measures the intensity of the beam. A crucial calibration step in this experiment is positioning the two mirrors so that the two beam align perfectly on the photdetector. Any deviations from this will reduce the signal measured. The photodetector is connected to the oscilliscope previously mentioned. This allows us to simultaneously measure the voltage supplied to the PZT - and in virtue of that, the displacement of the mirror attached to it - and the intensity of the resulting beam.
-   \\
   \section{Data Analysis}
     Figure \ref{fig:waveform} gives an example form of a signal seen on our oscilliscope. At every maximum in the orange line - representing the intensity of the measured beam - complete constructive interference is taking place between the two beams. At every minimum, complete destructive interference is taking place. This change in interference is induced by the change in relative phase between the two beams, which is caused by the differences in length produced by the PZT.
    \begin{figure}[t]
     \includegraphics[width=0.4\textwidth]{waveform.pdf}
-    \caption{An example reading of the oscilliscope, generated in Wolfram Mathematica. The blue line corresponds to the signal from the function generator, and the orange line corresponds to the intensity measured by the photodetector.}
+    \caption{An example reading of the oscilliscope, generated in Wolfram Mathematica. The blue line corresponds to the signal from the function generator, and the orange line corresponds to the intensity measured by the photodetector. A linear change in voltage corresponds to a periodic chance in intensity, with cusps at the points where the voltage switches direction.}
     \label{fig:waveform}
     \end{figure}
     The change from one maxima to another, or the change from one minima to another, corresponds to a change in the length travelled by one of the beams equal to the wavelength. This is a direct consequence of equation (6). Therefore, calculating the voltage differences supplied ot the PZT across maxima and minima, and then determining the displacement length corresponding to that voltage. we are able to determine the wavelength of the laser beam.
