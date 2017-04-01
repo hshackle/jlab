@@ -180,6 +180,8 @@ INPUT dynamics-paper.bbl
 INPUT dynamics-paper.aux
 INPUT ./dynamics-paper.out
 INPUT ./dynamics-paper.out
+INPUT /home/robin/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy9.600pk
+INPUT /home/robin/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi6.600pk
 INPUT /usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmbx10.pk
 INPUT /usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk
 INPUT /home/robin/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy6.600pk

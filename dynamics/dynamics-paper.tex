@@ -220,7 +220,20 @@ Located halfway between the helical trajectory between the beta source and the d
 \section{Experimental Calibration}
 There are two calibration procedures necessary for this experiment - the MCA calibration and the magnetometer calibration. The MCA detects the strength of incoming electric signals and bins them accordingly, but the correspondance between this measurement and the kinetic energy of the detected electron is, by default, unknown. To determine this relation, we place a $\tensor*[^133]{\text{Ba}}{}$ source next to the PIN diode. The spectrum of $\tensor*[^133]{\text{Ba}}{}$ is well known and can be used to calibrate our MCA. Displayed in Figure $2$ is an example of an MCA readout of a $\tensor*[^133]{\text{Ba}}{}$ source, with various peaks labeled. In Table $1$, the energy known to correspond to these peaks is listed. Using this data, we can calibrate our MCA to display the kinetic energy of incoming electrons. 
 
-To measure the magnetic field supplied to our electrons, we use a Hall effect magnetometer. 
+To measure the magnetic field supplied to our electrons, we use a Hall effect magnetometer. To calibrate this magnetometer, we measure several sources with known magnetic fields. By comparing this data to the magnetic field displayed by the magnetomter, shown in Table $2$, we are able to fit this relation to a linear equation that can be used to correct for systematic uncertainties in magnetic field measurement. 
+\begin{table}[h]
+  \caption{boop}
+  \begin{ruledtabular}
+    \begin{tabular}{cc}
+      B$_{expected}$ (G)&B$_{measured}$ (G)\\
+      \hline
+      $0.0$ & $0.0 \pm .1$ \\
+      $99.69 \pm 1.0$ & $111.3 \pm .2$ \\
+      $202.5 \pm 2.0$ & $201.5 \pm .2$ \\
+    \end{tabular}
+  \end{ruledtabular}
+\end{table}
+      
 
 
 
