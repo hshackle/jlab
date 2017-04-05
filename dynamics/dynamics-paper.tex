@@ -165,7 +165,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-\title{Relativistic Dynamic Detection through Electron Acceleration}
+\title{Relativistic Behavior Detection through Electron Acceleration}
 \author{Henry Shackleton}
 \email{hshackle@mit.edu}
 \date{\today}
@@ -173,7 +173,7 @@
 
 
 \begin{abstract}
-  Classical and relativsitic mechanics differ in their predictions of how the momentum and energy of particles depend on their velocity. By accelerating electrons emitted from a $\tensor*[^{90}]{\text{Sr}}{}$ source through a magnetic field, we are able to measure these momentum and energy relations for the electrons. Using this, we are able to conclude that the relativistic theory more accurately predicts the trends measured. Fitting this relation also allows us to calculate the elctron charge to mass ratio, $e/m$.
+  Classical and relativsitic mechanics differ in their predictions of how the momentum and energy of particles depend on their velocity. By accelerating electrons emitted from a $\tensor*[^{90}]{\text{Sr}}{}$ source through a magnetic field, we are able to measure these momentum and energy relations for the electrons. Using this, we are able to conclude that the relativistic theory more accurately predicts the trends measured. Fitting this relation also allows us to calculate the electron charge as $(5.02 \pm 0.3) \times 10^{-10}$ esu and the electron rest energy as $(5.05 \pm .78) \times 10^{2}$ kEv.
 \end{abstract}
 
 \maketitle
@@ -194,7 +194,7 @@ where $c$ is the speed of light - approximately $3.0 \times 10^{8}$ km/s. The va
 
 These predictions from classical mechanics and special relativity gives us relations that can be used to fit an experimentally-measured graph of $K(p)$. The remainder of our analysis of the physical theory will be used to dermine how the kinetic energy and momentum of a particle relate to our setup.
 
-The Lorentz law is an equation that holds in both classical mechanics and special relativity. This law determines how electric and magnetic fields affect the motion of a charged particle. In the presence of an electric field $\vb{E}$ and a magnetic field $\vb{B}$, the change in momentum is related to the two fields, as well as the charge of the particle $e$, the velocity of the particle $\vb{v}$, and the speed of light $c$ by
+In our experiment, we will use a magnetic field to accelerate electrons to high speeds. The Lorentz law is an equation that holds in both classical mechanics and special relativity, and determines how electric and magnetic fields affect the motion of a charged particle. In the presence of an electric field $\vb{E}$ and a magnetic field $\vb{B}$, the change in momentum is related to the two fields, as well as the charge of the particle $e$, the velocity of the particle $\vb{v}$, and the speed of light $c$ by
 \begin{equation}
     \dv{\vb{p}}{t} = e\left(\vb{E} + \frac{\vb{v}}{c} \times \vb{B} \right)
   \end{equation}
@@ -202,27 +202,37 @@ The Lorentz law is an equation that holds in both classical mechanics and specia
   \begin{equation}
     p = \left(\frac{e\rho}{c}\right) B
   \end{equation}
-
+Substituting this into our equations of kinetic energy, we get that the kinetic energy of a particle with charge $e$ and mass $m$ accelerated by a magnetic field $B$ around a radius $\rho$ is given by
+\begin{equation}
+  K = \frac{e^2 \rho^2}{2mc^2} B
+\end{equation}
+for classical mechanics, and
+\begin{equation}
+  K = \sqrt{e^2 \rho^2 B^2 + m^2 c^4} - mc^2
+\end{equation}
+for special relativity. Similar to the relation between $K$ and $p$, the relativistic and non-relativistic models predict different qualitative relations between $K$ and $B$. By accelerating particles with a magnetic field at a fixed radius and measuring the kinetic energy of the particles, we can obtain an experimental graph of $K(B)$ which will allow us to compare our relativistic and non-relativistic models.
 \section{Experimental Setup}
 Our experimental setup consists of a large, spherical shell with coils wrapped around it. When these coils are fed a current, it generates an approximately uniform magnetic field across the inside of the shell, oriented vertically. By varying the current supplied to the coils, we can control the magnetic field inside the shell. The top and bottom hemispheres of the shell are disconnected, to allow for inspection of the internal components of the shell.
 
-In the bottom hemisphere of the shell, a vacuum chamber is maintained through a mechanical pump and monitored by a pressure gauge. On one side of the chamber, a $\tensor*[^{90}]{\text{Sr}}{}$/$\tensor*[^{90}]{\text{Y}}{}$ beta source is placed. This beta source emits electrons with energies up to $2.28$ MeV. When electrons are emitted in the prsence of the magnetic field, their trajectories are curved into orbits relative to their momentum.
+In the bottom hemisphere of the shell, a vacuum chamber is maintained through a mechanical pump and monitored by a pressure gauge. On one side of the chamber, a $\tensor*[^{90}]{\text{Sr}}{}$/$\tensor*[^{90}]{\text{Y}}{}$ beta source is placed. This beta source emits electrons with energies up to $2.28$ MeV. When electrons are emitted in the prsence of the magnetic field, their trajectories are curved into orbits relative to their momentum, as predicted by Equation 4.
 
 On the other side of the chamber, placed at a distance of $40.6 \pm 0.4$ cm away from the source, is a parallel-plate velocity selector and a PIN diode detector. When the electrons are accelerated in a helical orbit, only electrons of a certain momentum will pass between the two plates. If these electrons continue on their helical orbit, they will hit the side of the plates and not be detected by the PIN diode. By supplying a constant electric field $E$ between the two plates , the trajectory of the elctrons can be straightened out and detected by the PIN diode at some $E$ proportional to the velocity of the electrons. When the electrons come in contact with the PIN diode, the kinetic energy is converted into an electric signal, which is fed through an amplifier and read by a multi-channel analyzer (MCA). This configuration allows us to detect the velocity, momentum, and kinetic energy of incoming electrons by looking at the supplied electric field, magnetic field, and MCA readout respectively.
 
 Located halfway between the helical trajectory between the beta source and the detector is a metal divider with a small slit in it. In the absence of a perfect vacuum, our vacuum chamber will be filled with other particles, which the electrons from our beta source can scatter off of. To minimize the effects of this, we place a slit to attempt to screen our particles and only allow particles to pass through the slit whose trajectories have not been altered by scattering.
 
 \begin{figure}[h]
-  \includegraphics[width=.5\textwidth]{setup.png}
+  \includegraphics[width=.5\textwidth]{setup2.png}
   \caption{A block diagram of our experimental setup. The circular lines drawn depict the expected trajectories from the beta source to the PIN diode detector.}
 \end{figure}
 
 \section{Experimental Calibration}
-There are two calibration procedures necessary for this experiment - the MCA calibration and the magnetometer calibration. The MCA detects the strength of incoming electric signals and bins them accordingly, but the correspondance between this measurement and the kinetic energy of the detected electron is, by default, unknown. To determine this relation, we place a $\tensor*[^133]{\text{Ba}}{}$ source next to the PIN diode. The spectrum of $\tensor*[^133]{\text{Ba}}{}$ is well known and can be used to calibrate our MCA. Displayed in Figure $2$ is an example of an MCA readout of a $\tensor*[^133]{\text{Ba}}{}$ source, with various peaks labeled. In Table $1$, the energy known to correspond to these peaks is listed. Using this data, we can calibrate our MCA to display the kinetic energy of incoming electrons. 
+Prior to our experiment, we carry out three calibration procedures - the MCA calibration, the magnetometer calibration, and inhomogeneity measurements of our magnetic field. The MCA calibration is necessary for our experiment, while the latter two calibrations are used to correct for systematic errors and obtain more accurate measurements.
 
-To measure the magnetic field supplied to our electrons, we use a Hall effect magnetometer. To calibrate this magnetometer, we measure several sources with known magnetic fields. By comparing this data to the magnetic field displayed by the magnetomter, shown in Table $2$, we are able to fit this relation to a linear equation that can be used to correct for systematic uncertainties in magnetic field measurement. 
+The MCA detects the strength of incoming electric signals and bins them by their amplitude. This amplitude corresponds to the kinetic energy of the particles hitting the PIN diode, but the correspondance between the kinetic energy and the measured amplitude is, by default, unknown. To determine this relation, we place a $\tensor*[^{133}]{\text{Ba}}{}$ source next to the PIN diode. The spectrum of $\tensor*[^{133}]{\text{Ba}}{}$ is well known and can be used to calibrate our MCA. Displayed in Figure $2$ is an example of an MCA readout of a $\tensor*[^{133}]{\text{Ba}}{}$ source, with various peaks labeled. In Table $1$, the energy known to correspond to these peaks is listed. Using this data, we can calibrate our MCA to measure the kinetic energy of incoming electrons. 
+
+To measure the magnetic field supplied to our electrons, we use a Hall effect magnetometer. To calibrate this magnetometer, we measure several sources with known magnetic fields. By comparing this data to the magnetic field displayed by the magnetomter, shown in Table $2$, we are able to fit this relation to a linear equation $\text{B}_{actual} = (0.94 \pm x)\text{B}_{measured} + (0 \pm 0)$ that can be used to correct for systematic uncertainties in magnetic field measurement. 
 \begin{table}[h]
-  \caption{boop}
+  \caption{A comparison of expected magnetic field values from various sources and the measured values. As the measured value varied depending on the location, we set the magnetometer to "peak hold," which displays only the largest value measured. We expect the location of the largest magnetic field to correspond to the location where the magnetic field is at the expected value.}
   \begin{ruledtabular}
     \begin{tabular}{cc}
       B$_{expected}$ (G)&B$_{measured}$ (G)\\
@@ -233,8 +243,56 @@ To measure the magnetic field supplied to our electrons, we use a Hall effect ma
     \end{tabular}
   \end{ruledtabular}
 \end{table}
-      
 
+The magnetic field generated by our device is assumed in our calculations to be homogeneous. However, this is not practically the case. To account for this, we measure the magnetic field at three different points - labeled A, B, and C - along the trajectory, as shown in Figure 3. Point C will be the location that we measure during our experimental runs. By averaging over these values, and repeating this measurement for various magnetic fields, we are able to obtain another linear relation which relates the magnetic field that we measure during our run to the average magnetic field across the trajectory of our electrons. This relation is given by a fit of $\text{B}_{average} = (0.99 \pm 0.01) \text{B}_C + (0.81 \pm 0.99)$.
+\begin{figure}[h]
+  \includegraphics[width=.5\textwidth]{inhomo.png}
+  \caption{The three locations, labeled A, B, and C, where we measured the magnetic field inside our apparatus in order to determine the correspondance between the magnetic field at "C" - the location at which we will mesaure the magnetic field during our experimental run - and the average magnetic field across the electron trajectory}
+\end{figure}
+\section{Data Analysis}
+In the course of our experiment, we collect data at four different values of the measured magnetic field, ranging from 90G to 120G. Note that this range only corresponds to the range of the magnetic fields displayed on the magnetometer - after correcting for the systematic uncertanties in the magnetometer and inhomogeneities in the magnetic field, the actual range of magnetic fields measured fall between 84G and 112G.
+
+In each of the different values of the magnetic field, we conduct a sweep of voltages supplied to our parallel-plate velocity selector, which corresponds to a sweep of the electric field between the two plates. As previously detailed, we expect some value of the electric field, E$^*$,  to straighten out the trajectory of the electrons and result in peak detection. By sweeping through values of the electric field and measuring the number of counts received by the MCA, we are able to obtain a value for E$^*$. While this value of E$^*$ will not be necessary for the data analysis in this paper, it can be used along with measured B values to determine the electron charge-to-mass ratio.
+
+For each run of a specific magnetic and electric field, we allow the MCA to collect data for 315 seconds in real time. The MCA receives electrical signals from the PIN diode corresponding to detections, which it bins according to the signal amplitude. This is converted to the corresponding energy through the data obtained in the MCA calibration. With this conversion, we obtain for each run a set of data, an example of which is shown in Figure 3. 
+
+\begin{figure}[h]
+  \includegraphics[width=.5\textwidth]{mca-readout.png}
+  \caption{Measured MCA detections for a single run, with $\text{B}_{measured} = 112$G and E $ = 4.4$kV. The MCA bins have been converted via the MCA calibration to their corresponding energies. The frequency of counts is sharply peaked around a small range of energies.}
+  \end{figure}
+      
+The distribution of these energy counts is sharply peaked over a small range. We detect a small amount of events outside this range - mostly with energies below the aforementioned range, but occasionally energies above the range. From our theory, we can deduce that these detections correspond to noise, either through electrons scattered by particles in the chamber, or the particles in the chamber themselves. As these two cases are irrelevant to the data we wish to measure
+
+\clearpage
+\appendix
+\section{Error Dependency of $mc^2$ and $e$}
+Given Equation $(6)$, we wish to determine how errors in $B$ and $K$ will affect the uncertainties in the obtained values of $mc^2$ and $e$. Solving Equation 6 for the two values, we obation
+\begin{equation}
+    mc^2 &= \frac{B^2 e^2 \rho^2}{2K} - \frac{K}{2}
+  \end{equation}
+  And
+  \begin{equation}
+    e &= \sqrt{\frac{K^2 + 2Kmc^2}{B^2 \rho^2}}
+  \end{equation}
+  Standard error propagation is given for some function $f(x,y)$ in first order as
+  \begin{equation}
+    \sigma_f^2 &= \sigma_x^2 \left(\pdv{f}{x}\right)^2 + \sigma_y^2 \left(\pdv{f}{y}\right)^2
+  \end{equation}
+  This equation assumes that the uncertainties in $B$ and $K$ are uncorralated, which we expect in our case - fluctuations in the magnetic field and variances in the kinetic energy measured are due to different aspects of our apparatus. As such, the equations for the uncertainty in $mc^2$ and $e$ to first order are given as
+  \begin{equation}
+    \sigma_{mc^2}^2 &= \sigma_B^2 \left(\frac{B \rho^2 e^2}{K}\right)^2 + \left(\frac{\beta^2 e^2 \rho^2}{2K^2} + \frac{1}{c}\right)^2 \sigma_K^2 
+  \end{equation}
+  and
+  \begin{equation}
+    \begin{aligned}
+    \sigma_e^2 &= \sigma_B^2 \left(\frac{2(K^2 + 2Kmc^2)}{B^4 \rho^6}\right) 
+    \\
+    &+ \sigma_K^2 \left(\frac{(2K + 2 mc^2)^2}{(K^2 + 2Kmc^2)B^2 \rho^2}\right)
+  \end{aligned}
+\end{equation}
+These equations show that uncertainty in $mc^2$ scales roughly linearly in $B/K$, which we expect to be large in our realm of measurement. This is not so for the uncertainty in $e$, which we expect to scale with terms such as $K/B$ and $K/B^2$. Although this analysis assumes a direct algebraic propagation of errors, as opposed to the propagation of errors to fit parameters through chi-squared and other fitting methods, the mechanism of propagation is similar enough that we can expect a similar scaling argument to hold.
+
+As previously mentioned, the consequence of this propagation can be understood intuitively by simply examining the equation. The function $K(B)$ is linear for $mc^2 = 0$, with a non-zero value of $mc^2$ turning $K(B)$ into a nonlinear function. Looking at the graph of $K(B)$, we see that it displays nonlinear behavior - specifically, quadratic - at low $B$. At higher values of $B$, where our data points are located, the graph is approximately linear. As such, we expect the value of $mc^2$ to not be reliably determined given our data points. Taking data points at lower $B$ would allow for more accurate measurements of $mc^2$, at the expense of not being able to reliably show the validity of special relativity over classical mechanics.
 
 
 

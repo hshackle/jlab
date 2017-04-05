@@ -1,7 +1,7 @@
 #include "Riostream.h"
 #include "TGraph.h"
 
-void mca_100_energy(){
+void mca_112_energy_new(){
  char tmp_str[1000];
   double freq;
   TCanvas *c1 = new TCanvas("c1", "Inhomogeneity Fit", 200, 10, 700, 500);
@@ -13,7 +13,7 @@ void mca_100_energy(){
   std::vector<double> err;
   int bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-4.4kV-100G.Spe"));
+  data->open(Form("hshackle-4.4kV-112G.Spe"));
   
   while (1){
 
@@ -33,15 +33,19 @@ void mca_100_energy(){
 
   gr = new TGraphErrors(2048, x, y, xerr, yerr);
   auto axis = gr->GetXaxis();
-  axis->SetLimits(245, 280);
+  axis->SetLimits(0, 600);
   gr->SetMarkerStyle(21);
-  gr->Draw("AP");
-  TF1 *fit = new TF1("fit", "gaus", 245, 280);
-  gr->Fit("fit", "R");
- mean.push_back(fit->GetParameter(1));
- err.push_back(fit->GetParError(1)); 
+  gr->Draw();
+  gr->GetXaxis()->SetTitle("Energy [kEv]");
+  gr->GetYaxis()->SetTitle("Frequency");
+  gr->SetTitle();
+  gStyle->SetOptStat(1111);
+  TF1 *fit = new TF1("fit", "gaus", 300, 325);
+ // gr->Fit("fit", "R");
+ //mean.push_back(fit->GetParameter(1));
+ //err.push_back(fit->GetParError(1)); 
 
-  gr->Clear();
+  gr->Draw();
  for (n=0;n< 2048;n++){
    x[bin] = 0;
    y[bin] = 0;
@@ -50,7 +54,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-4.3kV-100G.Spe"));
+  data->open(Form("hshackle-4.3kV-112G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -77,7 +81,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-4.2kV-100G.Spe"));
+  data->open(Form("hshackle-4.2kV-112G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -105,7 +109,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-4.1kV-100G.Spe"));
+  data->open(Form("hshackle-4.1kV-112G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -133,7 +137,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-4.0kV-100G.Spe"));
+  data->open(Form("hshackle-4.0kV-112G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -161,7 +165,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.9kV-100G.Spe"));
+  data->open(Form("hshackle-3.9kV-112G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -189,7 +193,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.8kV-100G.Spe"));
+  data->open(Form("hshackle-5kV-112G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -217,7 +221,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.7kV-100G.Spe"));
+  data->open(Form("hshackle-4.9kV-112G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -245,7 +249,7 @@ for (n=0;n< 2048;n++){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.6kV-100G.Spe"));
+  data->open(Form("hshackle-4.8kV-112G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -273,7 +277,7 @@ for (n=0;n< 2048;n++){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.5kV-100G.Spe"));
+  data->open(Form("hshackle-4.7kV-112G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -301,7 +305,7 @@ for (n=0;n< 2048;n++){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.4kV-100G.Spe"));
+  data->open(Form("hshackle-4.6kV-112G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -329,7 +333,7 @@ for (n=0;n< 2048;n++){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.3kV-100G.Spe"));
+  data->open(Form("hshackle-4.5kV-112G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);

@@ -10,7 +10,7 @@ void mca_112_energy(){
   data = new ifstream;
   data->open(Form("hshackle-4.4kV-112G.Spe"));
   
-  TH1F *h1 = new TH1F("Data", "Electron Count Rate", 600, 290, 330);
+  TH1F *h1 = new TH1F("Data", "Electron Count Rate", 50, 295, 320);
   while (1){
 
     data->getline(tmp_str, 256);
@@ -23,6 +23,8 @@ void mca_112_energy(){
   }
 
   data->close();
+  h1->SetMarkerStyle(21);
+  h1->Draw();
 
  h1->Fit("gaus");
  TF1 *fit = h1->GetFunction("gaus");

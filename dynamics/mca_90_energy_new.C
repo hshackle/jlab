@@ -1,7 +1,7 @@
 #include "Riostream.h"
 #include "TGraph.h"
 
-void mca_100_energy(){
+void mca_90_energy_new(){
  char tmp_str[1000];
   double freq;
   TCanvas *c1 = new TCanvas("c1", "Inhomogeneity Fit", 200, 10, 700, 500);
@@ -13,7 +13,7 @@ void mca_100_energy(){
   std::vector<double> err;
   int bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-4.4kV-100G.Spe"));
+  data->open(Form("hshackle-3.2kV-90G.Spe"));
   
   while (1){
 
@@ -33,10 +33,10 @@ void mca_100_energy(){
 
   gr = new TGraphErrors(2048, x, y, xerr, yerr);
   auto axis = gr->GetXaxis();
-  axis->SetLimits(245, 280);
+  axis->SetLimits(210, 235);
   gr->SetMarkerStyle(21);
   gr->Draw("AP");
-  TF1 *fit = new TF1("fit", "gaus", 245, 280);
+  TF1 *fit = new TF1("fit", "gaus", 210, 235);
   gr->Fit("fit", "R");
  mean.push_back(fit->GetParameter(1));
  err.push_back(fit->GetParError(1)); 
@@ -50,7 +50,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-4.3kV-100G.Spe"));
+  data->open(Form("hshackle-3.1kV-90G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -77,7 +77,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-4.2kV-100G.Spe"));
+  data->open(Form("hshackle-3.0kV-90G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -105,7 +105,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-4.1kV-100G.Spe"));
+  data->open(Form("hshackle-2.9kV-90G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -133,7 +133,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-4.0kV-100G.Spe"));
+  data->open(Form("hshackle-3.3kV-90G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -161,7 +161,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.9kV-100G.Spe"));
+  data->open(Form("hshackle-2.8kV-90G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -189,7 +189,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.8kV-100G.Spe"));
+  data->open(Form("hshackle-3.4kV-90G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -217,7 +217,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.7kV-100G.Spe"));
+  data->open(Form("hshackle-3.5kV-90G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -245,7 +245,7 @@ for (n=0;n< 2048;n++){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.6kV-100G.Spe"));
+  data->open(Form("hshackle-3.6kV-90G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -273,7 +273,7 @@ for (n=0;n< 2048;n++){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.5kV-100G.Spe"));
+  data->open(Form("hshackle-3.8kV-90G.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -293,63 +293,6 @@ for (n=0;n< 2048;n++){
  mean.push_back(fit->GetParameter(1));
  err.push_back(fit->GetParError(1)); 
 
-for (n=0;n< 2048;n++){
-   x[bin] = 0;
-   y[bin] = 0;
-   xerr[bin] = 0;
-   yerr[bin] = 0;
- }
-  bin = 0;
-  data = new ifstream;
-  data->open(Form("hshackle-3.4kV-100G.Spe"));
-  while (1){
-
-    data->getline(tmp_str, 256);
-    freq = atof(tmp_str);
-    x[bin] = bin*0.286286 - .591431;
-    y[bin] = freq;
-    yerr[bin] = TMath::Sqrt(freq);
-    xerr[bin] = 0;
-    bin += 1;
-    if(!data->good()) break;
-  }
-
-  data->close();
-  gr10 = new TGraphErrors(2048, x, y, xerr, yerr);
-  gr10->Fit("fit", "R");
- 
- mean.push_back(fit->GetParameter(1));
- err.push_back(fit->GetParError(1)); 
-
-for (n=0;n< 2048;n++){
-   x[bin] = 0;
-   y[bin] = 0;
-   xerr[bin] = 0;
-   yerr[bin] = 0;
- }
-  bin = 0;
-  data = new ifstream;
-  data->open(Form("hshackle-3.3kV-100G.Spe"));
-  while (1){
-
-    data->getline(tmp_str, 256);
-    freq = atof(tmp_str);
-    x[bin] = bin*0.286286 - .591431;
-    y[bin] = freq;
-    yerr[bin] = TMath::Sqrt(freq);
-    xerr[bin] = 0;
-    bin += 1;
-    if(!data->good()) break;
-  }
-
-  data->close();
-  gr11 = new TGraphErrors(2048, x, y, xerr, yerr);
-  gr11->Fit("fit", "R");
- 
- mean.push_back(fit->GetParameter(1));
- err.push_back(fit->GetParError(1)); 
-
-
 
  double total_mean = TMath::Mean(mean.begin(), mean.end());
  double rms = TMath::RMS(mean.begin(), mean.end());
@@ -361,8 +304,8 @@ for (n=0;n< 2048;n++){
  for (double n : err){
    total_err += n*n;
  }
- total_err = total_err/12;
- total_err = TMath::Sqrt(total_err + rms*rms/12);
+ total_err = total_err/10;
+ total_err = TMath::Sqrt(total_err + rms*rms/10);
  cout << total_err << endl;
 }
 

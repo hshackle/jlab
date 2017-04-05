@@ -1,7 +1,7 @@
 #include "Riostream.h"
 #include "TGraph.h"
 
-void mca_100_energy(){
+void mca_120_energy_new(){
  char tmp_str[1000];
   double freq;
   TCanvas *c1 = new TCanvas("c1", "Inhomogeneity Fit", 200, 10, 700, 500);
@@ -13,7 +13,7 @@ void mca_100_energy(){
   std::vector<double> err;
   int bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-4.4kV-100G.Spe"));
+  data->open(Form("hshackle-4.4kV-120G-long.Spe"));
   
   while (1){
 
@@ -33,10 +33,10 @@ void mca_100_energy(){
 
   gr = new TGraphErrors(2048, x, y, xerr, yerr);
   auto axis = gr->GetXaxis();
-  axis->SetLimits(245, 280);
+  axis->SetLimits(345, 365);
   gr->SetMarkerStyle(21);
   gr->Draw("AP");
-  TF1 *fit = new TF1("fit", "gaus", 245, 280);
+  TF1 *fit = new TF1("fit", "gaus", 340, 365);
   gr->Fit("fit", "R");
  mean.push_back(fit->GetParameter(1));
  err.push_back(fit->GetParError(1)); 
@@ -50,7 +50,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-4.3kV-100G.Spe"));
+  data->open(Form("hshackle-4.3kV-120G-long.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -77,7 +77,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-4.2kV-100G.Spe"));
+  data->open(Form("hshackle-5.4kV-120G-long.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -105,7 +105,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-4.1kV-100G.Spe"));
+  data->open(Form("hshackle-5.3kV-120G-long.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -133,7 +133,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-4.0kV-100G.Spe"));
+  data->open(Form("hshackle-5.2kV-120G-long.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -161,7 +161,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.9kV-100G.Spe"));
+  data->open(Form("hshackle-5.1kV-120G-long.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -189,7 +189,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.8kV-100G.Spe"));
+  data->open(Form("hshackle-5.0kV-120G-long.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -217,7 +217,7 @@ void mca_100_energy(){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.7kV-100G.Spe"));
+  data->open(Form("hshackle-4.9kV-120G-long.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -245,7 +245,7 @@ for (n=0;n< 2048;n++){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.6kV-100G.Spe"));
+  data->open(Form("hshackle-4.8kV-120G-long.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -264,7 +264,7 @@ for (n=0;n< 2048;n++){
  
  mean.push_back(fit->GetParameter(1));
  err.push_back(fit->GetParError(1)); 
-
+/*
 for (n=0;n< 2048;n++){
    x[bin] = 0;
    y[bin] = 0;
@@ -273,7 +273,7 @@ for (n=0;n< 2048;n++){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.5kV-100G.Spe"));
+  data->open(Form("hshackle-4.7kV-120G-long.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -292,6 +292,7 @@ for (n=0;n< 2048;n++){
  
  mean.push_back(fit->GetParameter(1));
  err.push_back(fit->GetParError(1)); 
+ */
 
 for (n=0;n< 2048;n++){
    x[bin] = 0;
@@ -301,7 +302,7 @@ for (n=0;n< 2048;n++){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.4kV-100G.Spe"));
+  data->open(Form("hshackle-4.6kV-120G-long.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -329,7 +330,7 @@ for (n=0;n< 2048;n++){
  }
   bin = 0;
   data = new ifstream;
-  data->open(Form("hshackle-3.3kV-100G.Spe"));
+  data->open(Form("hshackle-4.5kV-120G-long.Spe"));
   while (1){
 
     data->getline(tmp_str, 256);
@@ -361,8 +362,8 @@ for (n=0;n< 2048;n++){
  for (double n : err){
    total_err += n*n;
  }
- total_err = total_err/12;
- total_err = TMath::Sqrt(total_err + rms*rms/12);
+ total_err = total_err/11;
+ total_err = TMath::Sqrt(total_err + rms*rms/11);
  cout << total_err << endl;
 }
 
