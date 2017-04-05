@@ -57,14 +57,26 @@
       \begin{itemize}
         \item
           $\dv{\vb{p}}{t} = e \left(\vb{E} + \frac{\vb{v}}{c} \times \vb{B}\right)$
-        \item Electrons follow a circular orbit with radii proportional to their momentum
-        \item $p = \frac{\rho e}{c} B$
+        \item Electrons follow a circular orbit with radii $\rho$ proportional to their momentum, $p = \frac{\rho e}{c} B$
       \end{itemize}
 \end{column}
     \begin{column}{0.5\textwidth}
   \includegraphics[width=6cm]{lorentz.png}
 \end{column}
 \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Lorentz Law Yields Kinetic Energy vs. Magnetic Field Relations}
+  Classically,
+  \begin{equation*}
+    K = \frac{e^2 \rho^2}{2mc^2} B^2
+  \end{equation*}
+  Relativistically,
+  \begin{equation*}
+    K = \sqrt{e^2 \rho^2 B^2 + m^2 c^4} - mc^2
+  \end{equation*}
+  Experimentally measuring K vs. B will let us pick the more likely model
 \end{frame}
 
 \begin{frame}
@@ -100,7 +112,6 @@
   \frametitle{Kinetic Energy Determined through Gaussian Fitting}
   \includegraphics[width=12cm]{gaus.png}
 \end{frame}
-
 \begin{frame}
   \frametitle{Gaussian Fits Bring Uncertainty in Kinetic Energy}
   \begin{table}
@@ -108,10 +119,10 @@
     \begin{tabular}{ccc}
       $\text{B}_{approx} \text{ (G)}$ & K (kEv) & $\sigma_K$ (kEv) \\
       \hline
-      90 & 222 & .2 \\
-      100 & 265 & .2 \\
-      110 & 312 & .4 \\
-      120 & 355 & .3 \\
+      90 & 222 & 1.47 \\
+      100 & 265 & 1.08 \\
+      110 & 312 & .79 \\
+      120 & 355 & .66 \\
     \end{tabular}
   \end{ruledtabular}
 \end{table}
@@ -149,12 +160,42 @@
 
 \begin{frame}
   \frametitle{Data Follows Relativistic Trend}
-  \includegraphics[width=13cm]{finalfit.png}
+  \includegraphics[width=13cm]{sysgraph.png}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Shapes of Fit Separate at Large Kinetic Energies}
-  \includegraphics[width=13cm]{finalfitzoom.png}
+  \frametitle{Relativistic Fit Predicts Realistic Constants}
+  \begin{center}
+\begin{ruledtabular}
+    \begin{tabular}{ccc}
+      \hspace{52pt}\vline&  Measured Values & Expected Values \\
+      \hline
+      $e$ (esu) \hspace{12pt}    \vline& $5.02 \pm .03$ & $4.8$ \\
+      $mc^2$ (kEv) \vline& $505 \pm 76$ & $511$ \\
+    \end{tabular}
+  \end{ruledtabular}
+\end{center}
+Correlated fit pays off - uncertainty in $mc^2$ reduces from $200$ kEv to 76 kEv.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Rest Energy Is Not Dominant In Our Regime}
+  \begin{center}
+    $K = \sqrt{{\color{blue}\rho^2 e^2 B^2} - {\color{red} m^2 c^4}} - {\color{red} mc^2}$
+  \includegraphics[width=13cm]{error.png}
+\end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Electromagnetisim Allows for Detection of Relativistic Effects}
+  \begin{itemize}
+    \pause
+  \item Special Relativity and Classical Mechanics make different predictions for $K(p)$
+    \pause
+  \item Using Lorentz's Law, we can determine electron momentum by the magnetic field supplied
+    \pause
+  \item Experimentally determined relationship of K and B follow relativistic trends and predict electron charge and rest energy within expected values
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -176,6 +217,22 @@
       &= \frac{p^2}{2m}
     \end{aligned}
   \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Voltage for Curvature Correction Dependent on Velocity}
+  \begin{itemize}
+    \item For detection, the trajectory of the electron must be adjusted to a straight line
+      \pause
+    \item From Lorentz's Law, the required electric field is $E = \frac{vB}{c}$
+      \pause
+    \item For two plates separated by a distance $d$, the voltage required is $V = \frac{dvB}{c}$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Calibration Fit for Magnetometer Results in Large Errors}
+  \includegraphics[width=12cm]{calibration2.png}
 \end{frame}
 
 \end{document}

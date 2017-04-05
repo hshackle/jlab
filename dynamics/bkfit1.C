@@ -26,6 +26,14 @@ void bkfit1() {
   relativistic->SetParameter(1, 150);
   gr->Fit("relativistic");
   gStyle->SetOptFit(1111);
+  leg = new TLegend(0.1,0.1,0.45,0.3);
+  leg->AddEntry(fit1, "Relativistic Fit", "l");
+  leg->AddEntry(fit2, "Classic Fit", "l");
+  leg->SetTextSize(0.035);
+//  leg->SetFillColorAlpha(0,0);
+  leg->SetBorderSize(0);
+  //leg->SetTextAlign(11);
+  leg->Draw();
 };
 
 int main(){

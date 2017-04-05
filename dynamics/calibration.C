@@ -7,6 +7,9 @@ void calibration() {
 
   gr = new TGraphErrors(3, x, y, xerr, yerr);
   gr->Draw("AP");
+  gr->GetXaxis()->SetTitle("B Measured [G]");
+  gr->GetYaxis()->SetTitle("B Expected [G]");
+  gr->SetTitle();
   gr->Fit("pol1");
 /*  gr->Fit("relativistic");*/
   gStyle->SetOptFit(1111);

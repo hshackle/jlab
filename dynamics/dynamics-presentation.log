@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.8)  4 APR 2017 01:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.8)  5 APR 2017 16:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2071,89 +2071,89 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 ] <lorentz.png, id=299, 302.12875pt x 250.9375pt>
 File: lorentz.png Graphic file (type png)
  <use lorentz.png>
-Package pdftex.def Info: lorentz.png used on input line 68.
+Package pdftex.def Info: lorentz.png used on input line 67.
 (pdftex.def)             Requested size: 170.71652pt x 141.79143pt.
  [11
 
- <./lorentz.png>] <setup1.png, id=330, 1249.66875pt x 856.19875pt>
+ <./lorentz.png>] [12
+
+] <setup1.png, id=358, 1249.66875pt x 856.19875pt>
 File: setup1.png Graphic file (type png)
  <use setup1.png>
-Package pdftex.def Info: setup1.png used on input line 73.
-(pdftex.def)             Requested size: 312.9803pt x 214.42802pt.
- [12
-
- <./setup1.png (PNG copy)>] <setup2.png, id=358, 1249.66875pt x 856.19875pt>
-File: setup2.png Graphic file (type png)
- <use setup2.png>
-Package pdftex.def Info: setup2.png used on input line 78.
+Package pdftex.def Info: setup1.png used on input line 85.
 (pdftex.def)             Requested size: 312.9803pt x 214.42802pt.
  [13
 
- <./setup2.png (PNG copy)>] <setup3.png, id=386, 1249.66875pt x 856.19875pt>
-File: setup3.png Graphic file (type png)
- <use setup3.png>
-Package pdftex.def Info: setup3.png used on input line 83.
+ <./setup1.png (PNG copy)>] <setup2.png, id=386, 1249.66875pt x 856.19875pt>
+File: setup2.png Graphic file (type png)
+ <use setup2.png>
+Package pdftex.def Info: setup2.png used on input line 90.
 (pdftex.def)             Requested size: 312.9803pt x 214.42802pt.
  [14
 
- <./setup3.png (PNG copy)>] <calibration.png, id=413, 1053.9375pt x 677.53125pt>
-File: calibration.png Graphic file (type png)
- <use calibration.png>
-Package pdftex.def Info: calibration.png used on input line 88.
-(pdftex.def)             Requested size: 312.9803pt x 201.20361pt.
+ <./setup2.png (PNG copy)>] <setup3.png, id=413, 1249.66875pt x 856.19875pt>
+File: setup3.png Graphic file (type png)
+ <use setup3.png>
+Package pdftex.def Info: setup3.png used on input line 95.
+(pdftex.def)             Requested size: 312.9803pt x 214.42802pt.
  [15
 
- <./calibration.png>] <mca-readout-clean.pdf, id=442, 569.12625pt x 310.15875pt>
-File: mca-readout-clean.pdf Graphic file (type pdf)
- <use mca-readout-clean.pdf>
-Package pdftex.def Info: mca-readout-clean.pdf used on input line 93.
-(pdftex.def)             Requested size: 341.43306pt x 186.07774pt.
+ <./setup3.png (PNG copy)>] <calibration.png, id=440, 1053.9375pt x 677.53125pt>
+File: calibration.png Graphic file (type png)
+ <use calibration.png>
+Package pdftex.def Info: calibration.png used on input line 100.
+(pdftex.def)             Requested size: 312.9803pt x 201.20361pt.
  [16
 
- <./mca-readout-clean.pdf, page is rotated 90 degrees>] <mca-readout-total.png, id=513, 1603.9925pt x 874.26625pt>
-File: mca-readout-total.png Graphic file (type png)
- <use mca-readout-total.png>
-Package pdftex.def Info: mca-readout-total.png used on input line 97.
-(pdftex.def)             Requested size: 341.43306pt x 186.09595pt.
+ <./calibration.png>] <mca-readout-clean.pdf, id=470, 569.12625pt x 310.15875pt>
+File: mca-readout-clean.pdf Graphic file (type pdf)
+ <use mca-readout-clean.pdf>
+Package pdftex.def Info: mca-readout-clean.pdf used on input line 105.
+(pdftex.def)             Requested size: 341.43306pt x 186.07774pt.
  [17
 
- <./mca-readout-total.png>] <gaus.png, id=541, 1603.9925pt x 874.26625pt>
-File: gaus.png Graphic file (type png)
- <use gaus.png>
-Package pdftex.def Info: gaus.png used on input line 102.
+ <./mca-readout-clean.pdf, page is rotated 90 degrees>] <mca-readout-total.png, id=540, 1603.9925pt x 874.26625pt>
+File: mca-readout-total.png Graphic file (type png)
+ <use mca-readout-total.png>
+Package pdftex.def Info: mca-readout-total.png used on input line 109.
 (pdftex.def)             Requested size: 341.43306pt x 186.09595pt.
  [18
 
+ <./mca-readout-total.png>] <gaus.png, id=568, 1603.9925pt x 874.26625pt>
+File: gaus.png Graphic file (type png)
+ <use gaus.png>
+Package pdftex.def Info: gaus.png used on input line 114.
+(pdftex.def)             Requested size: 341.43306pt x 186.09595pt.
+ [19
+
  <./gaus.png>]
 
-./dynamics-presentation.tex:118: LaTeX Error: Environment ruledtabular undefined.
+./dynamics-presentation.tex:129: LaTeX Error: Environment ruledtabular undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.118 \end{frame}
+l.129 \end{frame}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./dynamics-presentation.tex:118: LaTeX Error: \begin{center} on input line 118 ended by \end{ruledtabular}.
+./dynamics-presentation.tex:129: LaTeX Error: \begin{center} on input line 129 ended by \end{ruledtabular}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.118 \end{frame}
+l.129 \end{frame}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[19
-
-] [20
+[20
 
 ] [21
 
@@ -2163,48 +2163,104 @@ or  <return>  to continue without it.
 
 ] [24
 
-] <inhomo.png, id=728, 894.34125pt x 841.1425pt>
+] [25
+
+] <inhomo.png, id=755, 894.34125pt x 841.1425pt>
 File: inhomo.png Graphic file (type png)
  <use inhomo.png>
-Package pdftex.def Info: inhomo.png used on input line 148.
+Package pdftex.def Info: inhomo.png used on input line 159.
 (pdftex.def)             Requested size: 170.71652pt x 160.56316pt.
- [25
+ [26
 
- <./inhomo.png>] <finalfit.png, id=757, 1603.9925pt x 874.26625pt>
-File: finalfit.png Graphic file (type png)
- <use finalfit.png>
-Package pdftex.def Info: finalfit.png used on input line 153.
+ <./inhomo.png>] <sysgraph.png, id=783, 1603.9925pt x 874.26625pt>
+File: sysgraph.png Graphic file (type png)
+ <use sysgraph.png>
+Package pdftex.def Info: sysgraph.png used on input line 164.
 (pdftex.def)             Requested size: 369.88582pt x 201.61061pt.
 
-Overfull \hbox (27.59052pt too wide) in paragraph at lines 153--153
-[][]  
- []
-
-[26
-
- <./finalfit.png>] <finalfitzoom.png, id=784, 1603.9925pt x 874.26625pt>
-File: finalfitzoom.png Graphic file (type png)
- <use finalfitzoom.png>
-Package pdftex.def Info: finalfitzoom.png used on input line 158.
-(pdftex.def)             Requested size: 369.88582pt x 201.61061pt.
-
-Overfull \hbox (27.59052pt too wide) in paragraph at lines 158--158
+Overfull \hbox (27.59052pt too wide) in paragraph at lines 164--164
 [][]  
  []
 
 [27
 
- <./finalfitzoom.png>] [28
+ <./sysgraph.png>]
 
-] [29
+./dynamics-presentation.tex:179: LaTeX Error: Environment ruledtabular undefined.
 
-] [30
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.179 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./dynamics-presentation.tex:179: LaTeX Error: \begin{center} on input line 179 ended by \end{ruledtabular}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.179 \end{frame}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[28
+
+] <error.png, id=837, 1603.9925pt x 874.26625pt>
+File: error.png Graphic file (type png)
+ <use error.png>
+Package pdftex.def Info: error.png used on input line 187.
+(pdftex.def)             Requested size: 369.88582pt x 201.61061pt.
+
+Overfull \hbox (27.59052pt too wide) in paragraph at lines 187--187
+ [] 
+ []
+
+
+Overfull \vbox (1.07527pt too high) detected at line 187
+ []
+
+[29
+
+ <./error.png (PNG copy)>] [30
 
 ] [31
 
 ] [32
 
-]
+] [33
+
+] [34
+
+] [35
+
+] [36
+
+] [37
+
+] [38
+
+] [39
+
+] [40
+
+] [41
+
+] <calibration2.png, id=1181, 1603.9925pt x 874.26625pt>
+File: calibration2.png Graphic file (type png)
+ <use calibration2.png>
+Package pdftex.def Info: calibration2.png used on input line 236.
+(pdftex.def)             Requested size: 341.43306pt x 186.09595pt.
+ [42
+
+ <./calibration2.png>]
 \tf@nav=\write7
 \openout7 = `dynamics-presentation.nav'.
 
@@ -2214,11 +2270,11 @@ Overfull \hbox (27.59052pt too wide) in paragraph at lines 158--158
 \tf@snm=\write9
 \openout9 = `dynamics-presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
  (./dynamics-presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
 Package rerunfilecheck Info: File `dynamics-presentation.out' has not changed.
 (rerunfilecheck)             Checksum: 37BBFAC7FB2A24A0FD1DA93FAFD9C22C;58.
 
@@ -2226,21 +2282,21 @@ Package rerunfilecheck Info: File `dynamics-presentation.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
  ) 
 Here is how much of TeX's memory you used:
- 24591 strings out of 493013
- 471983 string characters out of 6139317
- 519141 words of memory out of 5000000
- 27614 multiletter control sequences out of 15000+600000
+ 24626 strings out of 493013
+ 472317 string characters out of 6139317
+ 519142 words of memory out of 5000000
+ 27628 multiletter control sequences out of 15000+600000
  17156 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,16n,57p,10414b,600s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on dynamics-presentation.pdf (32 pages, 481493 bytes).
+Output written on dynamics-presentation.pdf (42 pages, 530239 bytes).
 PDF statistics:
- 998 PDF objects out of 1000 (max. 8388607)
- 892 compressed objects within 9 object streams
- 66 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1270 PDF objects out of 1440 (max. 8388607)
+ 1150 compressed objects within 12 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 135 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex dynamics-paper"] 1491359384 "dynamics-paper.aux" "dynamics-paper.bbl" "dynamics-paper" 1491359384
+["bibtex dynamics-paper"] 1491359384 "dynamics-paper.aux" "dynamics-paper.bbl" "dynamics-paper" 1491374395
   "/usr/share/texmf-dist/bibtex/bst/revtex/apsrev4-1.bst" 1479561037 71518 fec93f06df0c073f83d2330456bd19c2 ""
   "dynamics-paper.aux" 1491359382 2984 c9ef1adab6a311d74e48a73ae6d78cdb ""
   "dynamics-paper.bcf" 0 -1 0 ""
   "dynamics-paperNotes.bib" 1491359382 103 48ad29797468f16e2853d8797278d7af ""
   (generated)
-  "dynamics-paper.blg"
   "dynamics-paper.bbl"
-["pdflatex"] 1491359381 "dynamics-paper.tex" "dynamics-paper.pdf" "dynamics-paper" 1491359384
+  "dynamics-paper.blg"
+["pdflatex"] 1491359381 "dynamics-paper.tex" "dynamics-paper.pdf" "dynamics-paper" 1491374395
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1479649810 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1479649815 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1479649815 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -129,13 +129,13 @@
   "dynamics-paper.aux" 1491359382 2984 c9ef1adab6a311d74e48a73ae6d78cdb ""
   "dynamics-paper.bbl" 1491359384 1983 c789b8b2e2ff60989c671635ad8473c2 "bibtex dynamics-paper"
   "dynamics-paper.out" 1491359382 477 4076a86e8d79317822f1eaf790d1330c ""
-  "dynamics-paper.tex" 1491359380 24292 33c7778c40a5decbbab7e00642d49562 ""
+  "dynamics-paper.tex" 1491361216 24292 33c7778c40a5decbbab7e00642d49562 ""
   "inhomo.png" 1491095939 33612 53d397b10afa5c5701a8a8493e656503 ""
   "mca-readout.png" 1491094400 16173 0ad5e14dcd3a667065bd634a8860ca85 ""
   "setup2.png" 1491116899 50309 ee66a6680279cb5be623544b6180d46f ""
   (generated)
+  "dynamics-paperNotes.bib"
+  "dynamics-paper.log"
+  "dynamics-paper.aux"
   "dynamics-paper.pdf"
   "dynamics-paper.out"
-  "dynamics-paper.log"
-  "dynamics-paperNotes.bib"
-  "dynamics-paper.aux"
