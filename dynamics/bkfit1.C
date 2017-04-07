@@ -20,20 +20,20 @@ void bkfit1() {
   gr->Draw("AP");
   TF1 *classic = new TF1("classic", "[0]*x*x", -100, 100);
   classic->SetParameter(0, .03);
-//  gr->Fit("classic");
+  gr->Fit("classic");
   TF1 *relativistic = new TF1("relativistic", "TMath::Sqrt([0]*[0] *x*x + [1]*[1]) - [1]", -100, 100);
   relativistic->SetParameter(0, 20);
   relativistic->SetParameter(1, 150);
   gr->Fit("relativistic");
   gStyle->SetOptFit(1111);
-  leg = new TLegend(0.1,0.1,0.45,0.3);
+/*  leg = new TLegend(0.1,0.1,0.45,0.3);
   leg->AddEntry(fit1, "Relativistic Fit", "l");
   leg->AddEntry(fit2, "Classic Fit", "l");
   leg->SetTextSize(0.035);
 //  leg->SetFillColorAlpha(0,0);
   leg->SetBorderSize(0);
   //leg->SetTextAlign(11);
-  leg->Draw();
+  leg->Draw();*/
 };
 
 int main(){

@@ -1,0 +1,15 @@
+Intro
+=====
+
+- Hi, my name's Henry, and today I'll be presenting my findings on relativistic behavior detection through electron acceleration. Specifically, I'll be talking about the process of measuring the kinetic energy of electrons at high speeds. In doing so, we see that the framework of special relativity more accurately predicts the observed trends, and fitting our data to relativistic equations allows us to extract the electron charge and rest energy from our data.
+
+Slide 1
+=======
+
+- Our story begins back in the 17th century, when Newton formalized classical mechanics. F=ma, etc. This theory makes a number of predictions, a notable one being that there isn't any limit to how fast a particle can go.
+
+- In the 20th century, another theory began taking hold, the theory of special relativity. This theory holds as one of its assumptions that the speed of light, c, is constant in all reference frames. This leads to the prediction that the speed of an object is capped at c, different than what we would expect in classical mechanics.
+
+Slide 2 
+=======
+- Classical mechanics and relativity make different predictions 

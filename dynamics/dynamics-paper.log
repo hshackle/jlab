@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.8)  4 APR 2017 22:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.8)  7 APR 2017 02:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1389,10 +1389,10 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Try loading font information for U+msb on input line 176.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] <setup2.png, id=62, 1249.66875pt x 856.19875pt>
-File: setup2.png Graphic file (type png)
- <use setup2.png>
-Package pdftex.def Info: setup2.png used on input line 224.
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] <setup.png, id=68, 1249.66875pt x 856.19875pt>
+File: setup.png Graphic file (type png)
+ <use setup.png>
+Package pdftex.def Info: setup.png used on input line 224.
 (pdftex.def)             Requested size: 255.0pt x 174.71187pt.
 
 Overfull \hbox (9.0pt too wide) in paragraph at lines 224--225
@@ -1402,115 +1402,84 @@ Overfull \hbox (9.0pt too wide) in paragraph at lines 224--225
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<inhomo.png, id=63, 894.34125pt x 841.1425pt>
+<inhomo.png, id=73, 894.34125pt x 841.1425pt>
 File: inhomo.png Graphic file (type png)
  <use inhomo.png>
-Package pdftex.def Info: inhomo.png used on input line 249.
+Package pdftex.def Info: inhomo.png used on input line 256.
 (pdftex.def)             Requested size: 255.0pt x 239.83078pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 249--250
+Overfull \hbox (9.0pt too wide) in paragraph at lines 256--257
  [][] 
  []
 
-[2 <./setup2.png (PNG copy)>] <mca-readout.png, id=73, 1428.33624pt x 872.25874pt>
-File: mca-readout.png Graphic file (type png)
- <use mca-readout.png>
-Package pdftex.def Info: mca-readout.png used on input line 260.
-(pdftex.def)             Requested size: 255.0pt x 155.72208pt.
+[2 <./setup.png>] <mca-readout-clean.pdf, id=85, 569.12625pt x 310.15875pt>
+File: mca-readout-clean.pdf Graphic file (type pdf)
+ <use mca-readout-clean.pdf>
+Package pdftex.def Info: mca-readout-clean.pdf used on input line 268.
+(pdftex.def)             Requested size: 255.0pt x 138.9691pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 260--261
+Overfull \hbox (9.0pt too wide) in paragraph at lines 268--269
  [][] 
  []
 
-[3 <./inhomo.png> <./mca-readout.png>]
+[3 <./inhomo.png> <./mca-readout-clean.pdf, page is rotated 90 degrees>] <sysgraphpaper.pdf, id=137, 1603.79204pt x 874.15695pt>
+File: sysgraphpaper.pdf Graphic file (type pdf)
+ <use sysgraphpaper.pdf>
+Package pdftex.def Info: sysgraphpaper.pdf used on input line 299.
+(pdftex.def)             Requested size: 255.0pt x 138.98763pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 299--300
+ [][] 
+ []
+
+
+Package natbib Warning: Citation `ratio' on page 4 undefined on input line 304.
+
+(./dynamics-paper.bbl) [4 <./sysgraphpaper.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 268.
+(hyperref)                removing `math shift' on input line 326.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 268.
+(hyperref)                removing `superscript' on input line 326.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 268.
+(hyperref)                removing `math shift' on input line 326.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 268.
+(hyperref)                removing `math shift' on input line 326.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 268.
+(hyperref)                removing `math shift' on input line 326.
 
-./dynamics-paper.tex:271: Misplaced alignment tab character &.
-l.271     mc^2 &
-                = \frac{B^2 e^2 \rho^2}{2K} - \frac{K}{2}
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
-./dynamics-paper.tex:275: Misplaced alignment tab character &.
-l.275     e &
-             = \sqrt{\frac{K^2 + 2Kmc^2}{B^2 \rho^2}}
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+Package natbib Warning: There were undefined citations.
 
-./dynamics-paper.tex:279: Misplaced alignment tab character &.
-l.279     \sigma_f^2 &
-                      = \sigma_x^2 \left(\pdv{f}{x}\right)^2 + \sigma_y^2 \l...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./dynamics-paper.tex:283: Misplaced alignment tab character &.
-l.283     \sigma_{mc^2}^2 &
-                           = \sigma_B^2 \left(\frac{B \rho^2 e^2}{K}\right)^...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-(./dynamics-paper.bbl) [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 302.
+[5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 360.
  (./dynamics-paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
-
-
-Package rerunfilecheck Warning: File `dynamics-paper.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `dynamics-paper.out':
-(rerunfilecheck)             Before: 4C47F3E9352A1E0A88D51F5E7D2C1327;486
-(rerunfilecheck)             After:  4076A86E8D79317822F1EAF790D1330C;477.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 360.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 360.
+Package rerunfilecheck Info: File `dynamics-paper.out' has not changed.
+(rerunfilecheck)             Checksum: 4B939AC1D9B446D7A463499908536BFA;533.
  ) 
 Here is how much of TeX's memory you used:
- 15634 strings out of 493013
- 261226 string characters out of 6139317
- 440215 words of memory out of 5000000
- 19014 multiletter control sequences out of 15000+600000
+ 15682 strings out of 493013
+ 261841 string characters out of 6139317
+ 460829 words of memory out of 5000000
+ 19053 multiletter control sequences out of 15000+600000
  16807 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,10n,42p,10409b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,11n,42p,10409b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on dynamics-paper.pdf (4 pages, 316993 bytes).
+Output written on dynamics-paper.pdf (5 pages, 375355 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 72 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 242 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

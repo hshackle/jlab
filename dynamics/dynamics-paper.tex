@@ -173,12 +173,12 @@
 
 
 \begin{abstract}
-  Classical and relativsitic mechanics differ in their predictions of how the momentum and energy of particles depend on their velocity. By accelerating electrons emitted from a $\tensor*[^{90}]{\text{Sr}}{}$ source through a magnetic field, we are able to measure these momentum and energy relations for the electrons. Using this, we are able to conclude that the relativistic theory more accurately predicts the trends measured. Fitting this relation also allows us to calculate the electron charge as $(5.02 \pm 0.3) \times 10^{-10}$ esu and the electron rest energy as $(5.05 \pm .78) \times 10^{2}$ kEv.
+  Classical and relativistic mechanics differ in their predictions of how the momentum and energy of particles depend on their velocity. By accelerating electrons emitted from a $\tensor*[^{90}]{\text{Sr}}{}$ source through a magnetic field, we are able to measure these momentum and energy relations for the electrons. Using this, we are able to conclude that the relativistic theory more accurately predicts the trends measured. Fitting this relation also allows us to calculate the electron charge as $(5.02 \pm 0.3) \times 10^{-10}$ esu and the electron rest energy as $(5.05 \pm .78) \times 10^{2}$ kEv.
 \end{abstract}
 
 \maketitle
 \section{Introduction}
-Albert Einstein's 1905 paper, "On the Electrodynamics of Moving Bodies," was one of the foundational papers to developing the theory of special relativity. This theory was intended to reconcile inconsistencies with classical mechanics, electrodynamics, and observed phenomena. In his paper, Einstein postulated that the speed of light is a constant value in all reference frames, contradicting the classical prediction that light travels faster or slower depending on one's speed relaive to the light. This postulate, along with the additional assumption that the laws of physics are the same in all reference frames, leads to a new theory of dynamics, with different predictions than classical mechanics. These discrepencies allow us to compare the two theories against experimental data, and thus determine which theory yields more accurate predictions. We test this theory by accelerating electrons to speeds close to the speed of light - the regime where classical and relativistic theories differ the most.
+Albert Einstein's 1905 paper, "On the Electrodynamics of Moving Bodies," was one of the foundational papers to developing the theory of special relativity. This theory was intended to reconcile inconsistencies with classical mechanics, electrodynamics, and observed phenomena. In his paper, Einstein postulated that the speed of light is a constant value in all reference frames, contradicting the classical prediction that light travels faster or slower depending on one's speed relative to the light \cite{einstein}. This postulate, along with the additional assumption that the laws of physics are the same in all reference frames, leads to a new theory of dynamics, with different predictions than classical mechanics. These discrepancies allow us to compare the two theories against experimental data, and thus determine which theory yields more accurate predictions. We test this theory by accelerating electrons to speeds close to the speed of light - the regime where classical and relativistic theories differ the most.
 
 In classical mechanics, the kinetic energy $K$ of a particle as a function of momentum $p$ is given by
 \begin{equation}
@@ -190,11 +190,11 @@ In special relativity, the kinetic energy of a particle as a function of momentu
 \begin{equation}
   K = \sqrt{p^2 c^2 + m^2c^4} - mc^2
 \end{equation}
-where $c$ is the speed of light - approximately $3.0 \times 10^{8}$ km/s. The value $mc^2$ is known as the \textit{rest energy} of a particle. For particles with a small rest energy, $K$ becomes approximately a linear function of $p$. For massless particles like photons, $K(p)$ is exactly linear. 
+where $c$ is the speed of light - approximately $3.0 \times 10^{8}$ km/s. The value $mc^2$ is known as the \textit{rest energy} of a particle. For particles where the rest energy is small relative to $pc$, $K$ becomes approximately a linear function of $p$. For massless particles like photons, $K(p)$ is exactly linear. 
 
-These predictions from classical mechanics and special relativity gives us relations that can be used to fit an experimentally-measured graph of $K(p)$. The remainder of our analysis of the physical theory will be used to dermine how the kinetic energy and momentum of a particle relate to our setup.
+These predictions from classical mechanics and special relativity gives us relations that can be used to fit an experimentally-measured graph of $K(p)$. The remainder of our analysis of the physical theory will be used to determine how the kinetic energy and momentum of a particle relate to our setup.
 
-In our experiment, we will use a magnetic field to accelerate electrons to high speeds. The Lorentz law is an equation that holds in both classical mechanics and special relativity, and determines how electric and magnetic fields affect the motion of a charged particle. In the presence of an electric field $\vb{E}$ and a magnetic field $\vb{B}$, the change in momentum is related to the two fields, as well as the charge of the particle $e$, the velocity of the particle $\vb{v}$, and the speed of light $c$ by
+In our experiment, we will use a magnetic field to affect the trajectory of electrons - the particles whose relativistic effects we wish to detect. The Lorentz law is an equation that holds in both classical mechanics and special relativity, and determines how electric and magnetic fields affect the motion of a charged particle. In the presence of an electric field $\vb{E}$ and a magnetic field $\vb{B}$, the change in momentum is related to the two fields, as well as the charge of the particle $e$, the velocity of the particle $\vb{v}$, and the speed of light $c$ by
 \begin{equation}
     \dv{\vb{p}}{t} = e\left(\vb{E} + \frac{\vb{v}}{c} \times \vb{B} \right)
   \end{equation}
@@ -214,73 +214,131 @@ for special relativity. Similar to the relation between $K$ and $p$, the relativ
 \section{Experimental Setup}
 Our experimental setup consists of a large, spherical shell with coils wrapped around it. When these coils are fed a current, it generates an approximately uniform magnetic field across the inside of the shell, oriented vertically. By varying the current supplied to the coils, we can control the magnetic field inside the shell. The top and bottom hemispheres of the shell are disconnected, to allow for inspection of the internal components of the shell.
 
-In the bottom hemisphere of the shell, a vacuum chamber is maintained through a mechanical pump and monitored by a pressure gauge. On one side of the chamber, a $\tensor*[^{90}]{\text{Sr}}{}$/$\tensor*[^{90}]{\text{Y}}{}$ beta source is placed. This beta source emits electrons with energies up to $2.28$ MeV. When electrons are emitted in the prsence of the magnetic field, their trajectories are curved into orbits relative to their momentum, as predicted by Equation 4.
+In the bottom hemisphere of the shell, a vacuum chamber is maintained through a mechanical pump and monitored by a pressure gauge. On one side of the chamber, a $\tensor*[^{90}]{\text{Sr}}{}$/$\tensor*[^{90}]{\text{Y}}{}$ beta source is placed. This beta source emits electrons with energies up to $2.28$ MeV. When electrons are emitted in the presence of the magnetic field, their trajectories are curved into orbits relative to their momentum, as predicted by Equation 4.
 
-On the other side of the chamber, placed at a distance of $40.6 \pm 0.4$ cm away from the source, is a parallel-plate velocity selector and a PIN diode detector. When the electrons are accelerated in a helical orbit, only electrons of a certain momentum will pass between the two plates. If these electrons continue on their helical orbit, they will hit the side of the plates and not be detected by the PIN diode. By supplying a constant electric field $E$ between the two plates , the trajectory of the elctrons can be straightened out and detected by the PIN diode at some $E$ proportional to the velocity of the electrons. When the electrons come in contact with the PIN diode, the kinetic energy is converted into an electric signal, which is fed through an amplifier and read by a multi-channel analyzer (MCA). This configuration allows us to detect the velocity, momentum, and kinetic energy of incoming electrons by looking at the supplied electric field, magnetic field, and MCA readout respectively.
+On the other side of the chamber, placed at a distance of $40.6 \pm 0.4$ cm away from the source, is a parallel-plate velocity selector and a PIN diode detector. When the electrons are accelerated in a helical orbit, only electrons of a certain momentum will pass between the two plates. If these electrons continue on their helical orbit, they will hit the side of the plates and not be detected by the PIN diode. By supplying a constant electric field $E$ between the two plates, the trajectory of the electrons can be straightened out and detected by the PIN diode at some $E$ proportional to the velocity of the electrons. This follows directly from the Lorentz law. When the electrons come in contact with the PIN diode, the kinetic energy is converted into an electric signal, which is fed through an amplifier and read by a multi-channel analyzer (MCA). This configuration allows us to detect the velocity, momentum, and kinetic energy of incoming electrons by looking at the supplied electric field, magnetic field, and MCA readout respectively.
 
 Located halfway between the helical trajectory between the beta source and the detector is a metal divider with a small slit in it. In the absence of a perfect vacuum, our vacuum chamber will be filled with other particles, which the electrons from our beta source can scatter off of. To minimize the effects of this, we place a slit to attempt to screen our particles and only allow particles to pass through the slit whose trajectories have not been altered by scattering.
 
 \begin{figure}[h]
-  \includegraphics[width=.5\textwidth]{setup2.png}
-  \caption{A block diagram of our experimental setup. The circular lines drawn depict the expected trajectories from the beta source to the PIN diode detector.}
+  \includegraphics[width=.5\textwidth]{setup.png}
+  \caption{A block diagram of our experimental setup. The circular lines drawn depict the expected trajectories from the beta source to the PIN diode detector. Signals from the PIN diode are amplified and sent to a Multi-Channel Analyzer, as well as an oscilloscope for troubleshooting. Our velocity selector is connected to a voltage supply, as well as a voltometer to measure the voltage supplied.
+\cite{emanual}}
+  \label{diagram}
 \end{figure}
 
 \section{Experimental Calibration}
 Prior to our experiment, we carry out three calibration procedures - the MCA calibration, the magnetometer calibration, and inhomogeneity measurements of our magnetic field. The MCA calibration is necessary for our experiment, while the latter two calibrations are used to correct for systematic errors and obtain more accurate measurements.
 
-The MCA detects the strength of incoming electric signals and bins them by their amplitude. This amplitude corresponds to the kinetic energy of the particles hitting the PIN diode, but the correspondance between the kinetic energy and the measured amplitude is, by default, unknown. To determine this relation, we place a $\tensor*[^{133}]{\text{Ba}}{}$ source next to the PIN diode. The spectrum of $\tensor*[^{133}]{\text{Ba}}{}$ is well known and can be used to calibrate our MCA. Displayed in Figure $2$ is an example of an MCA readout of a $\tensor*[^{133}]{\text{Ba}}{}$ source, with various peaks labeled. In Table $1$, the energy known to correspond to these peaks is listed. Using this data, we can calibrate our MCA to measure the kinetic energy of incoming electrons. 
+The MCA detects the strength of incoming electric signals and bins them by their amplitude. This amplitude corresponds to the kinetic energy of the particles hitting the PIN diode, but the correspondence between the kinetic energy and the measured amplitude is, by default, unknown. To determine this relation, we place a $\tensor*[^{133}]{\text{Ba}}{}$ source next to the PIN diode. The spectrum of $\tensor*[^{133}]{\text{Ba}}{}$ is well known and can be used to calibrate our MCA. %Displayed in Figure $2$ is an example of an MCA readout of a $\tensor*[^{133}]{\text{Ba}}{}$ source, with various peaks labeled. In Table $1$, the energy known to correspond to these peaks is listed.
+Using this data, we can calibrate our MCA to measure the kinetic energy of incoming electrons. 
 
-To measure the magnetic field supplied to our electrons, we use a Hall effect magnetometer. To calibrate this magnetometer, we measure several sources with known magnetic fields. By comparing this data to the magnetic field displayed by the magnetomter, shown in Table $2$, we are able to fit this relation to a linear equation $\text{B}_{actual} = (0.94 \pm x)\text{B}_{measured} + (0 \pm 0)$ that can be used to correct for systematic uncertainties in magnetic field measurement. 
+To measure the magnetic field supplied to our electrons, we use a Hall effect magnetometer. To calibrate this magnetometer, we measure several sources with known magnetic fields. By comparing this data to the magnetic field displayed by the magnetometer, shown in Table \ref{magnetometer}, we are able to fit this relation to a linear equation $\text{B}_{actual} = (0.94 \pm 0.01)\text{B}_{measured} + (-0.02 \pm 0.09)$ that can be used to correct for systematic uncertainties in magnetic field measurement. 
 \begin{table}[h]
   \caption{A comparison of expected magnetic field values from various sources and the measured values. As the measured value varied depending on the location, we set the magnetometer to "peak hold," which displays only the largest value measured. We expect the location of the largest magnetic field to correspond to the location where the magnetic field is at the expected value.}
-  \begin{ruledtabular}
-    \begin{tabular}{cc}
+\begin{tabular}{||c c||}
+  \hline
       B$_{expected}$ (G)&B$_{measured}$ (G)\\
       \hline
+      \hline
       $0.0$ & $0.0 \pm .1$ \\
+      \hline
       $99.69 \pm 1.0$ & $111.3 \pm .2$ \\
+      \hline
       $202.5 \pm 2.0$ & $201.5 \pm .2$ \\
+      \hline
     \end{tabular}
-  \end{ruledtabular}
+  \label{magnetometer}
 \end{table}
 
-The magnetic field generated by our device is assumed in our calculations to be homogeneous. However, this is not practically the case. To account for this, we measure the magnetic field at three different points - labeled A, B, and C - along the trajectory, as shown in Figure 3. Point C will be the location that we measure during our experimental runs. By averaging over these values, and repeating this measurement for various magnetic fields, we are able to obtain another linear relation which relates the magnetic field that we measure during our run to the average magnetic field across the trajectory of our electrons. This relation is given by a fit of $\text{B}_{average} = (0.99 \pm 0.01) \text{B}_C + (0.81 \pm 0.99)$.
+The magnetic field generated by our device is assumed in our calculations to be homogeneous. However, this is not practically the case. To account for this, we measure the magnetic field at three different points - labeled A, B, and C - along the trajectory, as shown in Figure \ref{inhomo}. Point C will be the location that we measure during our experimental runs. By averaging over these values, and repeating this measurement for various magnetic fields, we are able to obtain another linear relation which relates the magnetic field that we measure during our run to the average magnetic field across the trajectory of our electrons. This relation is given by a fit of $\text{B}_{average} = (0.99 \pm 0.01) \text{B}_C + (0.81 \pm 0.99)$. These two relations - the inhomogeneity fit and the magnetometer fit - will be applied to our reported magnetic fields to acquire more accurate measurements, at the cost of some systematic uncertainty.
 \begin{figure}[h]
   \includegraphics[width=.5\textwidth]{inhomo.png}
-  \caption{The three locations, labeled A, B, and C, where we measured the magnetic field inside our apparatus in order to determine the correspondance between the magnetic field at "C" - the location at which we will mesaure the magnetic field during our experimental run - and the average magnetic field across the electron trajectory}
+  \caption{The three locations, labeled A, B, and C, where we measured the magnetic field inside our apparatus in order to determine the correspondence between the magnetic field at "C" - the location at which we will measure the magnetic field during our experimental run - and the average magnetic field across the electron trajectory}
+  \label{inhomo}
 \end{figure}
 \section{Data Analysis}
-In the course of our experiment, we collect data at four different values of the measured magnetic field, ranging from 90G to 120G. Note that this range only corresponds to the range of the magnetic fields displayed on the magnetometer - after correcting for the systematic uncertanties in the magnetometer and inhomogeneities in the magnetic field, the actual range of magnetic fields measured fall between 84G and 112G.
+In the course of our experiment, we collect data at four different values of the measured magnetic field, ranging from 90G to 120G in 10G increments. Note that this range only corresponds to the range of the magnetic fields displayed on the magnetometer - after correcting for the systematic uncertainties in the magnetometer and inhomogeneities in the magnetic field, the actual range of magnetic fields measured fall between 84G and 112G.
 
-In each of the different values of the magnetic field, we conduct a sweep of voltages supplied to our parallel-plate velocity selector, which corresponds to a sweep of the electric field between the two plates. As previously detailed, we expect some value of the electric field, E$^*$,  to straighten out the trajectory of the electrons and result in peak detection. By sweeping through values of the electric field and measuring the number of counts received by the MCA, we are able to obtain a value for E$^*$. While this value of E$^*$ will not be necessary for the data analysis in this paper, it can be used along with measured B values to determine the electron charge-to-mass ratio.
+In each of the different values of the magnetic field, we conduct a sweep of voltages supplied to our parallel-plate velocity selector, which corresponds to a sweep of the electric field between the two plates. As previously detailed, we expect some value of the electric field, E$^*$,  to straighten out the trajectory of the electrons and result in peak detection. By sweeping through values of the electric field and measuring the number of counts received by the MCA, we are able to obtain an approximate value for E$^*$.
 
-For each run of a specific magnetic and electric field, we allow the MCA to collect data for 315 seconds in real time. The MCA receives electrical signals from the PIN diode corresponding to detections, which it bins according to the signal amplitude. This is converted to the corresponding energy through the data obtained in the MCA calibration. With this conversion, we obtain for each run a set of data, an example of which is shown in Figure 3. 
+For each run of a specific magnetic and electric field, we allow the MCA to collect data for 315 seconds in real time. We obtain for each run a set of data, an example of which is shown in Figure \ref{mca}.
 
 \begin{figure}[h]
-  \includegraphics[width=.5\textwidth]{mca-readout.png}
-  \caption{Measured MCA detections for a single run, with $\text{B}_{measured} = 112$G and E $ = 4.4$kV. The MCA bins have been converted via the MCA calibration to their corresponding energies. The frequency of counts is sharply peaked around a small range of energies.}
+  \includegraphics[width=.5\textwidth]{mca-readout-clean.pdf}
+  \caption{Measured MCA detections for a single run, with $\text{B}_{measured} = 110$G and E $ = 4.4$kV. The MCA bins have been converted via the MCA calibration to their corresponding energies. The frequency of counts is sharply peaked around a small range of energies.}
+  \label{mca}
   \end{figure}
       
-The distribution of these energy counts is sharply peaked over a small range. We detect a small amount of events outside this range - mostly with energies below the aforementioned range, but occasionally energies above the range. From our theory, we can deduce that these detections correspond to noise, either through electrons scattered by particles in the chamber, or the particles in the chamber themselves. As these two cases are irrelevant to the data we wish to measure
+The distribution of these energy counts is sharply peaked over a small range. We detect a small amount of events outside this range - mostly with energies below the aforementioned range, but occasionally energies above the range. From our theory, we can deduce that these detections correspond to noise, either through electrons scattered by particles in the chamber, or the particles in the chamber themselves. As these two cases are irrelevant to the data we wish to measure, we can focus on the peak in our data analysis.
+
+To extract an exact kinetic energy from these distributions, we fit the data at the peaks to Gaussian distributions. These fits give consistent reduced chi-squares in the range $1.5 \geq \chi^2/\text{ndf} \geq 0.5$. These Gaussian fits give us a mean and some uncertainty on the mean, which we use as our reported kinetic energy and uncertainty. As we do not expect changes in the velocity selector voltage to affect our measurements of kinetic energy or momentum, all measurements taken in our voltage sweep provide data for determining the kinetic energy respective magnetic field. For each magnetic field, we average over all the corresponding kinetic energies, acquire some additional uncertainty in our final kinetic energy from averaging, and obtain the kinetic energies displayed in Table \ref{energy}.
+
+  \begin{table}
+    \begin{tabular}{||c c||}
+      \hline
+      $\text{B}_{approx} \text{ (G)}$ & K (kEv) \\
+      \hline
+      \hline
+      90 & $222 \pm 1.47$  \\
+      \hline
+      100 & $265 \pm 1.08$ \\
+      \hline
+      110 & $312 \pm .79$  \\
+      \hline
+      120 & $355 \pm .66$  \\
+      \hline
+    \end{tabular}
+  \caption{Our final values of kinetic energy from utilizing Gaussian fits, along with their respective uncertainties.}
+  \label{energy}
+\end{table}
+
+Similar refinements must be made to the magnetic field readings to obtain the desired four data points. Fluctuations in our individual magnetometer readings contribute an uncertainty to every measurement. Additionally, increased resistance in the coils of our apparatus due to the gradual heating of the coils causes our magnetic field to decrease over the course of any given run. To account for this, we take the magnetic field measured at the beginning and end of every run, and average the two.  Taking these values from every measurement of some voltage sweep and averaging them allows to arrive at a final magnetic field measurement and uncertainty for each of the four runs, which can then be refined by the relations described in Section III.
+
+\begin{figure}[t]
+  \includegraphics[width=.5\textwidth]{sysgraphpaper.pdf}
+\caption{The four data points acquired in our experiment and subsequent analysis. At each individual point, the uncorrelated uncertainties from our kinetic energy calculations and our magnetic field averaging is shown. A black bar is displayed on the bottom, representing the correlated uncertainty in our magnetic field - i.e, how far all the points could shift horizontally. The relativistic and classical fits are shown in red and blue, respectively. These fits demonstrate the relativistic theory's ability to account for the linearity in our data points}
+  \label{sys}
+\end{figure}
+
+Our final four data points, along with the fits described by the two equations $(5)$ and $(6)$, are displayed in Figure \ref{sys}. In order to account for our correlated uncertainties, we fit using a modified version of a chi-squared fit, known as a "pull" method, detailed in \cite{sys}. This pull method gives us a goodness of fit similar to a reduced chi-squared. For the relativistic fit, this value is $.05$, and for the classical fit, $33.02$. While a  reduced chi-squared (or this chi-squared equivalent) less than $1$ is often a sign of overfitting or incorrect error bars, visually inspecting the fit shows that the model predicted by special relativity simply happens to be able to pass through all the points near-perfectly. While our two models cannot be directly compared through standard methods such as Sequential Chi-Square Difference Tests \cite{diff} and the Likelihood Ratio Test \cite{ratio} as neither of the models is nested in the other, we can clearly see that the relativistic fit does a better job of capturing the near-linearity of our data.
+
+Using the fit to our relativistic equation, given by Equation $(6)$, we can use the parameters calculated by the fit to determine the electron charge, $e$, and the electron rest energy, $mc^2$. These values, along with the commonly-accepted values in physics literature, is displayed in Table \ref{data}.
+
+\begin{table}[h]
+  \begin{ruledtabular}
+    \begin{tabular}{ccc}
+      &  Measured Values & Expected Values \\
+      \hline
+      $e$ (esu) & $5.02 \pm .03$ & $4.8$ \\
+      $mc^2$ (kEv) & $505 \pm 76$ & $511$ \\
+    \end{tabular}
+  \end{ruledtabular}
+  \caption{A comparison of the physical constants predicted by our data and the relativistic energy equation, along with their expected values.}
+  \label{data}
+\end{table}
+As shown in the table, our uncertainty of the electron rest mass is a larger proportion of our reported value than our electron charge. A major factor in this is the qualitative behavior of the equation we use to fit our data. We expect our relativistic $K(B)$ equation to become approximately linear when the first term, $e^2 \rho^2 B^2$, dominates the second term, $(mc^2)^2$. While this allows for distinguishing between relativistic and classical predictions, it means that the electron rest energy will have less of an effect on our data, and as such will not be able to be determined with a great deal of accuracy. This qualitative argument is carried out more rigorously in Appendix A. With this in mind, one would expect our uncertainty in the electron rest mass to be reduced by taking measurements at lower magnetic fields.
+
+\bibliography{dynamics-paper}
 
 \clearpage
 \appendix
 \section{Error Dependency of $mc^2$ and $e$}
-Given Equation $(6)$, we wish to determine how errors in $B$ and $K$ will affect the uncertainties in the obtained values of $mc^2$ and $e$. Solving Equation 6 for the two values, we obation
+Given Equation $(6)$, we wish to determine how errors in $B$ and $K$ will affect the uncertainties in the obtained values of $mc^2$ and $e$. Solving Equation 6 for the two values, we obtain
 \begin{equation}
-    mc^2 &= \frac{B^2 e^2 \rho^2}{2K} - \frac{K}{2}
+    mc^2 = \frac{B^2 e^2 \rho^2}{2K} - \frac{K}{2}
   \end{equation}
   And
   \begin{equation}
-    e &= \sqrt{\frac{K^2 + 2Kmc^2}{B^2 \rho^2}}
+    e = \sqrt{\frac{K^2 + 2Kmc^2}{B^2 \rho^2}}
   \end{equation}
   Standard error propagation is given for some function $f(x,y)$ in first order as
   \begin{equation}
-    \sigma_f^2 &= \sigma_x^2 \left(\pdv{f}{x}\right)^2 + \sigma_y^2 \left(\pdv{f}{y}\right)^2
+    \sigma_f^2 = \sigma_x^2 \left(\pdv{f}{x}\right)^2 + \sigma_y^2 \left(\pdv{f}{y}\right)^2
   \end{equation}
-  This equation assumes that the uncertainties in $B$ and $K$ are uncorralated, which we expect in our case - fluctuations in the magnetic field and variances in the kinetic energy measured are due to different aspects of our apparatus. As such, the equations for the uncertainty in $mc^2$ and $e$ to first order are given as
+  This equation assumes that the uncertainties in $B$ and $K$ are uncorrelated, which we expect in our case - fluctuations in the magnetic field and variances in the kinetic energy measured are due to different aspects of our apparatus. As such, the equations for the uncertainty in $mc^2$ and $e$ to first order are given as
   \begin{equation}
-    \sigma_{mc^2}^2 &= \sigma_B^2 \left(\frac{B \rho^2 e^2}{K}\right)^2 + \left(\frac{\beta^2 e^2 \rho^2}{2K^2} + \frac{1}{c}\right)^2 \sigma_K^2 
+    \sigma_{mc^2}^2 = \sigma_B^2 \left(\frac{B \rho^2 e^2}{K}\right)^2 + \left(\frac{\beta^2 e^2 \rho^2}{2K^2} + \frac{1}{c}\right)^2 \sigma_K^2 
   \end{equation}
   and
   \begin{equation}
