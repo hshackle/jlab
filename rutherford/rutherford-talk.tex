@@ -1,0 +1,41 @@
+Introduction
+- Hi, I'm Henry
+- Giving talk on findings on scattering measurements of alpha particles through gold foil
+- Specifically, able to confirm theory of Rutherford scattering and extract knowledge of atom makeup
+
+Theory
+- To give historical context, I'll talk about two different models and the experimental observations they predict
+- Back in the 20th century, people weren't sure what made up atoms. Electrons, positive, negative...something?
+- Original theory was the plum pudding model, where you had negatively charged electrons in a "soup" of positive charge
+- The prediction that we want to get out of this model is how it describes scattering. You fire atoms at a thin layer of material, how do the incoming atoms scatter?
+- Small deflections from Coulumb interactions, you get that the probability of scattering at an angle theta dies off exponentially, with a rate proportional to theta_m (mean multiple scattering angle)
+- Actual rate depends on density, rate of particles, thickness, etc, but all contribute additive constants
+
+- Rutherford model resulted from experiments like this
+- Dense, concnetrated positively charged nucleus in the center
+- Interacts strongly with incoming particles - for example, it could bounce back!
+- Doing out the math gives something prop to 1/sin^4
+- Important to note that this is valid for large angles. You can see rate goes to infinity. This is because rutherford assumes single scattering - scattering off of one particle. You can't scatter off one particle and not change your angle. Because of this, we'll be measuring at high angles
+
+Apparatus
+- Talk about apparatus that allows us to detect this
+- Inside a chamber to reduce noise from particles in the air
+- Alpha particle howitzer contains an Am 241 source which emits alpha particles (two protons and two neutrons) at mostly constant energy
+- Gold foil energy reducer to reduce energy
+- Hits gold foil, now the fun stuff happens
+- Scatters at an angle theta and hits our detector, which registers the count and energy and sends it to the MCA
+
+- This angle theta is what we want to measure. However, it's a bit more complicated. We have our howitzer set at some angle phi away from the detector. 
+- Ideally, if we have an infinitesimal detector and beam, if we set the detector at angle phi, we would only detect scattering at angle phi. There wouldn't be any wiggle room.
+- We can see that since our detector is wide, there ends up being a range of angles that could be detected
+- Additionally, since our beam has some width, there are other locations from the gold foil where particles can be scattered and be detected at different angles
+
+- We reconcile this by asking a simple question. Given our howitzer at angle phi, what's the probability of detecting a scattering of angle theta? This is called the angular response function.
+- Ideally, it would just be a delta function. If we have our howitzer pointed fifteen degrees away from the detector, we detect fifteen degrees and nothing else
+- From geometric considerations, we expect as a first approximation to see a triangle shaped distribution
+
+- We obtain the size of this distribution by taking the beam profile, measuring scattering rates without any gold foil.
+- Ideally, we would expect to see counting rates when the beam is pointed right at the detector (0 degrees) and nothing else. However, this isn't the case. By looking at these deviations, we can estimate the angular response function.
+- This distribution tells us two things. Firstly, the fact that this isn't centered tells us that the angle reported by the apparatus is off a few degrees. Secondly, this gives us our angular response function. Replace zero with your angle phi, and this gives the distribution of thetas that we measure.
+
+- To determine how this correction affects our data, we take a convolution of our two scattering rates against the angular response function. This essentially amounts to taking the probability of scattering at an angle theta, multiply it with the probability of that scattering process being detected at a howitzer angle phi, and then integrating over all possible thetas. This gives us two functions, one predicted by Rutherford, and one predicted by the plum pudding model, that describe our scattering rates.

@@ -41,18 +41,18 @@ def nonConv(A, x):
     return numpy.exp(numpy.divide(-numpy.power(theta,2),numpy.power(0.017, 2)))*(1-numpy.absolute(theta-phi)/.122) *0.5 * (numpy.sign(-numpy.absolute(theta-phi) + .122) + 1)"""
 #* Heaviside(-numpy.absolute(theta-phi) + .122)
 
-def lowerplum_convolve_func(theta,phi):
-    return numpy.exp(numpy.divide(-numpy.power(theta,2),numpy.power(0.017, 2)))*(1-numpy.absolute(theta-phi)/.122) *0.5 * (numpy.sign(-numpy.absolute(theta-phi) + .122) + 1)
+def lowerplum_convolve_func(theta,phi, mean):
+    return numpy.exp(numpy.divide(-numpy.power(theta,2),numpy.power(mean, 2)))*(1-numpy.absolute(theta-phi)/.122) *0.5 * (numpy.sign(-numpy.absolute(theta-phi) + .122) + 1)
 
-def lowerplum_convolve(phi):
+def lowerplum_convolve(phi, mean):
     plum_sol = []
     for i in phi:
-        plum_sol.append(integrate.quad(lambda x: lowerplum_convolve_func(x, i), 0.0, 3.14159)[0])
+        plum_sol.append(integrate.quad(lambda x: lowerplum_convolve_func(x, i, mean), 0.0, 3.14159)[0])
     #result = integrate.quad(lambda x: convolve_func(x, phi), 0.01, 3.14159)
     return numpy.array(plum_sol)
 
 def lowerplum_fitFunc(A, x):
-    return A[0]*lowerplum_convolve(x)
+    return A[0]*lowerplum_convolve(x, A[1])
 
 def higherplum_convolve_func(theta,phi):
     return numpy.exp(numpy.divide(-numpy.power(theta,2),numpy.power(0.017, 2)))*(1-numpy.absolute(theta-phi)/.119381) *0.5 * (numpy.sign(-numpy.absolute(theta-phi) + .119381) + 1)
@@ -97,7 +97,7 @@ lowerout.pprint()
 
 lowerplum_conv_model = Model(lowerplum_fitFunc)
 lowerplum_data = RealData(xdata,ydata, sx=x_err, sy=y_err)
-lowerplum_odr = ODR(lowerplum_data, lowerplum_conv_model, beta0=[0.05])
+lowerplum_odr = ODR(lowerplum_data, lowerplum_conv_model, beta0=[0.05, 10])
 
 lowerplum_out = lowerplum_odr.run()
 lowerplum_out.pprint()
@@ -110,7 +110,7 @@ higherplum_out = higherplum_odr.run()
 higherplum_out.pprint()
 
 
-"""nonconv_model = Model(nonConv)
+nonconv_model = Model(nonConv)
 nondata = RealData(xdata,ydata, sx=x_err, sy=y_err)
 nonodr = ODR(nondata, nonconv_model, beta0=[0.005])
 
@@ -123,15 +123,15 @@ plum_nondata = RealData(xdata,ydata, sx=x_err, sy=y_err)
 plum_nonodr = ODR(plum_nondata, plum_nonconv_model, beta0=[0.005])
 
 plum_nonout = plum_nonodr.run()
-plum_nonout.pprint()"""
+plum_nonout.pprint()
 
 x_fit = numpy.linspace(xdata[0] - 0.01, xdata[-1]+ .01, 1000)
 lowery_fit = lowerfitFunc(lowerout.beta, x_fit)
 highery_fit =higherfitFunc(higherout.beta, x_fit)
 lowerplum_y_fit = lowerplum_fitFunc(lowerplum_out.beta, x_fit)
 higherplum_y_fit = higherplum_fitFunc(higherplum_out.beta, x_fit)
-"""nony_fit = nonConv(nonout.beta, x_fit)
-plum_nony_fit = plum_nonConv(plum_nonout.beta, x_fit)"""
+nony_fit = nonConv(nonout.beta, x_fit)
+#plum_nony_fit = plum_nonConv(plum_nonout.beta, x_fit)
 
 fig, ax = plt.subplots()
 
@@ -142,14 +142,14 @@ ax.semilogy(x_fit*57.296, highery_fit, label=r'Rutherford Scattering, $\chi^2/$n
 #ax.plot(x_fit*57.296, highery_fit)
 #ax.plot(x_fit*57.296, lowerplum_y_fit, color='green')
 #plt.plot(x_fit*57.296, y_fit)
-ax.semilogy(x_fit*57.296, lowerplum_y_fit, label=r'Thomson Scattering, $\chi^2/$ndf$ = 2096$', color='g')
+ax.semilogy(x_fit*57.296, lowerplum_y_fit, label=r'Thomson Scattering, $\chi^2/$ndf$ = 109$', color='g')
 plt.ylabel('Count Rate [1/s]', fontsize=18)
 plt.xlabel(r'Howitzer Angle [$\theta$]', fontsize=18)
 print(higherfitFunc(higherout.beta,[0]))
-legend = ax.legend(loc='upper center', fontsize='x-large')
+#ax.semilogy(x_fit*57.296, nony_fit, label=r'Rutherford Scattering, $\chi^2/$ndf = 8.18')
+legend = ax.legend(loc='upper center', fontsize='xx-large')
 #plt.plot(x_fit*57.296, plum_nony_fit)
 #plt.plot(x_fit*57.296, plum_nony_fit)
-#plt.semilogy(x_fit*57.296, nony_fit)
 
 axes=plt.gca()
 axes.set_ylim([.001, 100])

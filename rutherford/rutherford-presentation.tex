@@ -31,6 +31,8 @@
           \pause
         \item Produces small-angle scattering that dies off exponentially
           \pause
+        \item $F(\theta) \propto e^{-\theta^2/\theta_m^2}$
+          \pause
       \end{itemize}
     \end{center}
     \end{column}
@@ -46,24 +48,12 @@
       \item Electrons surround a concentrated positive charge
         \pause
       \item Allows for large scattering angles
+        \pause
+      \item $F(\theta) \propto \frac{1}{\sin^4(\theta/2)}$
     \end{itemize}
   \end{center}
   \end{column}
 \end{columns}
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Rutherford Scattering Derives from Coulumb Interactions}
-  \begin{equation*}
-    \dv{\sigma}{\Omega} = \left( \frac{Z Z' e^2}{4E}\right)^2 \frac{1}{\sin^4 (\theta/2)}
-  \end{equation*}
-
-  \begin{itemize}
-    \item Differential cross section describes probability of scattering at angle $\theta$.
-    \item Translation to observable trends requires consideration of flux, area density, etc., but does not affect $\theta$-dependence.
-    \item Equation only describes \textit{single} scattering events.
-  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -96,7 +86,22 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Convolution of Angular Resolution Corrects for Beam/Detector Width}
+  \frametitle{Apparatus allows for scattering detection at various angles}
+  \begin{center}
+  \includegraphics[width=0.8\textwidth]{apparatus-width1}
+\end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Apparatus allows for scattering detection at various angles}
+  \begin{center}
+  \includegraphics[width=0.8\textwidth]{apparatus-width}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Geometry of Detector Leads to Deviations from Scattering Predictions}
   \begin{itemize}
     \item With the howitzer at an angle $\phi$, what is the probability of detecting a particle scattered between $\theta$ and $\theta + \dd{\theta}$?
       \pause
@@ -114,14 +119,14 @@
 
 
 \begin{frame}
-  \frametitle{Convolving Beam Profile with Predicted Counting Rates Accounts for}
+  \frametitle{Convolving Beam Profile Corrects for Beam/Detector Width}
   \textbf{Rutherford}
   \begin{equation*}
     C_r(\phi) = C_{r,0}\int\limits_0^\pi g(\phi, \theta) \sin^{-4}(\theta/2) \dd{\theta}
   \end{equation*}
   \textbf{Thomson}
   \begin{equation*}
-    C_t(\phi) = C_{t,0} \int\limits_0^\pi g(\phi, \theta) e^{-\frac{\theta^2}{\theta_0^2}}  \dd{\theta}
+    C_t(\phi) = C_{t,0} \int\limits_0^\pi g(\phi, \theta) e^{-\frac{\theta^2}{\theta_m^2}}  \dd{\theta}
   \end{equation*}
 \end{frame}
 
@@ -145,7 +150,7 @@
         \pause
     \item Landau distribution of energy loss allows us to consider all points as valid data
       \pause
-    \item Count rate sill affected by counting uncertainty
+    \item Count rate still affected by counting uncertainty
   \end{itemize}
   \pause
 
@@ -158,7 +163,7 @@
 
 \begin{frame}
   \frametitle{Rutherford Scattering Effectively Predicts High-Angle Scattering}
-    \includegraphics[width=1.0\textwidth]{convolve.png}
+    \includegraphics[width=1.0\textwidth]{plot-correct.png}
 \end{frame}
 
 \begin{frame}
@@ -167,10 +172,33 @@
     \begin{tabular}{cc}
     Model & $\chi^2/\text{ndf}$ \\
     \hline
-    Rutherford & $1.89 \pm 0.11$ \\
-    Thomson & $1858 \pm 24$ \\
+    Rutherford & $2.14 \pm 0.11$ \\
+    Thomson & $2096 \pm 24$ \\
   \end{tabular}
   \end{table}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Rutherford Model Predicts High-Angle Scattering}
+  \begin{itemize}
+    \pause
+  \item Thomson's plum pudding model is unable to predict scattering trends at high angles.
+    \pause
+  \item Rutherford model predicts these trends more accurately, leading one to suspect a Rutherford-like atomic model
+    \pause
+  \item When detecting scattering rates with non-point detectors and beams, angular response function allows for more accurate data modeling
+\end{itemize}
+  \end{frame}
+
+\begin{frame}
+  \frametitle{Convolution Improves Results from Raw Rutherford Fit}
+  \includegraphics[width=1.0\textwidth]{plot-conv.png}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Thomson with Free $\theta_m$ Unable to Capture Data}
+  \includegraphics[width=1.0\textwidth]{free.png}
 \end{frame}
 
 \end{document}
