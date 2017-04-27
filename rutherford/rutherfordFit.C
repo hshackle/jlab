@@ -1,5 +1,9 @@
 #include "Riostream.h"
 
+double convolve(double x){
+
+
+
 void rutherfordFit() {
   TCanvas *c1 = new TCanvas("c1", "Data", 200, 10, 700 ,500);
   Double_t y[5] = {.66, .12, .02, .005, .0009};
