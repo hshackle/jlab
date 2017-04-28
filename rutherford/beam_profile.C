@@ -18,9 +18,9 @@ void beam_profile()
   angle[14] = 5;
   angle[15] = 6;
 
-  for (int i=0; i<16; i++){
+/*  for (int i=0; i<16; i++){
     angle[i] = angle[i] + 1.995;
-  }
+  }*/
   
   counts[0] = 2;
   counts[1] = 219;
@@ -61,4 +61,5 @@ void beam_profile()
   ratehist->SetTitle("Beam Profile");
   ratehist->GetXaxis()->SetTitle("Howitzer Angle [#theta]");
   ratehist->GetYaxis()->SetTitle("Count Rate [1/s]");
+  ratehist->Fit("gaus");
 }

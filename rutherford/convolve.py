@@ -8,10 +8,10 @@ from scipy.odr import ODR, Model, Data, RealData
 
 
 def lowerconvolve_func(theta,phi):
-    return 1/numpy.power(numpy.sin(theta/2), 4)*(1-numpy.absolute(theta-phi)/0.0998) *0.5 * (numpy.sign(-numpy.absolute(theta-phi) + 0.0998) + 1)
+    return 1/numpy.power(numpy.sin(theta/2), 4)*(1-numpy.absolute(theta-phi)/0.112) *0.5 * (numpy.sign(-numpy.absolute(theta-phi) + 0.0998) + 1)
 
 def higherconvolve_func(theta,phi):
-    return 1/numpy.power(numpy.sin(theta/2), 4)*(1-numpy.absolute(theta-phi)/0.119381) *0.5 * (numpy.sign(-numpy.absolute(theta-phi) + 0.119381) + 1)
+    return 1/numpy.power(numpy.sin(theta/2), 4)*numpy.exp(-numpy.power(theta-phi,2)/(2*0.0476*0.0476))
 #* Heaviside(-numpy.absolute(theta-phi) + .122)
 
 def lowerconvolve(phi):
@@ -42,7 +42,8 @@ def nonConv(A, x):
 #* Heaviside(-numpy.absolute(theta-phi) + .122)
 
 def lowerplum_convolve_func(theta,phi, mean):
-    return numpy.exp(numpy.divide(-numpy.power(theta,2),numpy.power(mean, 2)))*(1-numpy.absolute(theta-phi)/.122) *0.5 * (numpy.sign(-numpy.absolute(theta-phi) + .122) + 1)
+    return numpy.exp(numpy.divide(-numpy.power(theta,2),numpy.power(mean, 2)))*numpy.exp(-numpy.power(theta-phi,2)/(2*0.0476*0.0476))
+#*(1-numpy.absolute(theta-phi)/.122) *0.5 * (numpy.sign(-numpy.absolute(theta-phi) + .122) + 1)
 
 def lowerplum_convolve(phi, mean):
     plum_sol = []
@@ -136,17 +137,17 @@ nony_fit = nonConv(nonout.beta, x_fit)
 fig, ax = plt.subplots()
 
 ax.errorbar(xdata*57.296, ydata, xerr=x_err*57.296, yerr=y_err, linestyle='None',ecolor='r', marker='None', label='Experimental Data', mew=10, ms=20)
-#ax.semilogy(x_fit*57.296, lowery_fit, label=r'Rutherford Scattering, $\chi^2/$ndf$ = 1.89$', linestyle='--')
-ax.semilogy(x_fit*57.296, highery_fit, label=r'Rutherford Scattering, $\chi^2/$ndf$ = 2.14$', linestyle='--')
+ax.semilogy(x_fit*57.296, lowery_fit, label=r'Rutherford Scattering, $\chi^2/$ndf$ = 2.14 \pm 0.11$', )
+ax.semilogy(x_fit*57.296, higherplum_y_fit, label=r'Thomson Scattering with $\theta_m =1$, $\chi^2/$ndf$ = 2096 \pm 13$', linestyle='--')
 #ax.fill_between(x_fit*57.296, lowery_fit, highery_fit)
 #ax.plot(x_fit*57.296, highery_fit)
 #ax.plot(x_fit*57.296, lowerplum_y_fit, color='green')
 #plt.plot(x_fit*57.296, y_fit)
-ax.semilogy(x_fit*57.296, lowerplum_y_fit, label=r'Thomson Scattering, $\chi^2/$ndf$ = 109$', color='g')
+ax.semilogy(x_fit*57.296, lowerplum_y_fit, label=r'Thomson Scattering with Free $\theta_m$, $\chi^2/$ndf$ = 109 \pm 8.7$', color='g', linestyle="--")
 plt.ylabel('Count Rate [1/s]', fontsize=18)
 plt.xlabel(r'Howitzer Angle [$\theta$]', fontsize=18)
 print(higherfitFunc(higherout.beta,[0]))
-#ax.semilogy(x_fit*57.296, nony_fit, label=r'Rutherford Scattering, $\chi^2/$ndf = 8.18')
+#ax.semilogy(x_fit*57.296, nony_fit, label=r'Rutherford Scattering, $\chi^2/$ndf = 8.18', linestyle=":")
 legend = ax.legend(loc='upper center', fontsize='xx-large')
 #plt.plot(x_fit*57.296, plum_nony_fit)
 #plt.plot(x_fit*57.296, plum_nony_fit)
