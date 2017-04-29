@@ -171,7 +171,7 @@
 
 
 \begin{abstract}
-  Using a Michelson interferometer and oscilliscope, we compare interefence patterns produced by the interferometer to changes in the relative distance travelled by the two components of a split light beam before recombining. This allows us to precisely calculate the wavelength of the light beam as $620 \pm 36$ nm.
+  Using a Michelson interferometer and oscilliscope, we compare interference patterns produced by the interferometer to changes in the relative distance travelled by the two components of a split light beam before recombining. This allows us to precisely calculate the wavelength of the light beam as $620 \pm 36$ nm.
 \end{abstract}
 
 \maketitle
@@ -181,7 +181,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-A Michelson interferometer is a device where a beam of light can be split in two perpendicular directions, recombined, and then measured via a photodetector. By varying the length that one of the two split beams travels, one can produce interference patterns that can be detected by the photodetector. This setup was originally devised by Michelson in 1881 to test whether light propegated through an "aether," which could cause the light to travel more slowly in one direction than the other, thereby producing an interference pattern \cite{michelson}. His experiment, along with others of the time period, eventually showed that light travelled at the same speed irrespective of direction. This conclusions allowed the Michelson interferemoter to be useful for other measurements, such as the one described here.
+A Michelson interferometer is a device where a beam of light can be split in two perpendicular directions, recombined, and then measured via a photodetector. By varying the length that one of the two split beams travels, one can produce interference patterns that can be detected by the photodetector. This setup was originally devised by Michelson in 1881 to test whether light propegated through an "aether," which could cause the light to travel more slowly in one direction than the other, thereby producing an interference pattern \cite{michelson}. His experiment, along with others of the time period, eventually showed that light travelled at the same speed irrespective of direction. However, the  Michelson interferemoter has proven to be useful for other measurements, such as the one described here.
   \\
   As variations in length will be the predominant contributor to interference patterns, by varying the length precisely via a PZT (Piezoelectric Transducer) we can detect with high precision the length changes that correspond to various interference patterns. This allows us to calculate the wavelength of the beam of light under study. Through this procedure, we are able to calculate the wavelength of the light beam used as $620 \pm 36$ nm.
   \\
@@ -198,7 +198,7 @@ A Michelson interferometer is a device where a beam of light can be split in two
   \begin{equation}
     E_T =  E_1 e^{i(\phi_1 - \omega t)}+  E_2 e^{i(\phi_2 - \omega t)}
   \end{equation}
-  The form of this combined wave depends on the difference bewteen $\phi_1$ and $\phi_2$. If $\phi_1$ and $\phi_2$ differ by a complete phase, $\phi_1 - \phi_2 = 2\pi n $ for some integer $n$, then the equation reduces to
+  The form of this combined wave depends on the difference between $\phi_1$ and $\phi_2$. If $\phi_1$ and $\phi_2$ differ by a complete phase, $\phi_1 - \phi_2 = 2\pi n $ for some integer $n$, then the equation reduces to
   \begin{equation}
     E_T = (E_1 + E_2) e^{-i\omega t}
   \end{equation}
@@ -219,7 +219,7 @@ A Michelson interferometer is a device where a beam of light can be split in two
   \begin{equation}
     I \propto E_1^2 + E_2^2 + 2E_1 E_2 \cos(\phi_1 - \phi_2)
   \end{equation}
-  Constructive and destrucive interference affect the intensity - with constructive interference, $\cos(\phi_1 - \phi_2) = 1$, and with destructive interference, $\cos(\phi_1 - \phi_2) = -1$.
+  Constructive and destructive interference affect the intensity - with constructive interference, $\cos(\phi_1 - \phi_2) = 1$, and with destructive interference, $\cos(\phi_1 - \phi_2) = -1$.
   \\
   In our setup, a beam splitter separates a light beam into two beams of equal amplitude, and then the two beams are combined at a later stage. A phase difference is induced by the different lengths that the two beams travel. The correspondence between the phase difference and length difference is determined by the wavelength $\lambda$ of the beam. If one beam travels a distance of $2l_1$ before recombining, and the second beam travels a distance of $2l_2$, the phase difference is given as
   \begin{equation}
@@ -232,13 +232,13 @@ A Michelson interferometer is a device where a beam of light can be split in two
   %Where $I_{max}$ and $I_{min}$ represent the maximum and minimum intensities measured, respectively. In an ideal setting, $I_{min} = 0$ and $\mathcal{V} = 1$ - deviations from this will cause the visibility to dip below $1$.
 
   \section{Experimental Setup}
-  The source of our light beam will be an orange laser, which emits a constant light source of a certain wavelength. A beam splitter is positioned along the trajetory of the beam at a 45 degree angle, which splits the beam into two beams of approximately equal amplitude, each travelling perpendicular to the other. One of the beams travels a length $l_2$, is reflected by a mirror, and is sent back to be detected by a photodetector. The other beam travels a length $l_1$ and reaches a mirror connected to a PZT (piezoelectric transducer). The PZT is connected to a function generator, which supplies the PZT with a varying voltage in the form of a triangle waveform with a peak-to-peak voltage of 10V and a frequency of 10Hz. The PZT translates these supplied voltages to spatial translations along the length of $l_1$. The PZT used in this experiment has a response of $44.6 \pm 2.6$ $nm/V$. As the voltage varies, the length that the beam of light travels to reach the mirror varies from $l_1 + \Delta$ to $l_1 - \Delta$, where $\Delta$ is some small displacement induced by the PZT. The function generator applied to the PZT is additionally connected to an oscilliscope, which allows us to read off the voltage being supplied to the PZT, and therefore the difference in length in the trajectory of the light beam.
+  The source of our light beam will be an orange laser, which emits a constant light source of a certain wavelength. A beam splitter is positioned along the trajectory of the beam at a 45 degree angle, which splits the beam into two beams of approximately equal amplitude, each travelling perpendicular to the other. One of the beams travels a length $l_2$, is reflected by a mirror, and is sent back to be detected by a photodetector. The other beam travels a length $l_1$ and reaches a mirror connected to a PZT (piezoelectric transducer). The PZT is connected to a function generator, which supplies the PZT with a varying voltage in the form of a triangle waveform with a peak-to-peak voltage of 10V and a frequency of 10Hz. The PZT translates these supplied voltages to spatial translations along the length of $l_1$. The PZT used in this experiment has a response of $44.6 \pm 2.6$ $nm/V$. As the voltage varies, the length that the beam of light travels to reach the mirror varies from $l_1 + \Delta$ to $l_1 - \Delta$, where $\Delta$ is some small displacement induced by the PZT. The function generator applied to the PZT is additionally connected to an oscilliscope, which allows us to read off the voltage being supplied to the PZT, and therefore the difference in length in the trajectory of the light beam.
   \\
   \begin{figure}[t]
     \includegraphics[width=0.4\textwidth]{setup.png}
     \caption{A block diagram of our experimental setup, with lengths $l_1$ and $l_2$ indicating the distance travelled by each of the two light beams. \cite{michelsonmanual}}
   \end{figure}
-  Both light beams are reflected by the mirrors, and recombined at a photodetector, which measures the intensity of the beam. A crucial calibration step in this experiment is positioning the two mirrors so that the two beam align perfectly on the photdetector. Any deviations from this will reduce the signal measured. The photodetector is connected to the oscilliscope previously mentioned. This allows us to simultaneously measure the voltage supplied to the PZT - and in virtue of that, the displacement of the mirror attached to it - and the intensity of the resulting beam.
+  Both light beams are reflected by the mirrors, and recombined at a photodetector, which measures the intensity of the beam. A crucial calibration step in this experiment is positioning the two mirrors so that the two beam align perfectly on the photodetector. Any deviations from this will reduce the signal measured. The photodetector is connected to the oscilliscope previously mentioned. This allows us to simultaneously measure the voltage supplied to the PZT - and in virtue of that, the displacement of the mirror attached to it - and the intensity of the resulting beam.
   \section{Data Analysis}
     Figure \ref{fig:waveform} gives an example form of a signal seen on our oscilliscope. At every maximum in the orange line - representing the intensity of the measured beam - complete constructive interference is taking place between the two beams. At every minimum, complete destructive interference is taking place. This change in interference is induced by the change in relative phase between the two beams, which is caused by the differences in length produced by the PZT.
    \begin{figure}[t]
@@ -246,23 +246,23 @@ A Michelson interferometer is a device where a beam of light can be split in two
     \caption{An example reading of the oscilliscope, generated in Wolfram Mathematica. The blue line corresponds to the signal from the function generator, and the orange line corresponds to the intensity measured by the photodetector. A linear change in voltage corresponds to a periodic chance in intensity, with cusps at the points where the voltage switches direction.}
     \label{fig:waveform}
     \end{figure}
-    The change from one maxima to another, or the change from one minima to another, corresponds to a change in the length travelled by one of the beams equal to the wavelength. This is a direct consequence of equation (6). Therefore, calculating the voltage differences supplied ot the PZT across maxima and minima, and then determining the displacement length corresponding to that voltage. we are able to determine the wavelength of the laser beam.
+    The change from one maxima to another, or the change from one minima to another, corresponds to a change in the length travelled by one of the beams equal to the wavelength. This is a direct consequence of equation (6). Therefore, calculating the voltage differences supplied to the PZT across maxima and minima, and then determining the displacement length corresponding to that voltage. we are able to determine the wavelength of the laser beam.
     \\
-    Over the course of taking measurements of this voltage difference, we will accumulate a distribution of values. Using this distribution, we can calculate a mean, along with some statistical uncertainty for this value. Using this value, we can use the response value of the PZT, with its associated uncertainty, to come to final conclusion and uncertainy of our laser's wavelength.
-    \section{Data Analysis}
-    \begin{figure}[t]
+    Over the course of taking measurements of this voltage difference, we will accumulate a distribution of values. Using this distribution, we can calculate a mean, along with some statistical uncertainty for this value. Using this value, we can use the response value of the PZT, with its associated uncertainty, to come to final conclusion and uncertainty of our laser's wavelength.
+    \begin{figure}[h]
       \includegraphics[width=0.45\textwidth]{graph_helvetica.pdf}
       \caption{A distribution of the measured voltage differences between minima and maxima of interference peaks, with associated uncertainties for the frequency counts.}
       \label{fig:graph}
     \end{figure}
     \\
-    In our experiment, we conducted 29 measurements of the voltage difference across maxima and minima, represented visually in \ref{fig:graph}. Each individual voltage measurement has associated uncertainty of $\pm 0.1$ V due to the oscilliscope measurements being taken from reading off the values by eye. As two measurements are necessary to determine a voltage difference, this results in a total uncertainty of $\pm 0.14$ V. Taking the average of these measurements and calculating the uncertainty associated with this average, we arrive at an average voltage difference of $6.96 \pm .14 $ V. As the distribution of values was closely-packed, averaging over them only gives an additional uncertainty of $\pm 0.02$ V, which does not noticiably modify our initial uncertainty of $\pm 0.14$. Converting this average voltage into length displacement, we conclude that the predicted wavelenght of the laser is $620 \pm 38$ nm. This is within the visible spectrum, and rougly corresponds with the observed colour of the laser. Because of this, we can conclude that Michelson interferometers provide a method of detecting wavelengths of supplied light sources to within a reasonable degree of accuracy.
+    In our experiment, we conducted 29 measurements of the voltage difference across maxima and minima, represented visually in \ref{fig:graph}. Each individual voltage measurement has associated uncertainty of $\pm 0.1$ V due to the oscilliscope measurements being taken from reading off the values by eye. As two measurements are necessary to determine a voltage difference, this results in a total uncertainty of $\pm 0.14$ V. Taking the average of these measurements and calculating the uncertainty associated with this average, we arrive at an average voltage difference of $6.96 \pm .14 $ V. As the distribution of values was closely-packed, averaging over them only gives an additional uncertainty of $\pm 0.02$ V, which does not noticeably modify our initial uncertainty of $\pm 0.14$. Converting this average voltage into length displacement, we conclude that the predicted wavelength of the laser is $620 \pm 38$ nm. This is within the visible spectrum, and roughly corresponds with the observed colour of the laser. Because of this, we can conclude that Michelson interferometers provide a method of detecting wavelengths of supplied light sources to within a reasonable degree of accuracy.
     
-    By looking at our error propegation further, one can see that our PZT response of $44.6 \pm 2.6$ $nm/V$ is the single largest contributor of uncertainty in our experiment.
     \begin{figure}[h]
-      \includegraphics[width=0.45\textwidth]{error.pdf}
-      \caption{A graph showing the decrease }
+      \includegraphics[width=0.5\textwidth]{error.png}
+      \caption{A graph showing the effects on the total uncertainty that a decrease in uncertainty in either the PZT or voltage uncertainties would have, relative to the uncertainty values in this experiment. A decrease in the PZT uncertainty causes a more drastic change in the overall uncertainty.}
+      \label{fig:error}
     \end{figure}
+    By looking at our error propegation further, one can see that our PZT response of $44.6 \pm 2.6$ $nm/V$ is the single largest contributor of uncertainty in our experiment. As shown visually in \ref{fig:error}, a decrease in PZT uncertainty causes a larger change in the overall uncertainty than a decrease in our uncertainty in our voltage measurement. As such, in future iterations of this experiment, an effective method of decreasing uncertainty would be to acquire a PZT with a smaller uncertainty range.
     \section{Conclusion}
     Michelson interferometers allow one to detect interference patterns created through the relative phase difference of two laser beams. By varying this phase in a controlled manner and comparing this to the interference patterns recorded, we are able to determine the wavelength of the source laser with an uncertainty of less than 50 nanometers. 
     \begin{acknowledgements}

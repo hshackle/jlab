@@ -64,7 +64,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\documentclass[aps,twocolumn,secnumarabic,balancelastpage,amsmath,amssymb,nofootinbib, floatfix]{revtex4}
-\documentclass[aps,twocolumn,nobalancelastpage,secnumarabic,amsmath,amssymb,nofootinbib,floatfix]{revtex4-1}
+\documentclass[aps,twocolumn,balancelastpage,secnumarabic,amsmath,amssymb,nofootinbib,floatfix]{revtex4-1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % N.B.:  Different computers have different packages installed.  
@@ -174,7 +174,7 @@
 
 
 \begin{abstract}
-  Thomson's "plum pudding" and Rutherford's hard core models of atomic structure differ in the predictions they make with regards to high-angle scattering. By observing the scattering rates of $\alpha$ particles through gold foil and comparing the trends to theoretical predictions, we are able to conclude that Rutherford's model accurately describes the data acquired.
+  Thomson's "plum pudding" and Rutherford's hard core models of atomic structure differ in the predictions they make with regards to high-angle scattering. By observing the scattering rates of $\alpha$ particles through gold foil and comparing the trends to theoretical predictions, we are able to conclude that Rutherford's model accurately describes the data acquired with a $\chi^2/\text{ndf} = 2.14 \pm 0.11$.
 \end{abstract}
 
 \maketitle
@@ -216,9 +216,9 @@ These features of our apparatus can be captures by the \textit{angular response 
 \begin{equation}
   g(\varphi, \theta) = \delta(\theta - \varphi)
 \end{equation}
-As a first approximation, we expect the probability of detection to fall off linearly away from $\varphi$, so we approximate the form of $g(\varphi, \theta)$ to be a triangle. To determine the width of this triangle, we remove the gold foil from our apparatus, and measure how changes in $\varphi$ affect our count rate. This distribution is equivalent to $g(0, \theta)$. Our measured data, along with a triangle fit, is displayed in Figure \ref{profile}. This graph gives us the general form of $g(\varphi, \theta)$ - replacing the $\theta=0\degree$ point with the howitzer angle $\phi$ gives the distribution around $\varphi$ of scattering angles detected. Figure \ref{profile} also indicates that the protractor in our apparatus is slightly off-center - we would expect the maximum counting rate to be when the howitzer is pointed straight at the detector, or at $\varphi = 0$\degree, but instead, this occurs at around $\varphi = -2\degree$.
+As a first approximation, we expect the probability of detection to fall off linearly away from $\varphi$, so we approximate the form of $g(\varphi, \theta)$ to be a triangle. To determine the width of this triangle, we remove the gold foil from our apparatus, and measure how changes in $\varphi$ affect our count rate. This distribution is equivalent to $g(0, \theta)$. Our measured data, along with a triangle fit, is displayed in Figure \ref{profile}. This graph gives us the general form of $g(\varphi, \theta)$ - replacing the $\theta=0\degree$ point with the howitzer angle $\varphi$ gives the distribution around $\varphi$ of scattering angles detected. Figure \ref{profile} also indicates that the protractor in our apparatus is slightly off-center - we would expect the maximum counting rate to be when the howitzer is pointed straight at the detector, or at $\varphi = 0$\degree, but this occurs instead at around $\varphi = -2\degree$.
 
-As the reduced $\chi^2$ of this fit is poor, and we can see by eye that the data follows a rough Gaussian trend, we fit to a Gaussian distribution as well as a triangle. This gives a reduced $\chi^2$ of $0.246$, with  $\sigma = 2.73 \pm 19$ and $\mu = -1.819 \pm 0.29$. This low reduced $\chi^2$ may be a sign of overfitting, as we have no reason a priori to assume a Gaussian fit. Nevertheless, we include it to examine the effects it has on our final answer.
+As the reduced $\chi^2$ of this fit is poor, and we can see by eye that the data follows a rough Gaussian trend, we fit to a Gaussian distribution as well as a triangle. This gives a reduced $\chi^2$ of $0.246$, with  $\sigma = 2.73 \pm 0.19$ and $\mu = -1.819 \pm 0.29$. This low reduced $\chi^2$ may be a sign of overfitting, as we have no reason a priori to assume a Gaussian fit. Nevertheless, we include it to examine the effects it has on our final answer.
 \begin{figure}[h]
   \includegraphics[width=0.5\textwidth]{c1.png}
   \caption{The count rate of our particles, with each data point acquired over the course of 300 seconds. A triangle function is fit to our distribution. The goodness of fit is not perfect, indicating that our modeling of our angular response function as a triangle is only an approximation.}
@@ -240,31 +240,31 @@ To calculate how this angular response function affects our observed counting ra
    \section{Data Analysis}
    Over the course of our experiment, we took scattering measurements through gold foil at howitzer angles between $10\degree$ and $60\degree$. Our MCA readout for all measurements followed trends similar to the distribution shown in Figure \ref{mca}. The distribution of our energy loss can be fitted to Landau distribution, with is be done for all our runs with a reduced $\chi^2$ ranging from 0.57 to 0.88. As a Landau distribution is the predicted energy loss distribution for particles travelling through material\cite{landau}, this confirms that all or nearly all data collected is from scattering.
 
-   Noise for our experiement is measured by pointing the howitzer well away from the detector and collecting data. This data shows minimal noise in our experiment, most of it with energies below our area of interest. For energies within this range, we measure an average counting rate of noise as $0.0002 \pm 0.00018$ counts/second. This rate is not comparable to any of the counting rates we observe, and as such, can be disregarded. This further confirms that nearly all counts acquired were from scattering events.
+   Noise for our experiment is measured by pointing the howitzer well away from the detector and collecting data. This data shows minimal noise in our experiment, most of it with energies below our area of interest. For energies within this range, we measure an average counting rate of noise as $0.0002 \pm 0.00018$ counts/second. This rate is not comparable to any of the counting rates we observe, and as such, can be disregarded. This further confirms that nearly all counts acquired were from scattering events.
    \begin{figure}[h]
-     \includegraphics[width=0.5\textwidth]{mca_readout.png}
-     \caption{The MCA readout for our scattering measurement at $\varphi = 20\degree$. The MCA bin number corresponds linearly to the energy of the measured events.}
+     \includegraphics[width=0.5\textwidth]{mca-readout-cal.pdf}
+     \caption{The MCA readout for our scattering measurement at $\varphi = 20\degree$. The MCA bin number has been calibrated to correspond to the energy of the particles detected. The data is fitted to a reverse Landau distribution (as a Landau distribution describes the energy \textit{loss} of a particle, resulting in a reduced $\chi^2/\text{ndf}$ of 0.40.}
      \label{mca}
    \end{figure}
 
-   Further analysis of this Landau-distributed energy loss allows us to calculate the thickness of our gold foil. As the energy of $\alpha$ particles passing through a vacuum is known to be 4.84 MeV, taking $\alpha$ particle measurements with the gold foil removed and analyzing the distribution allows us to determine which MCA bin number corresponds to this 4.84 MeV  energy. This, combined with the assumption that the zero MCA bin number corresponds to zero energy, allows for a linear fit and a complete correspondance between MCA bin number and detected energy, with some uncertainty due to the width of the peak observed in the vacuum measurement. 
+   Further analysis of this Landau-distributed energy loss allows us to calculate the thickness of our gold foil. As the energy of $\alpha$ particles passing through a vacuum is known to be 4.84 MeV, taking $\alpha$ particle measurements with the gold foil removed and analyzing the distribution allows us to determine which MCA bin number corresponds to this 4.84 MeV  energy. This, combined with the assumption that the zero MCA bin number corresponds to zero energy, allows for a linear fit and a complete correspondence between MCA bin number and detected energy, with some uncertainty due to the width of the peak observed in the vacuum measurement. 
 
-   With this calibration, we are able to determine the mean energy of our particles after passing through gold foil. This allows us to calculate the energy loss through gold foil as $0.80 \pm 0.04$ MeV. We acquire data on the stopping power of gold - the rate of energy loss of an $\alpha$ particle through gold - from the NIST database, displayed in \ref{stop}. Dividing our energy loss by this rate, we are able to determine the distance through the gold that our $\alpha$ particles travel, and hence calculate the thickness of our gold foil as $1.68 \pm 0.08 \mu$m. This falls within $3\sigma$ of the reported thickness, $1.3 \pm 0.1 \mu$m.
+   With this calibration, we are able to determine the mean energy of our particles after passing through gold foil. This allows us to calculate the energy loss through gold foil as $0.80 \pm 0.04$ MeV. We acquire data on the stopping power of gold - the rate of energy loss of an $\alpha$ particle through gold - from the NIST database \cite{nist}, displayed in \ref{stop}. Dividing our energy loss by this rate, we are able to determine the distance through the gold that our $\alpha$ particles travel, and hence calculate the thickness of our gold foil as $1.68 \pm 0.08 \mu$m. This falls within $3\sigma$ of the reported thickness, $1.3 \pm 0.1 \mu$m.
 
    \begin{figure}[h]
      \includegraphics[width=0.5\textwidth]{nist.png}
-     \caption{The stopping power for $\alpha$ particles passing though gold, as a function of the energy of the $\alpha$ partices. To calculate the average stopping power, we determine both the stopping power at the incident energy of the $\alpha$ particle and the stopping power at the final energy of the $\alpha$ particle, and take the average.}
+     \caption{The stopping power for $\alpha$ particles passing though gold, as a function of the energy of the $\alpha$ particles. To calculate the average stopping power, we determine both the stopping power at the incident energy of the $\alpha$ particle and at the final energy of the $\alpha$ particle, and take the average.}
      \label{stop}
    \end{figure}
 
-Taking the number of counts detected at each angle and their associated Poissonian uncertainty, we divide by the time of acquisition to determine the counting rate at a given howitzer angle. These scattering rates are plotted as a function of their howizter angle position, and then fitted to the Rutherford and Thomson models convolved with a triangle. The results of these fits is displayed in Figure \ref{final-plot}.
+Taking the number of counts detected at each angle and their associated Poissonian uncertainty, we divide by the time of acquisition to determine the counting rate. These scattering rates are plotted as a function of their howitzer angle position, and then fitted to the Rutherford and Thomson models convoluted with a triangle. The results of these fits is displayed in Figure \ref{final-plot}.
 
 \begin{figure}[h]
   \includegraphics[width=0.5\textwidth]{plot-error.png}
   \label{final-plot}
   \caption{Experimentally-measured scattering rates plotted against their howitzer angle are fitted to the rates predicted by both Rutherford and Thomson. Thomson's model, even with $\theta_m$ as a free parameter, is unable to predict the slow falloff of scattering rates at large angles.}
 \end{figure}
-As clearly shwon by Figure \ref{final-plot}, Thomson's plum pudding model is unable to predict these high-angle scattering rates. For a more complete analysis, we consider both the Thomson model with the mean multiple scattering angle fixed at the usual $\theta_m = 1$ as well as with $\theta_m$ as a free parameter. However, it is clear that the exponential falloff predicted by Thomson's model leads to a fundamentally different shape in the predicted counting rate than Rutherford's $1/\sin^4(\theta/2)$ dependence.
+As clearly shown by Figure \ref{final-plot}, Thomson's plum pudding model is unable to predict these high-angle scattering rates. For a more complete analysis, we consider both the Thomson model with the mean multiple scattering angle fixed at the usual $\theta_m = 1$ as well as with $\theta_m$ as a free parameter. However, it is clear that the exponential falloff predicted by Thomson's model leads to a fundamentally different shape in the predicted counting rate than Rutherford's $1/\sin^4(\theta/2)$ dependence.
 
 \begin{figure}[h]
   \includegraphics[width=0.5\textwidth]{gaus.png}
@@ -273,13 +273,13 @@ As clearly shwon by Figure \ref{final-plot}, Thomson's plum pudding model is una
 \end{figure}
 
 
-The geometric considerations and calibration measurements in Section III lead to a triangle function to be convolved with our predicted scattering rates. Hoewver, the parameters on this triangle come with some uncertainty. The effect of this uncertainty on our goodness of fit can be approximated by varying the parameters and determining our $\chi^2$'s dependence on them. The variation in these reduced $\chi^2$'s are reported in Figure \ref{final-plot}.
+The geometric considerations and calibration measurements in Section III lead to a triangle function to be convoluted with our predicted scattering rates. However, the parameters on this triangle come with some uncertainty. The effect of this uncertainty on our goodness of fit can be approximated by varying the parameters and determining our $\chi^2$'s dependence on them. The variation in these reduced $\chi^2$'s are reported in Figure \ref{final-plot}.
 
 
 Further analysis of the effects of our convolution is necessary to confirm that our triangle approximation is valid. For this, we fit our data to both an unconvoluted Rutherford scattering rate, and a Rutherford scattering rate convoluted with our Gaussian distribution from Section III. The results of this are displayed in Figure \ref{convdata}. While both are not as poor of fits as the Thomson model, as all three capture the approximate trends of our data, the triangle convolution does fit better than both, suggesting that our triangle approximation of the apparatus's angular response function was valid. In future experiments, one would expect that by refining Figure \ref{profile} with further data, one would gain an even more accurate understanding of the apparatus's angular response function.
 
 \section{Conclusion}
-By measuring the scattering rates of $\alpha$ particles through gold foil, we are able to determine that Rutherford's scattering formula describes our data more accurately than Thomson's predictions from his plum pudding model. As such, we can conclude tha the atomic structure is more closely described by Rutherford's model than Thomson's. Through geometric considerations and calibration techniques, we are able to account for a systematic effects of our apparatus through a convolution, which is verified to improve the goodness of fit of the Rutherford prediction.
+By measuring the scattering rates of $\alpha$ particles through gold foil, we are able to determine that Rutherford's scattering formula describes our data more accurately than Thomson's predictions from his plum pudding model. As such, we can conclude that the atomic structure is more closely described by Rutherford's model than Thomson's. Through calibration techniques, we are able to account for a systematic effects of our apparatus through a convolution, which is verified to improve the goodness of fit of the Rutherford prediction.
 
 \section{Acknowledgements}
 I would like to thank my lab partner, Adin Hrnjic, for his extensive help and advice throughout this project. Discussions with him on error sources, analysis techniques, and scattering theory were invaluable. I would also like to thank the 8.13 staff for their assistance, both technical and with regards to analysis, throughout this experiment.

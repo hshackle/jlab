@@ -61,12 +61,12 @@
   \href {http://web.mit.edu/8.13/www/JLExperiments/JLExp09.pdf} {\enquote
   {\bibinfo {title} {Relativistic dynamics},}\ } (\bibinfo {year}
   {2013})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Joel~Heinrich}(2007)}]{sys}%
+\bibitem [{\citenamefont {{Heinrich \& Lyons}}(2007)}]{sys}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~L.}\ \bibnamefont
-  {Joel~Heinrich}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
-  {Annual Reivew of Nuclear and Particle Science}\ }\textbf {\bibinfo {volume}
-  {57}} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {{Heinrich \& Lyons}}},\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Annu. Rev. Nucl.
+  Part. Sci.}\ }\textbf {\bibinfo {volume} {57}} (\bibinfo {year}
+  {2007})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Steiger}(1985)}]{diff}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont

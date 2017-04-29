@@ -1,0 +1,5 @@
+Exiting rather than simulate.
+java.net.SocketException: Socket closedmove 1: read() timeout
+2017:117:18:41:51 comerr, got rstr = 
+	going to stow position
+Exiting rather than simulate.

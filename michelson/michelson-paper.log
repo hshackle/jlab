@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.30)  17 MAR 2017 22:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.8)  17 MAR 2017 23:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -383,10 +383,6 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 174.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-Package natbib Warning: Citation `michelson' on page 1 undefined on input line 184.
-
-
 Underfull \hbox (badness 1122) in paragraph at lines 184--188
 \OT1/cmr/m/n/10 de-tect with high pre-ci-sion the length changes that
  []
@@ -396,34 +392,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--188
 
  []
 
-<sin1.pdf, id=27, 361.35pt x 255.95625pt>
+<sin1.pdf, id=40, 361.35pt x 255.95625pt>
 File: sin1.pdf Graphic file (type pdf)
  <use sin1.pdf>
 Package pdftex.def Info: sin1.pdf used on input line 211.
 (pdftex.def)             Requested size: 203.99689pt x 144.49837pt.
- <shifted.pdf, id=28, 361.35pt x 255.95625pt>
+ <shifted.pdf, id=41, 361.35pt x 255.95625pt>
 File: shifted.pdf Graphic file (type pdf)
  <use shifted.pdf>
 Package pdftex.def Info: shifted.pdf used on input line 212.
 (pdftex.def)             Requested size: 203.99689pt x 144.49837pt.
- <destructive.pdf, id=29, 361.35pt x 255.95625pt>
+ <destructive.pdf, id=42, 361.35pt x 255.95625pt>
 File: destructive.pdf Graphic file (type pdf)
  <use destructive.pdf>
 Package pdftex.def Info: destructive.pdf used on input line 213.
 (pdftex.def)             Requested size: 203.99689pt x 144.49837pt.
- <setup.png, id=30, 770.12718pt x 618.05907pt>
+ <setup.png, id=43, 770.12718pt x 618.05907pt>
 File: setup.png Graphic file (type png)
  <use setup.png>
 Package pdftex.def Info: setup.png used on input line 238.
 (pdftex.def)             Requested size: 203.99689pt x 163.70943pt.
-
-
-Package natbib Warning: Citation `michelsonmanual' on page 1 undefined on input line 239.
-
-
-Package natbib Warning: Citation `michelsonmanual' on page 1 undefined on input line 239.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
 LaTeX Warning: A float is stuck (cannot be placed) on input line 242.
 
@@ -433,14 +422,16 @@ LaTeX Warning: A float is stuck (cannot be placed) on input line 242.
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
-
-LaTeX Warning: Reference `fig:waveform' on page 2 undefined on input line 243.
-
-<waveform.pdf, id=59, 361.35pt x 182.6825pt>
+<waveform.pdf, id=75, 361.35pt x 182.6825pt>
 File: waveform.pdf Graphic file (type pdf)
  <use waveform.pdf>
 Package pdftex.def Info: waveform.pdf used on input line 245.
 (pdftex.def)             Requested size: 203.99689pt x 103.13217pt.
+ <graph_helvetica.pdf, id=76, 569.12625pt x 608.2725pt>
+File: graph_helvetica.pdf Graphic file (type pdf)
+ <use graph_helvetica.pdf>
+Package pdftex.def Info: graph_helvetica.pdf used on input line 253.
+(pdftex.def)             Requested size: 229.49844pt x 245.28165pt.
  [2 <./sin1.pdf> <./shifted.pdf
 
 pdfTeX warning: pdflatex (file ./shifted.pdf): PDF inclusion: multiple pdfs with page group included in a single page
@@ -449,99 +440,50 @@ pdfTeX warning: pdflatex (file ./shifted.pdf): PDF inclusion: multiple pdfs with
 pdfTeX warning: pdflatex (file ./destructive.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./setup.png>]
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 252.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 259.
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 252.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 259.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
-<graph_helvetica.pdf, id=107, 569.12625pt x 608.2725pt>
-File: graph_helvetica.pdf Graphic file (type pdf)
- <use graph_helvetica.pdf>
-Package pdftex.def Info: graph_helvetica.pdf used on input line 254.
-(pdftex.def)             Requested size: 229.49844pt x 245.28165pt.
+<error.png, id=127, 402.50375pt x 171.64125pt>
+File: error.png Graphic file (type png)
+ <use error.png>
+Package pdftex.def Info: error.png used on input line 261.
+(pdftex.def)             Requested size: 255.0pt x 108.73953pt.
 
+Overfull \hbox (9.0pt too wide) in paragraph at lines 261--262
+ [][] 
+ []
 
-./michelson-paper.tex:259: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.259     I
-           n our experiment, we conducted 29 measurements of the voltage dif...
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: Reference `fig:graph' on page 3 undefined on input line 259.
-
-<error.pdf, id=108, 361.35pt x 186.6975pt>
-File: error.pdf Graphic file (type pdf)
- <use error.pdf>
-Package pdftex.def Info: error.pdf used on input line 263.
-(pdftex.def)             Requested size: 229.49844pt x 118.57437pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-(./michelson-paper.bbl [3 <./waveform.pdf> <./graph_helvetica.pdf> <./error.pdf
-
-pdfTeX warning: pdflatex (file ./error.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-
-LaTeX Warning: Reference `LastBibItem' on page 4 undefined on input line 9.
-
-)
+[3 <./waveform.pdf> <./graph_helvetica.pdf> <./error.png>] (./michelson-paper.bbl)
 
 Class revtex4-1 Warning: Environment acknowledgements is obsolete;
 Use acknowledgments instead.
 
-
-Package natbib Warning: There were undefined citations.
-
 [4]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 274.
- (./michelson-paper.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
+ (./michelson-paper.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 274.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 274.
-
-
-Package rerunfilecheck Warning: File `michelson-paper.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `michelson-paper.out':
-(rerunfilecheck)             Before: 93EE6E0B5EFD6EE421F92849DF7E6ABF;320
-(rerunfilecheck)             After:  21642E6AF8C2CB8A02E269EE101E56AD;552.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
-
+Package rerunfilecheck Info: File `michelson-paper.out' has not changed.
+(rerunfilecheck)             Checksum: BB258260104E06CC13140F0F4596E159;493.
  ) 
 Here is how much of TeX's memory you used:
- 8282 strings out of 493013
- 114923 string characters out of 6139316
- 327223 words of memory out of 5000000
- 11684 multiletter control sequences out of 15000+600000
+ 8284 strings out of 493013
+ 114950 string characters out of 6139317
+ 328182 words of memory out of 5000000
+ 11687 multiletter control sequences out of 15000+600000
  16807 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,8n,28p,1340b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
- </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/robin/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi9.600pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmti10.pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/robin/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy6.600pk> </home/robin/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr5.600pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmmi7.pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr7.pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmmi10.pk> </home/robin/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx9.600pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmsy10.pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmbx10.pk> </home/robin/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy9.600pk> </home/robin/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmr9.600pk> </home/robin/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmti9.600pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmsy7.pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr10.pk> </home/robin/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk>
-Output written on michelson-paper.pdf (4 pages, 189393 bytes).
+ 34i,8n,30p,1341b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on michelson-paper.pdf (4 pages, 294057 bytes).
 PDF statistics:
- 523 PDF objects out of 1000 (max. 8388607)
- 206 compressed objects within 3 object streams
- 27 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 268 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 100 words of extra memory for PDF output out of 10000 (max. 10000000)
 

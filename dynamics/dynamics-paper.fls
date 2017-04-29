@@ -175,9 +175,6 @@ INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT setup.png
 INPUT ./setup.png
 INPUT ./setup.png
-INPUT inhomo.png
-INPUT ./inhomo.png
-INPUT ./inhomo.png
 INPUT mca-readout-clean.pdf
 INPUT ./mca-readout-clean.pdf
 INPUT ./mca-readout-clean.pdf
