@@ -332,9 +332,13 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 INPUT diagrammatic.png
 INPUT ./diagrammatic.png
 INPUT ./diagrammatic.png
-INPUT siren_moving.png
-INPUT ./siren_moving.png
-INPUT ./siren_moving.png
+INPUT geom.png
+INPUT ./geom.png
+INPUT ./geom.png
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmssi10.tfm
+INPUT block.png
+INPUT ./block.png
+INPUT ./block.png
 OUTPUT 21cm-presentation.nav
 OUTPUT 21cm-presentation.toc
 OUTPUT 21cm-presentation.snm
@@ -346,5 +350,6 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
