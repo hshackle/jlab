@@ -5,14 +5,11 @@ double geometry(double freq, double sun_vel, double sun_distance, double angle, 
 {
   double rad = angle/180*3.14159265;
   double vel = (1420.406-freq)*299792.458/1420.406 - vlsr;
-  cout << "velocty " <<  vel << endl;
   double radius = (rotation*sun_distance*TMath::Sin(rad))/(vel + sun_vel*TMath::Sin(rad));
-  cout << "radius " << radius << endl;
   double gal_angle = TMath::ASin(sun_distance*TMath::Sin(rad)/radius);
-  double other_angle = 2*3.14159265 - gal_angle - rad;
-  cout << "other angle " << other_angle << endl;
+  double other_angle = 3.14159265 - gal_angle - rad;
 //  cout << TMath::Sin(other_angle) << " uh " << radius << " what  " << TMath::Sin(rad) << endl;
-  return TMath::Sin(other_angle)*radius/TMath::Sin(rad);
+  return (TMath::Sin(other_angle)*radius/TMath::Sin(rad))*3.2407*TMath::Power(10, -17);
 }
 
 void density()
@@ -22,7 +19,7 @@ void density()
   double temp;
   double freq;
   double sun_vel = 220;
-  double sun_distance = 1000000000000000000;
+  double sun_distance = 8*3.086*TMath::Power(10, 16);
   char str[200];
   double rotation = 200;
   double d = 0;
@@ -32,8 +29,9 @@ void density()
   char numbstr[200];
   cout << "1" << endl;
   double angles[17] = {95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 155, 160, 165, 170, 175};
-  double vlsr[17] = {-32, -32, -32, -32, -32, -32,-32, -32, -32, -32, -32, -32, -32,-32, -32, -32, -32};
-  TH2* h1 = new TH2F("h1", "hydrogen density", 72, 0, 360, 74, 0, 2000000000000000000);
+  double vlsr[17] = {-25.23, -22.33, -19.17, -16.01, -12.60, -9.1, -5.61,-2.08, 8.78, 5.1, 8.31, 12.01, 15.51, 18.62, 21.76, 24.67, 24.47};
+  double tsys[17] = {103, 103, 103, 103, 103, 103, 103, 103, 103, 110, 110, 110, 110, 110, 110, 110, 102};
+  TH2* h1 = new TH2F("h1", "hydrogen density", 72, 0, 360, 20, 0, 10);
 
   for( int a = 0; a < sizeof(angles)/sizeof(angles[0]); a = a+1){
 //  for( int a = 1; a < 2; a = a+1){
@@ -51,23 +49,23 @@ void density()
     temp = atof(tmp_str);
     
 
-    /*if (temp < 99)
+    if (temp < tsys[a])
     {
 	      hist->Fill((1420.406-freq)*299792.458/1420.406 -vlsr[a],0);
     }
-    if (temp > 99) /  {*/
+    if (temp > tsys[a]) /  {
 	      hist->Fill((1420.406-freq)*299792.458/1420.406 -vlsr[a],temp);
         d = geometry(freq, sun_vel, sun_distance, angles[a], vlsr[a], rotation);
         cout << "d=" << d << endl;
-        h1->Fill(angles[a], d, temp-95);
-	  //}
+        h1->Fill(angles[a], d, (temp-tsys[a])*d);
+	  }
 
     if(!file[a].good()) break;
     
   }
   cout << "collected data from " << angles[a] << endl;
-    hist->Draw();
-    hist->Reset();
+//    hist->Draw();
+ //   hist->Reset();
  /* 
   double bin;
   for(int i=0;i<148;i++)
@@ -96,6 +94,8 @@ void density()
   }*/
   
   }
-  
+/*  TH2D* dummy_his = new TH2D("dummy", "histo ttile", 100, -10, 10, 100, -10, 10);
+  TCanvas* c1 = new TCanvas("theCanvas", "theCanvas", 600, 600);
+  dummy_his->Draw("COL"); */
   h1->Draw("pollego2z");
 }
