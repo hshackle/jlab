@@ -42,7 +42,7 @@ void data_read()
 
   file[a].open(str);
 
-  TH1D* hist = new TH1D(numbstr,numbstr,148,(1420.406-1420.98844)*299792.458/1420.406 - vlsr[a],(1420.406-1419.84000)*299792.458/1420.406 - vlsr[a]);
+  //TH1D* hist = new TH1D(numbstr,numbstr,148,(1420.406-1420.98844)*299792.458/1420.406 - vlsr[a],(1420.406-1419.84000)*299792.458/1420.406 - vlsr[a]);
   TH1D* hist = new TH1D(numbstr,numbstr,148,1419.84000,1420.98844);
   while (1){
     file[a].getline(tmp_str, 256, ',');
@@ -57,7 +57,8 @@ void data_read()
 	      hist->Fill((1420.406-freq)*299792.458/1420.406 -vlsr[a],0);
     }
     if (temp > tsys[a])   {*/
-	      hist->Fill((1420.406-freq)*299792.458/1420.406 -vlsr[a],temp-97);
+	 //     hist->Fill((1420.406-freq)*299792.458/1420.406 -vlsr[a],temp-97);
+      
 	      hist->Fill(freq,temp-97);
         //d= geometry(1420.41, sun_vel, sun_distance, 140, 4.5, rotation);
         d = geometry(freq, sun_vel, sun_distance, angles[a], vlsr[a], rotation);
@@ -70,8 +71,12 @@ void data_read()
     
   }
   cout << "collected data from " << angles[a] << endl;
+  for (int i=0; i<148;i++){
+  hist->SetBinError(i, hist->(TMath::Sqrt(hist->GetBinContent(i)+97))/50);
+  }
     hist->Draw();
-    hist->GetXaxis()->SetTitle("Frequency [MHz]");
+    //hist->Fit("gaus");
+    hist->GetXaxis()->SetTitle("Velocity [km/s]");
     hist->GetYaxis()->SetTitle("Power [K]");
  //   hist->Reset();
  /* 

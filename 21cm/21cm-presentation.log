@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.4.20)  11 MAY 2017 01:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.5.1)  11 MAY 2017 11:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2026,50 +2026,77 @@ Package pdftex.def Info: diagrammatic.png used on input line 43.
 (pdftex.def)             Requested size: 342.2953pt x 95.4044pt.
  [3
 
- <./diagrammatic.png>] <geom.png, id=118, 302.12875pt x 414.54875pt>
-File: geom.png Graphic file (type png)
- <use geom.png>
-Package pdftex.def Info: geom.png used on input line 60.
-(pdftex.def)             Requested size: 136.91603pt x 187.86092pt.
+ <./diagrammatic.png>]
+File: diagrammatic.png Graphic file (type png)
+ <use diagrammatic.png>
+Package pdftex.def Info: diagrammatic.png used on input line 51.
+(pdftex.def)             Requested size: 342.2953pt x 95.4044pt.
  [4
 
- <./geom.png>] <block.png, id=148, 803.0pt x 178.6675pt>
-File: block.png Graphic file (type png)
- <use block.png>
-Package pdftex.def Info: block.png used on input line 69.
-(pdftex.def)             Requested size: 342.2953pt x 76.16304pt.
+] <geom.png, id=146, 302.12875pt x 414.54875pt>
+File: geom.png Graphic file (type png)
+ <use geom.png>
+Package pdftex.def Info: geom.png used on input line 68.
+(pdftex.def)             Requested size: 136.91603pt x 187.86092pt.
  [5
 
- <./block.png>] <data_freq.png, id=176, 1428.33624pt x 872.25874pt>
-File: data_freq.png Graphic file (type png)
- <use data_freq.png>
-Package pdftex.def Info: data_freq.png used on input line 74.
-(pdftex.def)             Requested size: 342.2953pt x 209.02695pt.
+ <./geom.png>] <block.png, id=174, 803.0pt x 178.6675pt>
+File: block.png Graphic file (type png)
+ <use block.png>
+Package pdftex.def Info: block.png used on input line 77.
+(pdftex.def)             Requested size: 342.2953pt x 76.16304pt.
  [6
 
- <./data_freq.png>] <data_vel.png, id=203, 1428.33624pt x 872.25874pt>
-File: data_vel.png Graphic file (type png)
- <use data_vel.png>
-Package pdftex.def Info: data_vel.png used on input line 79.
-(pdftex.def)             Requested size: 342.2953pt x 209.02695pt.
+ <./block.png>] <data_freq_small.png, id=202, 1749.53625pt x 978.65625pt>
+File: data_freq_small.png Graphic file (type png)
+ <use data_freq_small.png>
+Package pdftex.def Info: data_freq_small.png used on input line 82.
+(pdftex.def)             Requested size: 342.2953pt x 191.47185pt.
  [7
 
- <./data_vel.png>] [8
+ <./data_freq_small.png>] <data_vel_small.png, id=230, 1749.53625pt x 978.65625pt>
+File: data_vel_small.png Graphic file (type png)
+ <use data_vel_small.png>
+Package pdftex.def Info: data_vel_small.png used on input line 87.
+(pdftex.def)             Requested size: 342.2953pt x 191.47185pt.
+ [8
 
-] [9
+ <./data_vel_small.png>] [9
 
 ] [10
 
 ] [11
 
-] <final.png, id=335, 580.1675pt x 413.545pt>
+] [12
+
+] <thermal_small.png, id=363, 1749.53625pt x 978.65625pt>
+File: thermal_small.png Graphic file (type png)
+ <use thermal_small.png>
+Package pdftex.def Info: thermal_small.png used on input line 105.
+(pdftex.def)             Requested size: 342.2953pt x 191.47185pt.
+ [13
+
+ <./thermal_small.png>] <final.png, id=391, 580.1675pt x 413.545pt>
 File: final.png Graphic file (type png)
  <use final.png>
-Package pdftex.def Info: final.png used on input line 97.
+Package pdftex.def Info: final.png used on input line 111.
 (pdftex.def)             Requested size: 273.83728pt x 195.1928pt.
- [12
+ [14
 
- <./final.png>]
+ <./final.png>] <final_wester.png, id=419, 580.1675pt x 413.545pt>
+File: final_wester.png Graphic file (type png)
+ <use final_wester.png>
+Package pdftex.def Info: final_wester.png used on input line 116.
+(pdftex.def)             Requested size: 273.83728pt x 195.1928pt.
+ [15
+
+ <./final_wester.png>] [16
+
+] [17
+
+] [18
+
+]
 \tf@nav=\write7
 \openout7 = `21cm-presentation.nav'.
 
@@ -2079,11 +2106,11 @@ Package pdftex.def Info: final.png used on input line 97.
 \tf@snm=\write9
 \openout9 = `21cm-presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 130.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
  (./21cm-presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
 Package rerunfilecheck Info: File `21cm-presentation.out' has not changed.
 (rerunfilecheck)             Checksum: 37BBFAC7FB2A24A0FD1DA93FAFD9C22C;58.
 
@@ -2093,18 +2120,18 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 25351 strings out of 493013
- 482791 string characters out of 6139317
- 535014 words of memory out of 5000000
- 28417 multiletter control sequences out of 15000+600000
+ 25381 strings out of 493013
+ 483232 string characters out of 6139318
+ 535015 words of memory out of 5000000
+ 28433 multiletter control sequences out of 15000+600000
  10746 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,16n,57p,10410b,748s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on 21cm-presentation.pdf (12 pages, 280518 bytes).
+Output written on 21cm-presentation.pdf (18 pages, 452898 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 352 compressed objects within 4 object streams
- 26 named destinations out of 1000 (max. 500000)
- 110 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 565 PDF objects out of 1000 (max. 8388607)
+ 507 compressed objects within 6 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 120 words of extra memory for PDF output out of 10000 (max. 10000000)
 

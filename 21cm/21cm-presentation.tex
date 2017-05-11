@@ -9,7 +9,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 
-\title[21 cm]{Determining Galactic Strucutre through 21cm Emission Lines}
+\title[21 cm]{Determining Galactic Structure through 21cm Emission Lines}
 \author{Henry Shackleton}
 
 \begin{document}
@@ -19,7 +19,7 @@
 \section{Introduction and Theory}
 
 \begin{frame}
-  \frametitle{Hyperfine Strucutre of Hydrogen Emits 21cm Wavelenth Emission}
+  \frametitle{Hyperfine Transition of Hydrogen Emits 21cm Wavelenth Emission}
   \begin{columns}
     \begin{column}{0.7\textwidth}
       \begin{center}
@@ -39,6 +39,14 @@
   \includegraphics[width=1\textwidth]{diagrammatic}
   \begin{equation*}
   v = c \frac{1420.41 - \nu}{\nu}
+\end{equation*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Doppler Shift Gives Change in 21cm Line Proportional to Velocity}
+  \includegraphics[width=1\textwidth]{diagrammatic}
+  \begin{equation*}
+    v = c \frac{1420.41 - \nu}{\nu} - v_{lsr}
 \end{equation*}
 \end{frame}
 
@@ -70,12 +78,12 @@
 
 \begin{frame}
   \frametitle{Peak in Antenna Readings Signal Hydrogen Density Concentration}
-  \includegraphics[width=1\textwidth]{data_freq.png}
+  \includegraphics[width=1\textwidth]{data_freq_small.png}
 \end{frame}
 
 \begin{frame}
   \frametitle{Peak in Antenna Readings Signal Hydrogen Density Concentration}
-  \includegraphics[width=1\textwidth]{data_vel.png}
+  \includegraphics[width=1\textwidth]{data_vel_small.png}
 \end{frame}
 
 \begin{frame}
@@ -85,17 +93,38 @@
       \pause
     \item Distance from sun to center of galaxy also uncertain, $8.2 \pm 0.5$ kpc. 
       \pause
-    \item Poissonian uncertainy in number of counts.
-      \pause
     \item Beam width approximated as constant across five degree bin width - taking into account beam profile would allow for more accurate data analysis
+      \pause
+    \item Poissonian uncertainy in number of counts.
   \end{itemize}
 \end{frame}
+
+\begin{frame}
+  \frametitle{Thermal Broadening Irrelevant at Current Galactic Resolution}
+  \includegraphics[width=1\textwidth]{thermal_small.png}
+\end{frame}
+  
 
 \begin{frame}
   \frametitle{Hydrogen Mapping to Polar Histogram Indicates Spiral Arm}
   \includegraphics[width=0.8\textwidth]{final.png}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Hydrogen Mapping Agrees with Density Data}
+  \includegraphics[width=0.8\textwidth]{final_wester.png}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Results Verify Validity of 21cm Analysis}
+  \begin{itemize}
+    \item Hydrogen hyperfine emissions provide a reliable method of detecting hydrogen.
+      \pause
+    \item Analyzing Doppler shift allows for determining of source location and a mapping of hydrogen density.
+      \pause
+    \item Resolution limited due to telescope size and thermal broadening, but qualitative features agree with literature.
+  \end{itemize}
+\end{frame}
 
 
 \end{document}
