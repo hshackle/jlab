@@ -37,12 +37,13 @@ void data_read()
 
   for( int a = 5; a < 6; a = a+1){
 //  for( int a = 1; a < 2; a = a+1){
-  sprintf(str, "/home/robin/jlab/21cm/g%d.dat", angles[a]);
-  sprintf(numbstr, "g%d", angles[a]);
+  sprintf(str, "/home/robin/jlab/21cm/g%d.dat", (int)angles[a]);
+  sprintf(numbstr, "g%d", (int)angles[a]);
 
   file[a].open(str);
 
   TH1D* hist = new TH1D(numbstr,numbstr,148,(1420.406-1420.98844)*299792.458/1420.406 - vlsr[a],(1420.406-1419.84000)*299792.458/1420.406 - vlsr[a]);
+  TH1D* hist = new TH1D(numbstr,numbstr,148,1419.84000,1420.98844);
   while (1){
     file[a].getline(tmp_str, 256, ',');
     freq = atof(tmp_str);
@@ -56,12 +57,13 @@ void data_read()
 	      hist->Fill((1420.406-freq)*299792.458/1420.406 -vlsr[a],0);
     }
     if (temp > tsys[a])   {*/
-	      hist->Fill((1420.406-freq)*299792.458/1420.406 -vlsr[a],temp);
+	      hist->Fill((1420.406-freq)*299792.458/1420.406 -vlsr[a],temp-97);
+	      hist->Fill(freq,temp-97);
         //d= geometry(1420.41, sun_vel, sun_distance, 140, 4.5, rotation);
         d = geometry(freq, sun_vel, sun_distance, angles[a], vlsr[a], rotation);
         cout << "d=" << d << endl;
         h1->Fill(angles[a], d, (temp-tsys[a])*d);
-        h22>Fill(angles[a], d, TMath::Sqrt(temp)*d);
+        h2->Fill(angles[a], d, TMath::Sqrt(temp)*d);
 	  //}
 
     if(!file[a].good()) break;

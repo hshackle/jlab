@@ -341,6 +341,15 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmssi10.tfm
 INPUT block.png
 INPUT ./block.png
 INPUT ./block.png
+INPUT data_freq.png
+INPUT ./data_freq.png
+INPUT ./data_freq.png
+INPUT data_vel.png
+INPUT ./data_vel.png
+INPUT ./data_vel.png
+INPUT final.png
+INPUT ./final.png
+INPUT ./final.png
 OUTPUT 21cm-presentation.nav
 OUTPUT 21cm-presentation.toc
 OUTPUT 21cm-presentation.snm
