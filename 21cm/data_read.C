@@ -12,7 +12,7 @@ double geometry(double freq, double sun_vel, double sun_distance, double angle, 
   return (TMath::Sin(other_angle)*radius/TMath::Sin(rad))*3.2407*TMath::Power(10, -17);
 }
 
-void density()
+void data_read()
 {
  double number, Vlsr;
   char tmp[200];
@@ -35,7 +35,7 @@ void density()
   TH2* h1 = new TH2F("h1", "hydrogen density", 72, 0, 360, 20, 0, 10);
   TH2* h2 = new TH2F("h1", "hydrogen error", 72, 0, 360, 20, 0, 10);
 
-  for( int a = 0; a < sizeof(angles)/sizeof(angles[0]); a = a+1){
+  for( int a = 5; a < 6; a = a+1){
 //  for( int a = 1; a < 2; a = a+1){
   sprintf(str, "/home/robin/jlab/21cm/g%d.dat", angles[a]);
   sprintf(numbstr, "g%d", angles[a]);
@@ -51,24 +51,26 @@ void density()
     temp = atof(tmp_str);
     
 
-    if (temp < tsys[a])
+/*    if (temp < tsys[a])
     {
 	      hist->Fill((1420.406-freq)*299792.458/1420.406 -vlsr[a],0);
     }
-    if (temp > tsys[a]) /  {
+    if (temp > tsys[a])   {*/
 	      hist->Fill((1420.406-freq)*299792.458/1420.406 -vlsr[a],temp);
         //d= geometry(1420.41, sun_vel, sun_distance, 140, 4.5, rotation);
         d = geometry(freq, sun_vel, sun_distance, angles[a], vlsr[a], rotation);
         cout << "d=" << d << endl;
-        h2->Fill(angles[a], d, TMath::Sqrt((temp-tsys[a]))*d);
-        h1->Fill(angles[a], d, (temp - tsys[a])*d);
-	  }
+        h1->Fill(angles[a], d, (temp-tsys[a])*d);
+        h22>Fill(angles[a], d, TMath::Sqrt(temp)*d);
+	  //}
 
     if(!file[a].good()) break;
     
   }
   cout << "collected data from " << angles[a] << endl;
-//    hist->Draw();
+    hist->Draw();
+    hist->GetXaxis()->SetTitle("Frequency [MHz]");
+    hist->GetYaxis()->SetTitle("Power [K]");
  //   hist->Reset();
  /* 
   double bin;
@@ -101,5 +103,5 @@ void density()
 /*  TH2D* dummy_his = new TH2D("dummy", "histo ttile", 100, -10, 10, 100, -10, 10);
   TCanvas* c1 = new TCanvas("theCanvas", "theCanvas", 600, 600);
   dummy_his->Draw("COL"); */
-  h2->Draw("pollego2z");
+//  h1->Draw("pollego2z");
 }

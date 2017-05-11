@@ -225,6 +225,8 @@ INPUT /usr/share/texmf-dist/tex/latex/beamer/art/beamericononline.20.pdf
 INPUT /usr/share/texmf-dist/tex/latex/beamer/art/beamericononline.20.pdf
 INPUT /usr/share/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemedefault.sty
 INPUT /usr/share/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemedefault.sty
+INPUT /usr/share/texmf-dist/tex/latex/was/gensymb.sty
+INPUT /usr/share/texmf-dist/tex/latex/was/gensymb.sty
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texmf-dist/fonts/map/dvips/sansmathaccent/sansmathaccent.map
 INPUT /usr/share/texmf-dist/tex/latex/comment/comment.sty
