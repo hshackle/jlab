@@ -340,6 +340,12 @@ INPUT geom.png
 INPUT ./geom.png
 INPUT ./geom.png
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmssi10.tfm
+INPUT geom.png
+INPUT ./geom.png
+INPUT geom.png
+INPUT ./geom.png
+INPUT geom.png
+INPUT ./geom.png
 INPUT block.png
 INPUT ./block.png
 INPUT ./block.png

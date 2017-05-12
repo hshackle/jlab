@@ -190,4 +190,19 @@ Because of the dynamic nature of our galaxy, hydrogen that we observe can be mov
   V = \frac{(1420.406 - f)c}{1420.406} - V_{lsr}
 \end{equation}
 Where $c$ is the speed of light and $V_{lsr}$ corrects for the motion of the Earth around the Sun. The purpose of considering relative motion away from the Sun as opposed to the Earth is for the sake of geomoetric simplification.
+
+Given this information, we can calculate the location of the hydrogen source through geometric considerations. Illustrated in Figure \ref{geom} is the relevant geometry of our galaxy. The velocity due to Doppler shifting is given by the $\textit{actual}$ velocity of the hydrogen mass $\Theta$ projected along the line of sight from the sun, minues the sun's velocity projected along the lihe of sight. Through the law of sines, we can calculate the general relation
+
+\begin{equation}
+  V &= \frac{\Theta}{r} R_0 \sin \ell - \Theta_0 \sin \ell
+\end{equation}
+
+Where $R_0$ and $r$ are the distances from the sun and our hydrogen mass to the center of the galaxy, $\Theta_0$ is the velocity of the sun, and $\ell$ is our viewing angle. Both $r$ and $\Theta$ are unknown, but a general relation between the radius of an object from the center of the galaxy and its velocity can be determined via the Galactic Rotation Curve. This gives an equation that allows us to calculate $r$ given the viewing angle $\ell$ and our observed velocity $V$. We restrict our viewing angle to $90 \leq \ell \leq 180$. In this regime, the Galactic Rotation Curve predicts $\Theta$ to be approximately constant at $200$ km/s, which greatly simplifies calculations.
+
+
+\begin{figure}
+  \includegraphics[width=0.3\textwidth]{geom}
+  \caption{The relevant geometry of our galaxy. Known constants are the distance from our sun to the center of the galaxy,$R_0 = 8.2 \pm 0.5$, and the velocity of our sun. $\Theta_0 = 223 \pm 17$. The viewing angle $\ell$ is determined by the posiiton of our telescope.}
+  \label{geom}
+\end{figure}
 \end{document}

@@ -28,7 +28,7 @@ void data_read()
   file = new ifstream[17];
   char numbstr[200];
   cout << "1" << endl;
-  double angles[17] = {95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150, 155, 160, 165, 170};
+  double angles[17] = {95, 100, 105, 110, 115, 180, 125, 130, 135, 140, 145, 150, 155, 160, 165, 170};
   //double vlsr[17] = {-25.23, -22.33, -19.17, -16.01, -12.60, -9.1, -5.61,-2.08, 8.78, 5.1, 8.31, 12.01, 15.51, 18.62, 21.76, 24.67, 24.47};
   double vlsr[16] = {-25.23, -22.33, -19.17, -16.01, -12.60, -9.1, -5.61,-2.08, 8.78, 5.1, 8.31, 12.01, 15.51, 18.62, 21.76, 24.67};
   double tsys[17] = {103, 103, 103, 103, 103, 103, 103, 103, 103, 110, 110, 110, 110, 110, 110, 110, 102};
@@ -75,8 +75,8 @@ void data_read()
   hist->SetBinError(i, hist->(TMath::Sqrt(hist->GetBinContent(i)+97))/50);
   }
     hist->Draw();
-    //hist->Fit("gaus");
-    hist->GetXaxis()->SetTitle("Velocity [km/s]");
+    hist->Fit("gaus");
+    hist->GetXaxis()->SetTitle("Frequency [MHz]");
     hist->GetYaxis()->SetTitle("Power [K]");
  //   hist->Reset();
  /* 
