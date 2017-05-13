@@ -22,6 +22,15 @@ void data_read()
   double sun_distance = 8*3.086*TMath::Power(10, 16);
   char str[200];
   double rotation = 190;
+  TF1 *fit = new TF1("fit", "[0]*TMath::Voigt(-x-[3], [1], [2])", -30, 15);
+  fit->SetParameter(0, 10);
+  fit->SetParameter(3, 9);
+  fit->SetParameter(1, 2);
+  fit->SetParameter(2, 3);
+  fit->SetParName(0, "Normalization");
+  fit->SetParName(1, "Gaussian Std");
+  fit->SetParName(2, "Lorenzian HWHM");
+  fit->SetParName(3, "Mean");
   double d = 0;
   char tmp_str[1000];
   ifstream *file;
@@ -30,7 +39,7 @@ void data_read()
   cout << "1" << endl;
   double angles[17] = {95, 100, 105, 110, 115, 180, 125, 130, 135, 140, 145, 150, 155, 160, 165, 170};
   //double vlsr[17] = {-25.23, -22.33, -19.17, -16.01, -12.60, -9.1, -5.61,-2.08, 8.78, 5.1, 8.31, 12.01, 15.51, 18.62, 21.76, 24.67, 24.47};
-  double vlsr[16] = {-25.23, -22.33, -19.17, -16.01, -12.60, -9.1, -5.61,-2.08, 8.78, 5.1, 8.31, 12.01, 15.51, 18.62, 21.76, 24.67};
+  double vlsr[16] = {-25.23, -22.33, -19.17, -16.01, -12.60, 30, -5.61,-2.08, 8.78, 5.1, 8.31, 12.01, 15.51, 18.62, 21.76, 24.67};
   double tsys[17] = {103, 103, 103, 103, 103, 103, 103, 103, 103, 110, 110, 110, 110, 110, 110, 110, 102};
   TH2* h1 = new TH2F("h1", "hydrogen density", 72, 0, 360, 20, 0, 10);
   TH2* h2 = new TH2F("h1", "hydrogen error", 72, 0, 360, 20, 0, 10);
@@ -42,8 +51,8 @@ void data_read()
 
   file[a].open(str);
 
-  //TH1D* hist = new TH1D(numbstr,numbstr,148,(1420.406-1420.98844)*299792.458/1420.406 - vlsr[a],(1420.406-1419.84000)*299792.458/1420.406 - vlsr[a]);
-  TH1D* hist = new TH1D(numbstr,numbstr,148,1419.84000,1420.98844);
+  TH1D* hist = new TH1D(numbstr,numbstr,148,(1420.406-1420.98844)*299792.458/1420.406 - vlsr[a],(1420.406-1419.84000)*299792.458/1420.406 - vlsr[a]);
+//  TH1D* hist = new TH1D(numbstr,numbstr,148,1419.84000,1420.98844);
   while (1){
     file[a].getline(tmp_str, 256, ',');
     freq = atof(tmp_str);
@@ -57,10 +66,10 @@ void data_read()
 	      hist->Fill((1420.406-freq)*299792.458/1420.406 -vlsr[a],0);
     }
     if (temp > tsys[a])   {*/
-	 //     hist->Fill((1420.406-freq)*299792.458/1420.406 -vlsr[a],temp-97);
+	      hist->Fill((1420.406-freq)*299792.458/1420.406 -vlsr[a],temp-97);
       
-	      hist->Fill(freq,temp-97);
-        //d= geometry(1420.41, sun_vel, sun_distance, 140, 4.5, rotation);
+	      //hist->Fill(freq,temp-97);
+        d= geometry(1420.41, sun_vel, sun_distance, 140, 4.5, rotation);
         d = geometry(freq, sun_vel, sun_distance, angles[a], vlsr[a], rotation);
         cout << "d=" << d << endl;
         h1->Fill(angles[a], d, (temp-tsys[a])*d);
@@ -75,8 +84,8 @@ void data_read()
   hist->SetBinError(i, hist->(TMath::Sqrt(hist->GetBinContent(i)+97))/50);
   }
     hist->Draw();
-    hist->Fit("gaus");
-    hist->GetXaxis()->SetTitle("Frequency [MHz]");
+    hist->Fit("fit", "R");
+    hist->GetXaxis()->SetTitle("Velocity [km/s]");
     hist->GetYaxis()->SetTitle("Power [K]");
  //   hist->Reset();
  /* 

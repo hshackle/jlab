@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.4.20)  12 MAY 2017 18:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.5.1)  13 MAY 2017 01:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1393,8 +1393,17 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 180.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-./21cm-paper.tex:197: Misplaced alignment tab character &.
-l.197   V &
+
+Package natbib Warning: Citation `griffiths' on page 1 undefined on input line 186.
+
+<geom.png, id=58, 302.12875pt x 414.54875pt>
+File: geom.png Graphic file (type png)
+ <use geom.png>
+Package pdftex.def Info: geom.png used on input line 195.
+(pdftex.def)             Requested size: 153.00156pt x 209.93057pt.
+
+./21cm-paper.tex:202: Misplaced alignment tab character &.
+l.202   V &
            = \frac{\Theta}{r} R_0 \sin \ell - \Theta_0 \sin \ell
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1403,39 +1412,140 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-<geom.png, id=23, 302.12875pt x 414.54875pt>
-File: geom.png Graphic file (type png)
- <use geom.png>
-Package pdftex.def Info: geom.png used on input line 204.
-(pdftex.def)             Requested size: 153.00156pt x 209.93057pt.
- (./21cm-paper.bbl) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./geom.png>]
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 208.
+LaTeX Warning: Reference `srt' on page 2 undefined on input line 211.
+
+<block.png, id=85, 803.0pt x 178.6675pt>
+File: block.png Graphic file (type png)
+ <use block.png>
+Package pdftex.def Info: block.png used on input line 214.
+(pdftex.def)             Requested size: 203.99689pt x 45.3892pt.
+ <elevation.png, id=87, 1749.53625pt x 978.65625pt>
+File: elevation.png Graphic file (type png)
+ <use elevation.png>
+Package pdftex.def Info: elevation.png used on input line 221.
+(pdftex.def)             Requested size: 255.0pt x 142.6407pt.
+ <azimuth_large.png, id=88, 1749.53625pt x 978.65625pt>
+File: azimuth_large.png Graphic file (type png)
+ <use azimuth_large.png>
+Package pdftex.def Info: azimuth_large.png used on input line 221.
+(pdftex.def)             Requested size: 255.0pt x 142.6407pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 221--222
+ [][] 
+ []
+
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 221--222
+ [] 
+ []
+
+<data.png, id=89, 1749.53625pt x 978.65625pt>
+File: data.png Graphic file (type png)
+ <use data.png>
+Package pdftex.def Info: data.png used on input line 228.
+(pdftex.def)             Requested size: 255.0pt x 142.6407pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 228--229
+ [][] 
+ []
+
+[2 <./block.png> <./elevation.png> <./azimuth_large.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 237.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 237.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
-[2 <./geom.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 208.
+<anomolous.png, id=99, 1749.53625pt x 978.65625pt>
+File: anomolous.png Graphic file (type png)
+ <use anomolous.png>
+Package pdftex.def Info: anomolous.png used on input line 239.
+(pdftex.def)             Requested size: 255.0pt x 142.6407pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 239--240
+ [][] 
+ []
+
+
+Package natbib Warning: Citation `thermal-spread' on page 3 undefined on input line 244.
+
+<thermal_large.png, id=101, 1925.1925pt x 980.66376pt>
+File: thermal_large.png Graphic file (type png)
+ <use thermal_large.png>
+Package pdftex.def Info: thermal_large.png used on input line 247.
+(pdftex.def)             Requested size: 255.0pt x 129.88495pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 247--248
+ [][] 
+ []
+
+[3 <./data.png> <./anomolous.png> <./thermal_large.png>]
+
+Package natbib Warning: Citation `wester' on page 4 undefined on input line 259.
+
+<final.png, id=113, 580.1675pt x 413.545pt>
+File: final.png Graphic file (type png)
+ <use final.png>
+Package pdftex.def Info: final.png used on input line 262.
+(pdftex.def)             Requested size: 255.0pt x 181.76474pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 262--263
+ [][] 
+ []
+
+<final_wester.png, id=114, 580.1675pt x 413.545pt>
+File: final_wester.png Graphic file (type png)
+ <use final_wester.png>
+Package pdftex.def Info: final_wester.png used on input line 268.
+(pdftex.def)             Requested size: 255.0pt x 181.76474pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 268--269
+ [][] 
+ []
+
+
+Package natbib Warning: Citation `westerhout' on page 4 undefined on input line 269.
+
+
+Package natbib Warning: Citation `westerhout' on page 4 undefined on input line 269.
+
+(./21cm-paper.bbl)
+
+Package natbib Warning: There were undefined citations.
+
+[4 <./final.png> <./final_wester.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 273.
  (./21cm-paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 208.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 208.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 273.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 273.
 Package rerunfilecheck Info: File `21cm-paper.out' has not changed.
-(rerunfilecheck)             Checksum: ECF5B5A3C8FDE535DC73E4C155D570EB;290.
+(rerunfilecheck)             Checksum: 73F24AB230E933C3B069A307E77670DA;886.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
+
  ) 
 Here is how much of TeX's memory you used:
- 16175 strings out of 493013
- 269789 string characters out of 6139317
- 450218 words of memory out of 5000000
- 19569 multiletter control sequences out of 15000+600000
+ 16257 strings out of 493013
+ 270898 string characters out of 6139318
+ 453272 words of memory out of 5000000
+ 19624 multiletter control sequences out of 15000+600000
  17505 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,8n,38p,10405b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on 21cm-paper.pdf (2 pages, 177668 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on 21cm-paper.pdf (4 pages, 515977 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 188 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 150 words of extra memory for PDF output out of 10000 (max. 10000000)
 

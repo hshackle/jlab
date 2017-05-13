@@ -180,10 +180,10 @@
 \maketitle
 
 \section{Introduction}
-In 1944, Hendrick van de Hulst predicted an emission of 1420.4 MHz radiation from neutral hydrogen from a hyperfine splitting transition (detailed further in Section II). As electromagnetic energy in this range can pass through Earth's atmosphere easily, this discovery proved to be immensly useful in the field of astronomy. Soon after this discovery, Edward Purcell and Harold Ewen published a paper detailing their successful detection of this emission line through a radiometer. This emission line was used to determine the spiral structure of our Milky Way, as well as information about other galaxies. In this paper, we reconstuct some of the key features of the Milky Way's spiral arm structure using radio astronomy.
+In 1944, Hendrick van de Hulst predicted an emission of 1420.4 MHz radiation from neutral hydrogen from a hyperfine splitting transition (detailed further in Section II). As electromagnetic energy in this range can pass through Earth's atmosphere easily, this discovery proved to be immensly useful in the field of astronomy. Soon after this discovery, Edward Purcell and Harold Ewen published a paper detailing their successful detection of this emission line through a radiometer. As hydrogen makes up 90\% of our galaxy's interstallar medium (ISM), a mapping of hydrogen density via this 21cm emission line can be used to extract details about the structure of our galaxy. In this paper, we reconstuct some of the key features of the Milky Way's spiral arm structure using radio astronomy.
 
 \section{Theoretical Background}
-Due to the low temperatures predominant in interstellar medium, hydrogen is most often found in its ground state. Due to the magnetic moments from the spins of both the proton and the electron, the hydrogen ground state has two modes - one where the two spins are aligned, and one where the spins oppose each other. The former has slightly higher energy, and when a hydrogen atom transitions from both spins being aligned to being disaligned, it emits radiation with a wavelength of 21cm, or with a frequency of 1420.4 MHz. This process is highly unlikely, occurring at a transition rate of $2.9 \times 10^{-15}\ s^{-1}$. However, in large enough quantities, this process produces radiation at a constant frequency, which can be observed by a radio telescope. 
+Due to the low temperatures predominant in interstellar medium, hydrogen is most often found in its ground state. As a result of the intrinsic spins of both the proton and the electron, the hydrogen ground state has two modes - one where the two spins are aligned, and one where the spins oppose each other. These two states have an energy difference of $\Delta E = 5.884 \times 10^{-6}$ eV \cite{griffiths}, and when a hydrogen atom transitions from both spins being aligned to being disaligned, it emits radiation with a wavelength of 21cm, or with a frequency of 1420.4 MHz. This process is highly forbidden, occurring at a transition rate of $2.9 \times 10^{-15}\ s^{-1}$. However, the ISM is dense enough (1 atom per cubic centimeter) and large enough (on the order of kiloparsecs) to produce detectible amounts of radiation, which can be observed by a radio telescope. 
 
 Because of the dynamic nature of our galaxy, hydrogen that we observe can be moving relative to us. This relative motion has a Doppler effect on the radiation frequency observed. The relationship between a body moving away from the Sun at a relative velocity $V$ and the frequency $f$ that we observe is given by
 \begin{equation}
@@ -191,18 +191,83 @@ Because of the dynamic nature of our galaxy, hydrogen that we observe can be mov
 \end{equation}
 Where $c$ is the speed of light and $V_{lsr}$ corrects for the motion of the Earth around the Sun. The purpose of considering relative motion away from the Sun as opposed to the Earth is for the sake of geomoetric simplification.
 
+\begin{figure}
+  \includegraphics[width=0.3\textwidth]{geom}
+  \caption{The relevant geometry of our galaxy, represented as a top-down view of the galactic disk. Known constants are the distance from our sun to the center of the galaxy,$R_0 = 8.2 \pm 0.5$ kpc, and the velocity of our sun. $\Theta_0 = 223 \pm 17$ km/s. The viewing angle $\ell$ is determined by the posiiton of our telescope.}
+  \label{geom}
+\end{figure}
 Given this information, we can calculate the location of the hydrogen source through geometric considerations. Illustrated in Figure \ref{geom} is the relevant geometry of our galaxy. The velocity due to Doppler shifting is given by the $\textit{actual}$ velocity of the hydrogen mass $\Theta$ projected along the line of sight from the sun, minues the sun's velocity projected along the lihe of sight. Through the law of sines, we can calculate the general relation
 
 \begin{equation}
   V &= \frac{\Theta}{r} R_0 \sin \ell - \Theta_0 \sin \ell
 \end{equation}
 
-Where $R_0$ and $r$ are the distances from the sun and our hydrogen mass to the center of the galaxy, $\Theta_0$ is the velocity of the sun, and $\ell$ is our viewing angle. Both $r$ and $\Theta$ are unknown, but a general relation between the radius of an object from the center of the galaxy and its velocity can be determined via the Galactic Rotation Curve. This gives an equation that allows us to calculate $r$ given the viewing angle $\ell$ and our observed velocity $V$. We restrict our viewing angle to $90 \leq \ell \leq 180$. In this regime, the Galactic Rotation Curve predicts $\Theta$ to be approximately constant at $200$ km/s, which greatly simplifies calculations.
+Where $R_0$ and $r$ are the distances from the sun and our hydrogen mass to the center of the galaxy, $\Theta_0$ is the velocity of the sun, and $\ell$ is our viewing angle. Both $r$ and $\Theta$ are unknown, but a general relation between the radius of an object from the center of the galaxy and its velocity can be determined via the Galactic Rotation Curve. This gives an equation that allows us to calculate $r$ given the viewing angle $\ell$ and our observed velocity $V$. We restrict our viewing angle to $90\degree \leq \ell \leq 180\degree$. In this regime, the Galactic Rotation Curve predicts $\Theta$ to be approximately constant at $200$ km/s, which greatly simplifies calculations.
 
+
+
+\section{Experimental Setup}
+\subsection{Radio Telescope Specifications}
+To detect radiation from these hyperfine transitions, we use a small radio telescope (SRT), capable of detecting and recording electromagnetic radiation. This telescope has a 7.5 foot diameter parabolic dish, and a beam width of approximately 7.0 degrees. This focal length will ultimately constrain the angular resolution of the data we collect. The telescope is controlled via a computer interface, a block diagram of which is detailed in Figure \ref{srt}. Radio signals are reflected off of the telescope's dish and into the antenna feed horn. In order to process this data, the signals are fed through a band pass filter, a low noise pre-amplifier, and a mixer. This converts our signal into a digital recording. As the bandwidth of our receiver is only approximately $0.5$ MHz, and is not wide enough to detect the degree of Doppler shifting necessary for this experiment, we use a protocol in the SRT software that allows us to stitch three readings at different bandwidths together into one reading. This allows for an effective bandwith of about $1.2$ MHz. The SRT detects brightness temperature as a function of frequency within the bandwidth specified. This brightness temperature is, up to constants of proportionality, the power detected of a certain frequency.
+
+\begin{figure}[h]
+  \includegraphics[width=0.4\textwidth]{block}
+  \caption{A block diagram of our computer interface and its communication with our telescope. The computer ultimately controls motors on the telescope, which allow for position adjustement. A receiver processes our collected data and then sends it back to the computer.}
+\end{figure}
+Using a noise diode attached to the SRT, we are able to calibrate our apparatus in order to account for both external sources of radiation in the sky and noise generated by the antenna. Correcting our data due to external sources is done automatically through the SRT software, whereas the noise generated by the antenna - the \textit{antenna temperature} - is given by the software as a value which must be manually subtracted from our data.
+
+\subsection{Sun Calibration}
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{elevation} \includegraphics[width=0.5\textwidth]{azimuth_large}
+  \caption{The antenna temperature as a function of elevation and azimuth angular offset from the sun. The theoretical antenna pattern described by equation $(3)$ is fitted to both these graphs. The top graph and fit is off center by $1.5\degree$, indicating a slight calibration error in our SRT.}
+\end{figure}
+
+\subsection{Data Collection}
+The SRT software is able to determine the configuration corresponding to pointing our SRT dish along the plane of our galaxy at an angle $\ell$ from the center of the galaxy. Using this, we collect data from $90\degree \leq \ell \leq 180\degree$ in five degree increments. As our beam width is approximately seven degrees, taking data in increments significantly less than this is does not allow for increased resolution. At each angle, our telescope records data for approximately five seconds. In order to reduce statistical fluctuations and increase accuracy, we take fifty measurments at each angle and average them together.
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{data}
+  \caption{The raw data received from our SRT Telescope at $\ell=115\degree$, averaged over 50 runs. The antenna temperature of 97 K must be subtracted to acquire the data of interest. In each individual run, every point has a Poissonian uncertainty associated with it. Averaging over fifty runs gives uncertainties on each point bewteen $0.25$ and $0.75$, which are too small to observe at this scale.}
+  \label{raw}
+\end{figure}
+An example readout from our SRT, averaged over 50 runs, is displayed in Figure \ref{raw}. Most notably are two peaks in the brightness temperature to the right of the $1420.4$ MHz line, which we expect to correspond to two different concentrations of hydrogen at two different velocities.
+
+\section{Data Analysis}
+\subsection{Anomolous Data}
+Upon collecting our data and subtracting out the antenna temperature, we are able to map the frequency of each data point to a velocity, and then by using the velocity along with the observation angle $\ell$, map this to a point in our galaxy corresponding to a density proportional to the brightness temperature measured multiplied by $r$, the distance from our sun to the hydrogen source \footnote{The power emitted from our sources falls off as $1/r^2$, so this factor must be taken into account to determine the density. However, the area of the bins we use to represent our data grow proprotional to $r$, so we ultimately only multiply by one factor of $r$.}. Before doing this, we examine our data taken for anomolous points. These correspond to sharp peaks in our data, usually over the span of a single or handful of points. As we expect any radiation from galactic sources to have some spread due to spectral broadening (detailed later), we suspect these points either correspond to a terrestrial source unaccounted for by the calibration, or from an internal error in the telescope - potentially due to the stitching together of multiple measurements. As these points do not come from galactic hydrogen, we remove them from our data.
 
 \begin{figure}
-  \includegraphics[width=0.3\textwidth]{geom}
-  \caption{The relevant geometry of our galaxy. Known constants are the distance from our sun to the center of the galaxy,$R_0 = 8.2 \pm 0.5$, and the velocity of our sun. $\Theta_0 = 223 \pm 17$. The viewing angle $\ell$ is determined by the posiiton of our telescope.}
-  \label{geom}
+  \includegraphics[width=0.5\textwidth]{anomolous}
+  \caption{An example of data taken at $\ell=140\degree$. The antenna temperature of 97 K has been subtracted from the data. Circled in red is the anomolous point, which we hypothesize either comes from a terrestrial source unaccounted for by the calibration, or from some internal error in the telescope.}
 \end{figure}
+
+\subsection{Spectral Broadening}
+We expect the emission lines from galactic sources to be spread out due to thermal effects. While a large mass of hydrogen will move at some average velocity relative to the center of the galaxy, the individual atoms can move around inside the large mass due to the non-zero temperature of our galaxy. We measure this thermal broadening by analyzing data collected at $\ell=180\degree$. At this point, we expect any hydrogen to be stationary relative to our motion. However, as shown in Figure \ref{thermal}, this distribution is spread out due to thermal effects. The effects of thermal broadening are predicted to broaden spectral lines into a Gaussian shape \cite{thermal-spread}. As such, we fit to a Gaussian to determine a standard deviation of $12.97 \pm 0.07$ km/s. Considering a spreading of our data by $2\sigma$, we determine that this systematic "smearing" has the effect of spreading a source across a distance of between 0.5 and 1.3 kpc, depending on the observation angle. This puts a restriction on the radial resolution of our data, but still allows us to extract qualitative features of our galactic hydrogen density.
+
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{thermal_large}
+  \caption{The thermal broadening of the 21cm emission line at $\ell=180\degree$. This spread is fit to a Gaussian, which gives a $\sigma = 12.97 \pm 0.07$ km/s.}
+  \label{thermal}
+\end{figure}
+
+\subsection{Uncertain Galactic Constants}
+
+In order to analyze our data, we require the velocity of the sun and the distance from the sun to the center of the galaxy. Both of these constants are uncertain, with the former reported as $8.2 \pm 0.5$ kpc, and the latter as $223 \pm 17$ km/s. This contributes to uncertainty in our results, but only as a matter of scale. Variations in these constants change the overall length scale of the hydrogen density map, but do not noticiably impact the structure of the map. As such, we expect that the hydrogen density map that we acquire may vary in size from other hydrogen density maps constructed in other sources.
+
+\section{Results and Discussion}
+After mapping our data to a polar histogram, we acquire a mapping of the density of neutral hydrogen in the galaxy, displayed in Figure \ref{result}. Only the \textit{relative} densities of neutral hydrogen are mapped. A calculation of the actual densities of neutral hydrogen would require calculating the brightness temperature detected from a single hydrogen hyperfine transition, as well as the probability of these transitions occuring within the time of our data collection. Further theoretical considerations would be necessary to determine how the brightness temperature measured corresponds to the density of neutral hydrogen that has already undergone its hyperfine transition and decayed to its lowest energy state.
+
+The relative densities of hydrogen still allow us to extract information about the structure of the Milky Way. Seen between $95 \leq \ell \leq 140$ are two separate concentrations of hydrogen densities, although the distinction between the two is diminished by thermal broadening. By comparing to a density map calculated by Westerhout \cite{wester}, as shown in Figure \ref{comp}, we see that these two densities correspond to the Orion and Perseus spiral arms of our galaxy. A rescaling of Westerhout's axes are necessary for it to agree with our data - as previously mentioned, this can be attributed to different constants used in calculations.
+
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{final}
+  \caption{A hydrogen densitiy map of a portion of our galaxy, calculated from the data acquired by calculating the sources of our 21cm emissions via Doppler analysis. The sun is located at the (0,0) point. }
+  \label{result}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{final_wester}
+  \caption{Our calculated hydrogen density map compared with a hydrogen density map determined by Westerhout \cite{westerhout}. After a rescaling of axis, the two plots show general agreement on galactic structure.}
+  \label{comp}
+\end{figure}
+
 \end{document}
